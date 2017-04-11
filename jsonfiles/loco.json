@@ -1,0 +1,25 @@
+[
+  {
+    "headers":{
+      "Event":"NWC April",
+      "Site":"NWC April",
+      "Date":"1983.??.??",
+      "EventDate":"?",
+      "Round":"?",
+      "Result":"0-1",
+      "White":"Lance Darling",
+      "Black":"Richard Wood",
+      "ECO":"A00",
+      "WhiteElo":"?",
+      "BlackElo":"?",
+      "PlyCount":"4"
+    },
+    "moves":[
+      "g4",
+      "e6",
+      "f4",
+      "Qh4#"
+    ],
+    "result":"0-1"
+  }
+]
