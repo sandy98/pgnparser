@@ -1,6 +1,7 @@
 ## PGNParser
 A simple utility to parse PGN chess files and retrieve the collection of games
 within in JSON format.
+
 Could be regarded as a PGN compiler, being JSON the 'object format' produced by the compiler.
 
 ### Build
@@ -16,7 +17,8 @@ end_game).
 There are a bunch of files under tests directory which provide example of using
 the library from python, ruby, node.js (js and coffee-script) and clojure.
 Their contents is pretty self-explanatory as to how to use them.
-It's also provided the directory 'pgnfiles' containing some pgn files for test purpose, 
+
+It's also provided the directory 'pgnfiles', containing some pgn files for test purpose, 
 and 'jsonfiles' directory, home for files generated using 'make-json.sh' script.
 
 ### Comments
