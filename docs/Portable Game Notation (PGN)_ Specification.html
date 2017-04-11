@@ -1,0 +1,2609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- saved from url=(0082)http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#2.3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script type="text/javascript" src="./Portable Game Notation (PGN)_ Specification_files/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app15.us.archive.org";archive_analytics.values.server_ms=375;</script>
+<link type="text/css" rel="stylesheet" href="./Portable Game Notation (PGN)_ Specification_files/banner-styles.css">
+
+
+	<title> Portable Game Notation (PGN): Specification </title>
+	<meta name="DESCRIPTION" content="Portable Game Notation Specification and Implementation Guide.
+	This is the " luxury="" variant"="" of="" steven="" j.="" edwards="" original="" document="" (transposed="" to="" html,="" added="" table="" contents,="" internal="" and="" external="" links)."="">
+	<meta name="KEYWORDS" content="chess world, ChessWorld, chess, chess games, chess game, 
+	chess problem, chess problems, computer chess, chess notation, specification, 
+	PGN, SAN, FEN, EPD, portable game notation, algebraic notation, Forsyth, Edwards,
+	download, schach, Thomas Stahl">
+	<meta name="ROBOTS" content="follow">
+				<link rel="STYLESHEET" type="text/css" href="./Portable Game Notation (PGN)_ Specification_files/site.css">
+	<script language="javascript"> <!--
+	//--> </script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+ <body bgcolor="#FFFFFF" text="#000000" link="#990000" alink="#CC0000" vlink="#660000" cz-shortcut-listen="true"><div id="wm-ipp" lang="en" style="display: block;" class="">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="http://web.archive.org/web/" title="Wayback Machine home page"><img src="./Portable Game Notation (PGN)_ Specification_files/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="http://web.archive.org/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.very-best.de/pgn-spec.htm" style="width:400px;" onfocus="this.focus();this.select();"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20100528142843"><input type="submit" value="Go"><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="http://web.archive.org/web/20100407090858/http://www.very-best.de/pgn-spec.htm" title="7 abr 2010">ABR</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 14:28:43 may 28, 2010">may</td>
+		<td class="f" nowrap="nowrap">
+		
+		    jun
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="http://web.archive.org/web/20100407090858/http://www.very-best.de/pgn-spec.htm" title="9:08:58 abr 7, 2010"><img src="./Portable Game Notation (PGN)_ Specification_files/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0"></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 14:28:43 may 28, 2010">28</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="./Portable Game Notation (PGN)_ Specification_files/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0">
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="http://web.archive.org/web/20090122122151/http://very-best.de/pgn-spec.htm" title="22 ene 2009"><strong>2009</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 14:28:43 may 28, 2010">2010</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2011
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="http://web.archive.org/web/20100528142843*/http://www.very-best.de/pgn-spec.htm" title="See a list of every capture for this URL">91 captures</a>
+           <div class="r" title="Timespan for captures of this URL">12 oct 99 - 28 may 10</div>
+       </td>
+       <td class="k">
+       <a href="http://web.archive.org/web/20020815000000/http://www.very-best.de/pgn-spec.htm" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines" onmouseover="__wm.st(1)" onmouseout="__wm.st(0)" onmousemove="__wm.mv(event,this)" width="550" height="27" border="0" src="./Portable Game Notation (PGN)_ Specification_files/graph.jsp">
+       <div class="yt" style="display: none; width: 25px; height: 27px; left: 150px;"></div><div class="mt" style="display: none; width: 2px; height: 27px; left: 165px;"></div></div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="./Portable Game Notation (PGN)_ Specification_files/disclaim-element.js"></script>
+<script type="text/javascript" src="./Portable Game Notation (PGN)_ Specification_files/graph-calc.js"></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.very-best.de/pgn-spec.htm";
+
+var firstYear = 1996;
+var displayDay = "28";
+var displayMonth = "may";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(550, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<center><table border="1" bordercolor="#DDDDDD" bgcolor="#EEEEEE" cellpadding="2" cellspacing="0" width="700"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#FFCC66"><th align="left" class="headline"><a class="headline" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/ChessWorld.htm" title="Homepage">&nbsp;Chess World&nbsp;</a></th><th align="right" class="headline"><a class="headline" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/Download.htm" title="Main page of this area">&nbsp;PGN Archive&nbsp;</a></th></tr></tbody></table><p><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><th width="120" rowspan="2" valign="middle" align="left"><div class="dense">&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/ChessWorld.htm" title="Homepage of ChessWorld site">&nbsp;Home&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/ChessTestPortal.htm" title="Chess Contest - determine your rating!">&nbsp;Contest&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/PC.htm" title="Play chess with players from all around the world">&nbsp;Play Online&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/BestLinks.htm" title="Find the best chess sites on the web!">&nbsp;Search Engine&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menucurr" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/Download.htm" title="Download of PGN games ...">&nbsp;PGN Archive&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/NewsList.htm" title="New in Chess: Calendar, Articles and Usenet">&nbsp;News&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/Shop.htm" title="The best chess books">&nbsp;Bookshop&nbsp;</a></span><br>&nbsp;<span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/About.htm" title="Top Secret!">&nbsp;This and That&nbsp;</a></span><br></div></th><td align="center"><small><a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/cgi-bin/ads.pl?banner=default" target="_top">Learn how to drive traffic to your site!</a></small><br><a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/cgi-bin/ads.pl?banner=default" target="_top"><img src="./Portable Game Notation (PGN)_ Specification_files/MoreVisitors.gif" height="60" width="468" alt="Maybe the most important download of your life ..." border="0" ismap=""></a>
+</td><td align="right"></td></tr><tr><th colspan="2" valign="bottom" align="center" class="menu"><p><table bgcolor="#EEEEEE" border="1" bordercolor="#FFCC66" cellpadding="0" cellspacing="0"><tbody><tr><td><span class="menu"><a class="menu" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/Download.htm" title="Download of PGN games">&nbsp;Download&nbsp;</a></span></td><td><span class="menu"><a class="menucurr" href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm" title="PGN specification by Steve Edwards">&nbsp;PGN Specification&nbsp;</a></span></td>
+</tr></tbody></table></p></th></tr></tbody></table></p></td></tr><tr><td bgcolor="#FFFFFF"><table border="0" bordercolor="#999999" bgcolor="#FFFFFF" cellpadding="12" cellspacing="0" width="700"><tbody><tr><td>
+<p>
+	<table width="100%" cellpadding="1" cellspacing="0" border="0"><tbody><tr><td bgcolor="#FFCC66">
+	&nbsp;<b>Portable Game Notation</b></td>     
+	</tr></tbody></table>
+<table cellpadding="0" cellspacing="3" border="0">
+<tbody><tr><th align="left">Standard</th> <td>Portable Game Notation Specification and Implementation Guide</td>
+</tr><tr><th align="left">Revised</th> <td> 1994.03.12</td>
+</tr><tr><th align="left">Authors</th> <td> Interested readers of the Internet newsgroup rec.games.chess</td>
+</tr><tr><th align="left">Coordinator</th> <td> Steven J. Edwards 
+									(send comments to <a href="mailto:sje@world.std.com">sje@world.std.com</a>)</td>
+</tr></tbody></table>
+	<br>
+	</p><p>
+	<span class="MenuTitle"> <font size="3" color="#006600"> Portable Game Notation </font> </span>
+	<br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#1." title="springe zur Sektion 1."><span class="menue">1. Introduction</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#2." title="springe zur Sektion 2."><span class="menue">2. Chess data representation</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#2.1" title="springe zur Sektion 2.1"><span class="menue">2.1 Data interchange incompatibility</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#2.2" title="springe zur Sektion 2.2"><span class="menue">2.2 Specification goals</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#2.3" title="springe zur Sektion 2.3"><span class="menue">2.3 A sample PGN game</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#3." title="springe zur Sektion 3."><span class="menue">3. Formats: import and export</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#3.1" title="springe zur Sektion 3.1"><span class="menue">3.1 Import format allows for manually prepared data</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#3.2" title="springe zur Sektion 3.2"><span class="menue">3.2 Export format used for program generated output</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#4." title="springe zur Sektion 4."><span class="menue">4. Lexicographical issues</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#4.1" title="springe zur Sektion 4.1"><span class="menue">4.1 Character codes</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#4.2" title="springe zur Sektion 4.2"><span class="menue">4.2 Tab characters</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#4.3" title="springe zur Sektion 4.3"><span class="menue">4.3 Line lengths</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#5." title="springe zur Sektion 5."><span class="menue">5. Commentary</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#6." title="springe zur Sektion 6."><span class="menue">6. Escape mechanism</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#7." title="springe zur Sektion 7."><span class="menue">7. Tokens</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#8." title="springe zur Sektion 8."><span class="menue">8. Parsing games</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#8.1" title="springe zur Sektion 8.1"><span class="menue">8.1 Tag pair section</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#8.2" title="springe zur Sektion 8.2"><span class="menue">8.2 Movetext section</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9." title="springe zur Sektion 9."><span class="menue">9. Supplemental tag names</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.1" title="springe zur Sektion 9.1"><span class="menue">9.1 Player related information</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.2" title="springe zur Sektion 9.2"><span class="menue">9.2 Event related information</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.3" title="springe zur Sektion 9.3"><span class="menue">9.3 Opening information (locale specific)</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.4" title="springe zur Sektion 9.4"><span class="menue">9.4 Opening information (third party vendors)</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.5" title="springe zur Sektion 9.5"><span class="menue">9.5 Time and date related information</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.6" title="springe zur Sektion 9.6"><span class="menue">9.6 Time control</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.7" title="springe zur Sektion 9.7"><span class="menue">9.7 Alternative starting positions</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.8" title="springe zur Sektion 9.8"><span class="menue">9.8 Game conclusion</span></a>  <br>
+		&nbsp; &nbsp; &nbsp;
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#9.9" title="springe zur Sektion 9.9"><span class="menue">9.9 Miscellaneous</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#10." title="springe zur Sektion 10."><span class="menue">10. Numeric Annotation Glyphs</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#11." title="springe zur Sektion 11."><span class="menue">11. File names and directories</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#12." title="springe zur Sektion 12."><span class="menue">12. PGN collating sequence</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#13." title="springe zur Sektion 13."><span class="menue">13. PGN software</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#14." title="springe zur Sektion 14."><span class="menue">14. PGN data archives</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#15." title="springe zur Sektion 15."><span class="menue">15. International Olympic Committee country codes</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#16." title="springe zur Sektion 16."><span class="menue">16. Additional chess data standards</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#17." title="springe zur Sektion 17."><span class="menue">17. Alternative chesspiece identifier letters</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#18." title="springe zur Sektion 18."><span class="menue">18. Formal syntax</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#19." title="springe zur Sektion 19."><span class="menue">19. Canonical chess position hash coding</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#20." title="springe zur Sektion 20."><span class="menue">20. Binary representation (PGC)</span></a>  <br>
+	 <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/pgn-spec.htm#21." title="springe zur Sektion 21."><span class="menue">21. E-mail correspondence usage</span></a>  <br>
+</p><h2>Preface</h2>
+From the Tower of Babel story:
+<blockquote>
+"If now, while they are one people, all speaking the same language, they have
+started to do this, nothing will later stop them from doing whatever they
+propose to do."
+<p>
+Genesis XI, v.6
+</p></blockquote>
+		<h2> <a name="1.">1. Introduction</a></h2>
+PGN is "Portable Game Notation", a standard designed for the representation of
+chess game data using ASCII text files.  PGN is structured for easy reading and
+writing by human users and for easy parsing and generation by computer
+programs.  The intent of the definition and propagation of PGN is to facilitate
+the sharing of public domain chess game data among chessplayers (both organic
+and otherwise), publishers, and computer chess researchers throughout the
+world.
+<p>
+PGN is not intended to be a general purpose standard that is suitable for every
+possible use; no such standard could fill all conceivable requirements.
+Instead, PGN is proposed as a universal portable representation for data
+interchange.  The idea is to allow the construction of a family of chess
+applications that can quickly and easily process chess game data using PGN for
+import and export among themselves.
+		</p><h2> <a name="2.">2. Chess data representation</a></h2>
+Computer usage among chessplayers has become quite common in recent years and a
+variety of different programs, both commercial and public domain, are used to
+generate, access, and propagate chess game data.  Some of these programs are
+rather impressive; most are now well behaved in that they correctly follow the
+Laws of Chess and handle users' data with reasonable care.  Unfortunately, many
+programs have had serious problems with several aspects of the external
+representation of chess game data.  Sometimes these problems become more
+visible when a user attempts to move significant quantities of data from one
+program to another; if there has been no real effort to ensure portability of
+data, then the chances for a successful transfer are small at best.
+		<h3> <a name="2.1">2.1 Data interchange incompatibility</a></h3>
+The reasons for format incompatibility are easy to understand.  In fact, most
+of them are correlated with the same problems that have already been seen with
+commercial software offerings for other domains such as word processing,
+spreadsheets, fonts, and graphics.  Sometimes a manufacturer deliberately
+designs a data format using encryption or some other secret, proprietary
+technique to "lock in" a customer.  Sometimes a designer may produce a format
+that can be deciphered without too much difficulty, but at the same time
+publicly discourage third party software by claiming trade secret protection.
+Another software producer may develop a non-proprietary system, but it may work
+well only within the scope of a single program or application because it is not
+easily expandable.  Finally, some other software may work very well for many
+purposes, but it uses symbols and language not easily understood by people or
+computers available to those outside the country of its development.
+		<h3> <a name="2.2">2.2 Specification goals</a></h3>
+A specification for a portable game notation must observe the lessons of
+history and be able to handle probable needs of the future.  The design
+criteria for PGN were selected to meet these needs.  These criteria :
+<ol>
+<li> The details of the system must be publicly available and free of unnecessary
+complexity.  Ideally, if the documentation is not available for some reason,
+typical chess software developers and users should be able to understand most
+of the data without the need for third party assistance.
+</li>
+<li> The details of the system must be non-proprietary so that users and software
+developers are unrestricted by concerns about infringing on intellectual
+property rights.  The idea is to let chess programmers compete in a free market
+where customers may choose software based on their real needs and not based on
+artificial requirements created by a secret data format.
+</li>
+<li> The system must work for a variety of programs.  The format should be such
+that it can be used by chess database programs, chess publishing programs,
+chess server programs, and chessplaying programs without being unnecessarily
+specific to any particular application class.
+</li>
+<li> The system must be easily expandable and scalable.  The expansion ability
+must  handling data items that may not exist currently but could be
+expected to emerge in the future.  (Examples: new opening classifications and
+new country names.)  The system should be scalable in that it must not have any
+arbitrary restrictions concerning the quantity of stored data.  Also, planned
+modes of expansion should either preserve earlier databases or at least allow
+for their automatic conversion.
+</li>
+<li> The system must be international.  Chess software users are found in many
+countries and the system should be free of difficulties caused by conventions
+local to a given region.
+</li>
+<li> Finally, the system should handle the same kinds and amounts of data that
+are already handled by existing chess software and by print media.
+</li>
+</ol>
+		<h3> <a name="2.3">2.3 A sample PGN game</a></h3>
+Although its description may seem rather lengthy, PGN is actually fairly
+simple.  A sample PGN game follows; it has most of the important features
+described in later sections of this document.
+<pre>[Event "F/S Return Match"]
+[Site "Belgrade, Serbia JUG"]
+[Date "1992.11.04"]
+[Round "29"]
+[White "Fischer, Robert J."]
+[Black "Spassky, Boris V."]
+[Result "1/2-1/2"]
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3
+O-O 9. h3 Nb8 10. d4 Nbd7 11. c4 c6 12. cxb5 axb5 13. Nc3 Bb7 14. Bg5 b4 15.
+Nb1 h6 16. Bh4 c5 17. dxe5 Nxe4 18. Bxe7 Qxe7 19. exd6 Qf6 20. Nbd2 Nxd6 21.
+Nc4 Nxc4 22. Bxc4 Nb6 23. Ne5 Rae8 24. Bxf7+ Rxf7 25. Nxf7 Rxe1+ 26. Qxe1 Kxf7
+27. Qe3 Qg5 28. Qxg5 hxg5 29. b3 Ke6 30. a3 Kd6 31. axb4 cxb4 32. Ra5 Nd5 33.
+f3 Bc8 34. Kf2 Bf5 35. Ra7 g6 36. Ra6+ Kc5 37. Ke1 Nf4 38. g3 Nxh3 39. Kd2 Kb5
+40. Rd6 Kc5 41. Ra6 Nf2 42. g4 Bd3 43. Re6 1/2-1/2
+</pre>
+		<h2> <a name="3.">3. Formats: import and export</a></h2>
+There are two formats in the PGN specification.  These are the "import" format
+and the "export" format.  These are the two different ways of formatting the
+same PGN data according to its source.  The details of the two formats are
+described throughout the following sections of this document.
+<p>
+Other than formats, there is the additional topic of PGN presentation.  While
+both PGN import and export formats are designed to be readable by humans, there
+is no recommendation that either of these be an ultimate mode of chess data
+presentation.  Rather, software developers are urged to consider all of the
+various techniques at their disposal to enhance the display of chess data at
+the presentation level (i.e., highest level) of their programs.  This means
+that the use of different fonts, character sizes, color, and other tools of
+computer aided interaction and publishing should be explored to provide a high
+quality presentation appropriate to the function of the particular program.
+		</p><h3> <a name="3.1">3.1 Import format allows for manually prepared data</a></h3>
+The import format is rather flexible and is used to describe data that may have
+been prepared by hand, much like a source file for a high level programming
+language.  A program that can read PGN data should be able to handle the
+somewhat lax import format.
+		<h3> <a name="3.2">3.2 Export format used for program generated output</a></h3>
+The export format is rather strict and is used to describe data that is usually
+prepared under program control, something like a pretty printed source program
+reformatted by a compiler.
+		<h4> <a name="3.2.1">3.2.1 Byte equivalence</a></h4>
+For a given PGN data file, export format representations generated by different
+PGN programs on the same computing system should be exactly equivalent, byte
+for byte.
+		<h4> <a name="3.2.2">3.2.2 Archival storage and the newline character</a></h4>
+Export format should also be used for archival storage.  Here, "archival"
+storage is defined as storage that may be accessed by a variety of computing
+systems.  The only extra requirement for archival storage is that the newline
+character have a specific representation that is independent of its value for a
+particular computing system's text file usage.  The archival representation of
+a newline is the ASCII control character LF (line feed, decimal value 10,
+hexadecimal value 0x0a).
+<p>
+Sadly, there are some accidents of history that survive to this day that have
+baroque representations for a newline: multicharacter sequences, end-of-line
+record markers, start-of-line byte counts, fixed length records, and so forth.
+It is well beyond the scope of the PGN project to reconcile all of these to the
+unified world of ANSI C and the those enjoying the bliss of a single '\n'
+convention.  Some systems may just not be able to handle an archival PGN text
+file with native text editors.  In these cases, an indulgence of sorts is
+granted to use the local newline convention in non-archival PGN files for those
+text editors.
+		</p><h4> <a name="3.2.3">3.2.3 Speed of processing</a></h4>
+Several parts of the export format deal with exact descriptions of line and
+field justification that are absent from the import format details.  The main
+reason for these restrictions on the export format are to allow the
+construction of simple data translation programs that can easily scan PGN data
+without having to have a full chess engine or other complex parsing routines.
+The idea is to encourage chess software authors to always allow for at least a
+limited PGN reading capability.  Even when a full chess engine parsing
+capability is available, it is likely to be at least two orders of magnitude
+slower than a simple text scanner.
+		<h4> <a name="3.2.4">3.2.4 Reduced export format</a></h4>
+A PGN game represented using export format is said to be in "reduced export
+format" if all of the following hold: 1) it has no commentary, 2) it has only
+the standard seven tag roster identification information ("STR", see below), 3)
+it has no recursive annotation variations ("RAV", see below), and 4) it has no
+numeric annotation glyphs ("NAG", see below).  Reduced export format is used
+for bulk storage of unannotated games.  It represents a minimum level of
+standard conformance for a PGN exporting application.
+		<h2> <a name="4.">4. Lexicographical issues</a></h2>
+PGN data is composed of characters; non-overlapping contiguous sequences of
+characters form lexical tokens.
+		<h3> <a name="4.1">4.1 Character codes</a></h3>
+PGN data is represented using a subset of the eight bit ISO 8859/1 (Latin 1)
+character set.  ("ISO" is an acronym for the International Standards
+Organization.)  This set is also known as ECMA-94 and is similar to other ISO
+Latin character sets.  ISO 8859/1 includes the standard seven bit ASCII
+character set for the 32 control character code values from zero to 31.  The 95
+printing character code values from 32 to 126 are also equivalent to seven bit
+ASCII usage.  (Code value 127, the ASCII DEL control character, is a graphic
+character in ISO 8859/1; it is not used for PGN data representation.)
+<p>
+The 32 ISO 8859/1 code values from 128 to 159 are non-printing control
+characters.  They are not used for PGN data representation.  The 32 code values
+from 160 to 191 are mostly non-alphabetic printing characters and their use for
+PGN data is discouraged as their graphic representation varies considerably
+among other ISO Latin sets.  Finally, the 64 code values from 192 to 255 are
+mostly alphabetic printing characters with various diacritical marks; their use
+is encouraged for those languages that require such characters.  The graphic
+representations of this last set of 64 characters is fairly constant for the
+ISO Latin family.
+</p><p>
+Printing character codes outside of the seven bit ASCII range may only appear
+in string data and in commentary.  They are not permitted for use in symbol
+construction.
+</p><p>
+Because some PGN users' environments may not support presentation of non-ASCII
+characters, PGN game authors should refrain from using such characters in
+critical commentary or string values in game data that may be referenced in
+such environments.  PGN software authors should have their programs handle such
+environments by displaying a question mark ("?") for non-ASCII character codes.
+This is an important point because there are many computing systems that can
+display eight bit character data, but the display graphics may differ among
+machines and operating systems from different manufacturers.
+</p><p>
+Only four of the ASCII control characters are permitted in PGN import format;
+these are the horizontal and vertical tabs along with the linefeed and carriage
+return codes.
+</p><p>
+The external representation of the newline character may differ among
+platforms; this is an acceptable variation as long as the details of the
+implementation are hidden from software implementors and users.  When a choice
+is practical, the Unix "newline is linefeed" convention is preferred.
+		</p><h3> <a name="4.2">4.2 Tab characters</a></h3>
+Tab characters, both horizontal and vertical, are not permitted in the export
+format.  This is because the treatment of tab characters is highly dependent
+upon the particular software in use on the host computing system.  Also, tab
+characters may not appear inside of string data.
+		<h3> <a name="4.3">4.3 Line lengths</a></h3>
+PGN data are organized as simple text lines without any special bytes or
+markers for secondary record structure imposed by specific operating systems.
+Import format PGN text lines are limited to having a maximum of 255 characters
+per line including the newline character.  Lines with 80 or more printing
+characters are strongly discouraged because of the difficulties experienced by
+common text editors with long lines.
+<p>
+In some cases, very long tag values will require 80 or more columns, but these
+are relatively rare.  An example of this is the "FEN" tag pair; it may have a
+long tag value, but this particular tag pair is only used to represent a game
+that doesn't start from the usual initial position.
+		</p><h2> <a name="5.">5. Commentary</a></h2>
+Comment text may appear in PGN data.  There are two kinds of comments.  The
+first kind is the "rest of line" comment; this comment type starts with a
+semicolon character and continues to the end of the line.  The second kind
+starts with a left brace character and continues to the next right brace
+character.  Comments cannot appear inside any token.
+<p>
+Brace comments do not nest; a left brace character appearing in a brace comment
+loses its special meaning and is ignored.  A semicolon appearing inside of a
+brace comment loses its special meaning and is ignored.  Braces appearing
+inside of a semicolon comments lose their special meaning and are ignored.
+</p><p>
+*** Export format representation of comments needs definition work.
+		</p><h2> <a name="6.">6. Escape mechanism</a></h2>
+There is a special escape mechanism for PGN data.  This mechanism is triggered
+by a percent sign character ("%") appearing in the first column of a line; the
+data on the rest of the line is ignored by publicly available PGN scanning
+software.  This escape convention is intended for the private use of software
+developers and researchers to embed non-PGN commands and data in PGN streams.
+<p>
+A percent sign appearing in any other place other than the first position in a
+line does not trigger the escape mechanism.
+		</p><h2> <a name="7.">7. Tokens</a></h2>
+PGN character data is organized as tokens.  A token is a contiguous sequence of
+characters that represents a basic semantic unit.  Tokens may be separated from
+adjacent tokens by white space characters.  (White space characters 
+space, newline, and tab characters.)  Some tokens are self delimiting and do
+not require white space characters.
+<p>
+A string token is a sequence of zero or more printing characters delimited by a
+pair of quote characters (ASCII decimal value 34, hexadecimal value 0x22).  An
+empty string is represented by two adjacent quotes.  (Note: an apostrophe is
+not a quote.)  A quote inside a string is represented by the backslash
+immediately followed by a quote.  A backslash inside a string is represented by
+two adjacent backslashes.  Strings are commonly used as tag pair values (see
+below).  Non-printing characters like newline and tab are not permitted inside
+of strings.  A string token is terminated by its closing quote.  Currently, a
+string is limited to a maximum of 255 characters of data.
+</p><p>
+An integer token is a sequence of one or more decimal digit characters.  It is
+a special case of the more general "symbol" token class described below.
+Integer tokens are used to help represent move number indications (see below).
+An integer token is terminated just prior to the first non-symbol character
+following the integer digit sequence.
+</p><p>
+A period character (".") is a token by itself.  It is used for move number
+indications (see below).  It is self terminating.
+</p><p>
+An asterisk character ("*") is a token by itself.  It is used as one of the
+possible game termination markers (see below); it indicates an incomplete game
+or a game with an unknown or otherwise unavailable result.  It is self
+terminating.
+</p><p>
+The left and right bracket characters ("[" and "]") are tokens.  They are used
+to delimit tag pairs (see below).  Both are self terminating.
+</p><p>
+The left and right parenthesis characters ("(" and ")") are tokens.  They are
+used to delimit Recursive Annotation Variations (see below).  Both are self
+terminating.
+</p><p>
+The left and right angle bracket characters ("&lt;" and "&gt;") are tokens.  They are
+reserved for future expansion.  Both are self terminating.
+</p><p>
+A Numeric Annotation Glyph ("NAG", see below) is a token; it is composed of a
+dollar sign character ("$") immediately followed by one or more digit
+characters.  It is terminated just prior to the first non-digit character
+following the digit sequence.
+</p><p>
+A symbol token starts with a letter or digit character and is immediately
+followed by a sequence of zero or more symbol continuation characters.  These
+continuation characters are letter characters ("A-Za-z"), digit characters
+("0-9"), the underscore ("_"), the plus sign ("+"), the octothorpe sign ("#"),
+the equal sign ("="), the colon (":"),  and the hyphen ("-").  Symbols are used
+for a variety of purposes.  All characters in a symbol are significant.  A
+symbol token is terminated just prior to the first non-symbol character
+following the symbol character sequence.  Currently, a symbol is limited to a
+maximum of 255 characters in length.
+		</p><h2> <a name="8.">8. Parsing games</a></h2>
+A PGN database file is a sequential collection of zero or more PGN games.  An
+empty file is a valid, although somewhat uninformative, PGN database.
+<p>
+A PGN game is composed of two sections.  The first is the tag pair section and
+the second is the movetext section.  The tag pair section provides information
+that identifies the game by defining the values associated with a set of
+standard parameters.  The movetext section gives the usually enumerated and
+possibly annotated moves of the game along with the concluding game termination
+marker.  The chess moves themselves are represented using SAN (Standard
+Algebraic Notation), also described later in this document.
+		</p><h3> <a name="8.1">8.1 Tag pair section</a></h3>
+The tag pair section is composed of a series of zero or more tag pairs.
+<p>
+A tag pair is composed of four consecutive tokens: a left bracket token, a
+symbol token, a string token, and a right bracket token.  The symbol token is
+the tag name and the string token is the tag value associated with the tag
+name.  (There is a standard set of tag names and semantics described below.)
+The same tag name should not appear more than once in a tag pair section.
+</p><p>
+A further restriction on tag names is that they are composed exclusively of
+letters, digits, and the underscore character.  This is done to facilitate
+mapping of tag names into key and attribute names for use with general purpose
+database programs.
+</p><p>
+For PGN import format, there may be zero or more white space characters between
+any adjacent pair of tokens in a tag pair.
+</p><p>
+For PGN export format, there are no white space characters between the left
+bracket and the tag name, there are no white space characters between the tag
+value and the right bracket, and there is a single space character between the
+tag name and the tag value.
+</p><p>
+Tag names, like all symbols, are case sensitive.  All tag names used for
+archival storage begin with an upper case letter.
+</p><p>
+PGN import format may have multiple tag pairs on the same line and may even
+have a tag pair spanning more than a single line.  Export format requires each
+tag pair to appear left justified on a line by itself; a single empty line
+follows the last tag pair.
+</p><p>
+Some tag values may be composed of a sequence of items.  For example, a
+consultation game may have more than one player for a given side.  When this
+occurs, the single character ":" (colon) appears between adjacent items.
+Because of this use as an internal separator in strings, the colon should not
+otherwise appear in a string.
+</p><p>
+The tag pair format is designed for expansion; initially only strings are
+allowed as tag pair values.  Tag value formats associated with the STR (Seven
+Tag Roster, see below) will not change; they will always be string values.
+However, there are long term plans to allow general list structures as tag
+values for non-STR tag pairs.  Use of these expanded tag values will likely be
+restricted to special research programs.  In all events, the top level
+structure of a tag pair remains the same: left bracket, tag name, tag value,
+and right bracket.
+		</p><h4> <a name="8.1.1">8.1.1 Seven Tag Roster</a></h4>
+There is a set of tags defined for mandatory use for archival storage of PGN
+data.  This is the STR (Seven Tag Roster).  The interpretation of these tags is
+fixed as is the order in which they appear.  Although the definition and use of
+additional tag names and semantics is permitted and encouraged when needed, the
+STR is the common ground that all programs should follow for public data
+interchange.
+<p>
+For import format, the order of tag pairs is not important.  For export format,
+the STR tag pairs appear before any other tag pairs.  (The STR tag pairs must
+also appear in order; this order is described below).  Also for export format,
+any additional tag pairs appear in ASCII order by tag name.
+</p><p>
+The seven tag names of the STR are (in order):
+</p><ol>
+<li> Event (the name of the tournament or match event) </li>
+<li> Site (the location of the event) </li>
+<li> Date (the starting date of the game) </li>
+<li> Round (the playing round ordinal of the game) </li>
+<li> White (the player of the white pieces) </li>
+<li> Black (the player of the black pieces) </li>
+<li> Result (the result of the game) </li>
+</ol>
+<p>
+A set of supplemental tag names is given later in this document.
+</p><p>
+For PGN export format, a single blank line appears after the last of the tag
+pairs to conclude the tag pair section.  This helps simple scanning programs to
+quickly determine the end of the tag pair section and the beginning of the
+movetext section.
+The Event tag value should be reasonably descriptive.  Abbreviations are to be
+avoided unless absolutely necessary.  A consistent event naming should be used
+to help facilitate database scanning.  If the name of the event is unknown, a
+single question mark should appear as the tag value.
+</p><p>
+Examples: </p><pre>[Event "FIDE World Championship"]
+[Event "Moscow City Championship"]
+[Event "ACM North American Computer Championship"]
+[Event "Casual Game"]
+</pre>
+The Site tag value should  city and region names along with a standard
+name for the country.  The use of the IOC (International Olympic Committee)
+three letter names is suggested for those countries where such codes are
+available.  If the site of the event is unknown, a single question mark should
+appear as the tag value.  A comma may be used to separate a city from a region.
+No comma is needed to separate a city or region from the IOC country code.  A
+later section of this document gives a list of three letter nation codes along
+with a few additions for "locations" not covered by the IOC.
+<p>
+Examples: </p><pre>[Site "New York City, NY USA"]
+[Site "St. Petersburg RUS"]
+[Site "Riga LAT"]
+</pre>
+The Date tag value gives the starting date for the game.  (Note: this is not
+necessarily the same as the starting date for the event.)  The date is given
+with respect to the local time of the site given in the Event tag.  The Date
+tag value field always uses a standard ten character format: "YYYY.MM.DD".  The
+first four characters are digits that give the year, the next character is a
+period, the next two characters are digits that give the month, the next
+character is a period, and the final two characters are digits that give the
+day of the month.  If the any of the digit fields are not known, then question
+marks are used in place of the digits.
+<p>
+Examples: </p><pre>[Date "1992.08.31"]
+[Date "1993.??.??"]
+[Date "2001.01.01"]
+</pre>
+The Round tag value gives the playing round for the game.  In a match
+competition, this value is the number of the game played.  If the use of a
+round number is inappropriate, then the field should be a single hyphen
+character.  If the round is unknown, a single question mark should appear as
+the tag value.
+Some organizers employ unusual round designations and have multipart playing
+rounds and sometimes even have conditional rounds.  In these cases, a multipart
+round identifier can be made from a sequence of integer round numbers separated
+by periods.  The leftmost integer represents the most significant round and
+succeeding integers represent round numbers in descending hierarchical order.
+<p>
+Examples:</p><pre>[Round "1"]
+[Round "3.1"]
+[Round "4.1.2"]
+</pre>
+The White tag value is the name of the player or players of the white pieces.
+The names are given as they would appear in a telephone directory.  The family
+or last name appears first.  If a first name or first initial is available, it
+is separated from the family name by a comma and a space.  Finally, one or more
+middle initials may appear.  (Wherever a comma appears, the very next character
+should be a space.  Wherever an initial appears, the very next character should
+be a period.)  If the name is unknown, a single question mark should appear as
+the tag value.
+<p>
+The intent is to allow meaningful ASCII sorting of the tag value that is
+independent of regional name formation customs.  If more than one person is
+playing the white pieces, the names are listed in alphabetical order and are
+separated by the colon character between adjacent entries.  A player who is
+also a computer program should have appropriate version information listed
+after the name of the program.
+</p><p>
+The format used in the FIDE Rating Lists is appropriate for use for player name
+tags.
+</p><p>
+Examples:</p><pre>[White "Tal, Mikhail N."]
+[White "van der Wiel, Johan"]
+[White "Acme Pawngrabber v.3.2"]
+[White "Fine, R."]
+</pre>
+The Black tag value is the name of the player or players of the black pieces.
+The names are given here as they are for the White tag value.
+<p>
+Examples:</p><pre>[Black "Lasker, Emmanuel"]
+[Black "Smyslov, Vasily V."]
+[Black "Smith, John Q.:Woodpusher 2000"]
+[Black "Morphy"]
+</pre>
+The Result field value is the result of the game.  It is always exactly the
+same as the game termination marker that concludes the associated movetext.  It
+is always one of four possible values: "1-0" (White wins), "0-1" (Black wins),
+"1/2-1/2" (drawn game), and "*" (game still in progress, game abandoned, or
+result otherwise unknown).  Note that the digit zero is used in both of the
+first two cases; not the letter "O".
+<p>
+All possible examples:</p><pre>[Result "0-1"]
+[Result "1-0"]
+[Result "1/2-1/2"]
+[Result "*"]
+</pre>
+		<h3> <a name="8.2">8.2 Movetext section</a></h3>
+The movetext section is composed of chess moves, move number indications,
+optional annotations, and a single concluding game termination marker.
+<p>
+Because illegal moves are not real chess moves, they are not permitted in PGN
+movetext.  They may appear in commentary, however.  One would hope that illegal
+moves are relatively rare in games worthy of recording.
+		</p><h4> <a name="8.2.1">8.2.1 Movetext line justification</a></h4>
+In PGN import format, tokens in the movetext do not require any specific line
+justification.
+<p>
+In PGN export format, tokens in the movetext are placed left justified on
+successive text lines each of which has less than 80 printing characters.  As
+many tokens as possible are placed on a line with the remainder appearing on
+successive lines.  A single space character appears between any two adjacent
+symbol tokens on the same line in the movetext.  As with the tag pair section,
+a single empty line follows the last line of data to conclude the movetext
+section.
+</p><p>
+Neither the first or the last character on an export format PGN line is a
+space.  (This may change in the case of commentary; this area is currently
+under development.)
+		</p><h4> <a name="8.2.2">8.2.2 Movetext move number indications</a></h4>
+A move number indication is composed of one or more adjacent digits (an integer
+token) followed by zero or more periods.  The integer portion of the indication
+gives the move number of the immediately following white move (if present) and
+also the immediately following black move (if present).
+PGN import format does not require move number indications.  It does not
+prohibit superfluous move number indications anywhere in the movetext as long
+as the move numbers are correct.
+<p>
+PGN import format move number indications may have zero or more period
+characters following the digit sequence that gives the move number; one or more
+white space characters may appear between the digit sequence and the period(s).
+There are two export format move number indication formats, one for use
+appearing immediately before a white move element and one for use appearing
+immediately before a black move element.  A white move number indication is
+formed from the integer giving the fullmove number with a single period
+character appended.  A black move number indication is formed from the integer
+giving the fullmove number with three period characters appended.
+</p><p>
+All white move elements have a preceding move number indication.  A black move
+element has a preceding move number indication only in two cases: first, if
+there is intervening annotation or commentary between the black move and the
+previous white move; and second, if there is no previous white move in the
+special case where a game starts from a position where Black is the active
+player.
+</p><p>
+There are no other cases where move number indications appear in PGN export
+format.
+		</p><h4> <a name="8.2.3">8.2.3 Movetext SAN (Standard Algebraic Notation)</a></h4>
+SAN (Standard Algebraic Notation) is a representation standard for chess moves
+using the ASCII Latin alphabet.
+<p>
+Examples of SAN recorded games are found throughout most modern chess
+publications.  SAN as presented in this document uses English language single
+character abbreviations for chess pieces, although this is easily changed in
+the source.  English is chosen over other languages because it appears to be
+the most widely recognized.
+</p><p>
+An alternative to SAN is FAN (Figurine Algebraic Notation).  FAN uses miniature
+piece icons instead of single letter piece abbreviations.  The two notations
+are otherwise identical.
+SAN identifies each of the sixty four squares on the chessboard with a unique
+two character name.  The first character of a square identifier is the file of
+the square; a file is a column of eight squares designated by a single lower
+case letter from "a" (leftmost or queenside) up to and including "h" (rightmost
+or kingside).  The second character of a square identifier is the rank of the
+square; a rank is a row of eight squares designated by a single digit from "1"
+(bottom side [White's first rank]) up to and including "8" (top side [Black's
+first rank]).  The initial squares of some pieces are: white queen rook at a1,
+white king at e1, black queen knight pawn at b7, and black king rook at h8.
+SAN identifies each piece by a single upper case letter.  The standard English
+values: pawn = "P", knight = "N", bishop = "B", rook = "R", queen = "Q", and
+king = "K".
+</p><p>
+The letter code for a pawn is not used for SAN moves in PGN export format
+movetext.  However, some PGN import software disambiguation code may allow for
+the appearance of pawn letter codes.  Also, pawn and other piece letter codes
+are needed for use in some tag pair and annotation constructs.
+</p><p>
+It is admittedly a bit chauvinistic to select English piece letters over those
+from other languages.  There is a slight justification in that English is a de
+facto universal second language among most chessplayers and program users.  It
+is probably the best that can be done for now.  A later section of this
+document gives alternative piece letters, but these should be used only for
+local presentation software and not for archival storage or for dynamic
+interchange among programs.
+A basic SAN move is given by listing the moving piece letter (omitted for
+pawns) followed by the destination square.  Capture moves are denoted by the
+lower case letter "x" immediately prior to the destination square; pawn
+captures  the file letter of the originating square of the capturing
+pawn immediately prior to the "x" character.
+</p><p>
+SAN kingside castling is indicated by the sequence "O-O"; queenside castling is
+indicated by the sequence "O-O-O".  Note that the upper case letter "O" is
+used, not the digit zero.  The use of a zero character is not only incompatible
+with traditional text practices, but it can also confuse parsing algorithms
+which also have to understand about move numbers and game termination markers.
+Also note that the use of the letter "O" is consistent with the practice of
+having all chess move symbols start with a letter; also, it follows the
+convention that all non-pawn move symbols start with an upper case letter.
+</p><p>
+En passant captures do not have any special notation; they are formed as if the
+captured pawn were on the capturing pawn's destination square.  Pawn promotions
+are denoted by the equal sign "=" immediately following the destination square
+with a promoted piece letter (indicating one of knight, bishop, rook, or queen)
+immediately following the equal sign.  As above, the piece letter is in upper
+case.
+In the case of ambiguities (multiple pieces of the same type moving to the same
+square), the first appropriate disambiguating step of the three following steps
+is taken:
+</p><p>
+First, if the moving pieces can be distinguished by their originating files,
+the originating file letter of the moving piece is inserted immediately after
+the moving piece letter.
+</p><p>
+Second (when the first step fails), if the moving pieces can be distinguished
+by their originating ranks, the originating rank digit of the moving piece is
+inserted immediately after the moving piece letter.
+</p><p>
+Third (when both the first and the second steps fail), the two character square
+coordinate of the originating square of the moving piece is inserted
+immediately after the moving piece letter.
+</p><p>
+Note that the above disambiguation is needed only to distinguish among moves of
+the same piece type to the same square; it is not used to distinguish among
+attacks of the same piece type to the same square.  An example of this would be
+a position with two white knights, one on square c3 and one on square g1 and a
+vacant square e2 with White to move.  Both knights attack square e2, and if
+both could legally move there, then a file disambiguation is needed; the
+(nonchecking) knight moves would be "Nce2" and "Nge2".  However, if the white
+king were at square e1 and a black bishop were at square b4 with a vacant
+square d2 (thus an absolute pin of the white knight at square c3), then only
+one white knight (the one at square g1) could move to square e2: "Ne2".
+If the move is a checking move, the plus sign "+" is appended as a suffix to
+the basic SAN move notation; if the move is a checkmating move, the octothorpe
+sign "#" is appended instead.
+</p><p>
+Neither the appearance nor the absence of either a check or checkmating
+indicator is used for disambiguation purposes.  This means that if two (or
+more) pieces of the same type can move to the same square the differences in
+checking status of the moves does not allieviate the need for the standard rank
+and file disabiguation described above.  (Note that a difference in checking
+status for the above may occur only in the case of a discovered check.)
+</p><p>
+Neither the checking or checkmating indicators are considered annotation as
+they do not communicate subjective information.  Therefore, they are
+qualitatively different from move suffix annotations like "!" and "?".
+Subjective move annotations are handled using Numeric Annotation Glyphs as
+described in a later section of this document.
+</p><p>
+There are no special markings used for double checks or discovered checks.
+</p><p>
+There are no special markings used for drawing moves.
+SAN moves can be as short as two characters (e.g., "d4"), or as long as seven
+characters (e.g., "Qa6xb7#", "fxg1=Q+").  The average SAN move length seen in
+realistic games is probably just fractionally longer than three characters.  If
+the SAN rules seem complicated, be assured that the earlier notation systems of
+LEN (Long English Notation) and EDN (English Descriptive Notation) are much
+more complex, and that LAN (Long Algebraic Notation, the predecessor of SAN) is
+unnecessarily bulky.
+PGN export format always uses the above canonical SAN to represent moves in the
+movetext section of a PGN game.  Import format is somewhat more relaxed and it
+makes allowances for moves that do not conform exactly to the canonical format.
+However, these allowances may differ among different PGN reader programs.  Only
+data appearing in export format is in all cases guaranteed to be importable
+into all PGN readers.
+</p><p>
+There are a number of suggested guidelines for use with implementing PGN reader
+software for permitting non-canonical SAN move representation.  The idea is to
+have a PGN reader apply various transformations to attempt to discover the move
+that is represented by non-canonical input.  Some suggested transformations
+: letter case remapping, capture indicator insertion, check indicator
+insertion, and checkmate indicator insertion.
+Import format PGN allows for the use of traditional suffix annotations for
+moves.  There are exactly six such annotations available: "!", "?", "!!", "!?",
+"?!", and "??".  At most one such suffix annotation may appear per move, and if
+present, it is always the last part of the move symbol.
+</p><p>
+When exported, a move suffix annotation is translated into the corresponding
+Numeric Annotation Glyph as described in a later section of this document.  For
+example, if the single move symbol "Qxa8?" appears in an import format PGN
+movetext, it would be replaced with the two adjacent symbols "Qxa8 $2".
+		</p><h4> <a name="8.2.4">8.2.4 Movetext NAG (Numeric Annotation Glyph)</a></h4>
+An NAG (Numeric Annotation Glyph) is a movetext element that is used to
+indicate a simple annotation in a language independent manner.  An NAG is
+formed from a dollar sign ("$") with a non-negative decimal integer suffix.
+The non-negative integer must be from zero to 255 in value.
+		<h4> <a name="8.2.5">8.2.5 Movetext RAV (Recursive Annotation Variation)</a></h4>
+An RAV (Recursive Annotation Variation) is a sequence of movetext containing
+one or more moves enclosed in parentheses.  An RAV is used to represent an
+alternative variation.  The alternate move sequence given by an RAV is one that
+may be legally played by first unplaying the move that appears immediately
+prior to the RAV.  Because the RAV is a recursive construct, it may be nested.
+<p>
+*** The specification for import/export representation of RAV elements needs
+further development.
+		</p><h4> <a name="8.2.6">8.2.6 Game Termination Markers</a></h4>
+Each movetext section has exactly one game termination marker; the marker
+always occurs as the last element in the movetext.  The game termination marker
+is a symbol that is one of the following four values: "1-0" (White wins), "0-1"
+(Black wins), "1/2-1/2" (drawn game), and "*" (game in progress, result
+unknown, or game abandoned).  Note that the digit zero is used in the above;
+not the upper case letter "O".  The game termination marker appearing in the
+movetext of a game must match the value of the game's Result tag pair.  (While
+the marker appears as a string in the Result tag, it appears as a symbol
+without quotes in the movetext.)
+		<h2> <a name="9.">9. Supplemental tag names</a></h2>
+The following tag names and their associated semantics are recommended for use
+for information not contained in the Seven Tag Roster.
+		<h3> <a name="9.1">9.1 Player related information</a></h3>
+Note that if there is more than one player field in an instance of a player
+(White or Black) tag, then there will be corresponding multiple fields in any
+of the following tags.  For example, if the White tag has the three field value
+"Jones:Smith:Zacharias" (a consultation game), then the WhiteTitle tag could
+have a value of "IM:-:GM" if Jones was an International Master, Smith was
+untitled, and Zacharias was a Grandmaster.
+		<h4> <a name="9.1.1">9.1.1 Tags: WhiteTitle</a></h4>
+These use string values such as "FM", "IM", and "GM"; these tags are used only
+for the standard abbreviations for FIDE titles.  A value of "-" is used for an
+untitled player.
+		<h4> <a name="9.1.2">9.1.2 Tags: WhiteElo</a></h4>
+These tags use integer values; these are used for FIDE Elo ratings.  A value of
+"-" is used for an unrated player.
+		<h4> <a name="9.1.3">9.1.3 Tags: WhiteUSCF</a></h4>
+These tags use integer values; these are used for USCF (United States Chess
+Federation) ratings.  Similar tag names can be constructed for other rating
+agencies.
+		<h4> <a name="9.1.4">9.1.4 Tags: WhiteNA</a></h4>
+These tags use string values; these are the e-mail or network addresses of the
+players.  A value of "-" is used for a player without an electronic address.
+		<h4> <a name="9.1.5">9.1.5 Tags: WhiteType</a></h4>
+These tags use string values; these describe the player types.  The value
+"human" should be used for a person while the value "program" should be used
+for algorithmic (computer) players.
+		<h3> <a name="9.2">9.2 Event related information</a></h3>
+The following tags are used for providing additional information about the
+event.
+		<h4> <a name="9.2.1">9.2.1 Tag: EventDate</a></h4>
+This uses a date value, similar to the Date tag field, that gives the starting
+date of the Event.
+		<h4> <a name="9.2.2">9.2.2 Tag: EventSponsor</a></h4>
+This uses a string value giving the name of the sponsor of the event.
+		<h4> <a name="9.2.3">9.2.3 Tag: Section</a></h4>
+This uses a string; this is used for the playing section of a tournament (e.g.,
+"Open" or "Reserve").
+		<h4> <a name="9.2.4">9.2.4 Tag: Stage</a></h4>
+This uses a string; this is used for the stage of a multistage event (e.g.,
+"Preliminary" or "Semifinal").
+		<h4> <a name="9.2.5">9.2.5 Tag: Board</a></h4>
+This uses an integer; this identifies the board number in a team event and also
+in a simultaneous exhibition.
+		<h3> <a name="9.3">9.3 Opening information (locale specific)</a></h3>
+The following tag pairs are used for traditional opening names.  The associated
+tag values will vary according to the local language in use.
+		<h4> <a name="9.3.1">9.3.1 Tag: Opening</a></h4>
+This uses a string; this is used for the traditional opening name.  This will
+vary by locale.  This tag pair is associated with the use of the EPD opcode
+"v0" described in a later section of this document.
+		<h4> <a name="9.3.2">9.3.2 Tag: Variation</a></h4>
+This uses a string; this is used to further refine the Opening tag.  This will
+vary by locale.  This tag pair is associated with the use of the EPD opcode
+"v1" described in a later section of this document.
+		<h4> <a name="9.3.3">9.3.3 Tag: SubVariation</a></h4>
+This uses a string; this is used to further refine the Variation tag.  This
+will vary by locale.  This tag pair is associated with the use of the EPD
+opcode "v2" described in a later section of this document.
+		<h3> <a name="9.4">9.4 Opening information (third party vendors)</a></h3>
+The following tag pairs are used for representing opening identification
+according to various third party vendors and organizations.  References to
+these organizations does not imply any endorsement of them or any endorsement
+by them.
+		<h4> <a name="9.4.1">9.4.1 Tag: ECO</a></h4>
+This uses a string of either the form "XDD" or the form "XDD/DD" where the "X"
+is a letter from "A" to "E" and the "D" positions are digits; this is used for
+an opening designation from the five volume _Encyclopedia of Chess Openings_.
+This tag pair is associated with the use of the EPD opcode "eco" described in a
+later section of this document.
+		<h4> <a name="9.4.2">9.4.2 Tag: NIC</a></h4>
+This uses a string; this is used for an opening designation from the _New in
+Chess_ database.  This tag pair is associated with the use of the EPD opcode
+"nic" described in a later section of this document.
+		<h3> <a name="9.5">9.5 Time and date related information</a></h3>
+The following tags assist with further refinement of the time and data
+information associated with a game.
+		<h4> <a name="9.5.1">9.5.1 Tag: Time</a></h4>
+This uses a time-of-day value in the form "HH:MM:SS"; similar to the Date tag
+except that it denotes the local clock time (hours, minutes, and seconds) of
+the start of the game.  Note that colons, not periods, are used for field
+separators for the Time tag value.  The value is taken from the local time
+corresponding to the location given in the Site tag pair.
+		<h4> <a name="9.5.2">9.5.2 Tag: UTCTime</a></h4>
+This tag is similar to the Time tag except that the time is given according to
+the Universal Coordinated Time standard.
+		<h4> <a name="9.5.3">9.5.3 Tag:; UTCDate</a></h4>
+This tag is similar to the Date tag except that the date is given according to
+the Universal Coordinated Time standard.
+		<h3> <a name="9.6">9.6 Time control</a></h3>
+The follwing tag is used to help describe the time control used with the game.
+		<h4> <a name="9.6.1">9.6.1 Tag: TimeControl</a></h4>
+This uses a list of one or more time control fields.  Each field contains a
+descriptor for each time control period; if more than one descriptor is present
+then they are separated by the colon character (":").  The descriptors appear
+in the order in which they are used in the game.  The last field appearing is
+considered to be implicitly repeated for further control periods as needed.
+<p>
+There are six kinds of TimeControl fields.
+</p><p>
+The first kind is a single question mark ("?") which means that the time
+control mode is unknown.  When used, it is usually the only descriptor present.
+</p><p>
+The second kind is a single hyphen ("-") which means that there was no time
+control mode in use.  When used, it is usually the only descriptor present.
+</p><p>
+The third Time control field kind is formed as two positive integers separated
+by a solidus ("/") character.  The first integer is the number of moves in the
+period and the second is the number of seconds in the period.  Thus, a time
+control period of 40 moves in 2 1/2 hours would be represented as "40/9000".
+</p><p>
+The fourth TimeControl field kind is used for a "sudden death" control period.
+It should only be used for the last descriptor in a TimeControl tag value.  It
+is sometimes the only descriptor present.  The format consists of a single
+integer that gives the number of seconds in the period.  Thus, a blitz game
+would be represented with a TimeControl tag value of "300".
+</p><p>
+The fifth TimeControl field kind is used for an "incremental" control period.
+It should only be used for the last descriptor in a TimeControl tag value and
+is usually the only descriptor in the value.  The format consists of two
+positive integers separated by a plus sign ("+") character.  The first integer
+gives the minimum number of seconds allocated for the period and the second
+integer gives the number of extra seconds added after each move is made.  So,
+an incremental time control of 90 minutes plus one extra minute per move would
+be given by "4500+60" in the TimeControl tag value.
+</p><p>
+The sixth TimeControl field kind is used for a "sandclock" or "hourglass"
+control period.  It should only be used for the last descriptor in a
+TimeControl tag value and is usually the only descriptor in the value.  The
+format consists of an asterisk ("*") immediately followed by a positive
+integer.  The integer gives the total number of seconds in the sandclock
+period.  The time control is implemented as if a sandclock were set at the
+start of the period with an equal amount of sand in each of the two chambers
+and the players invert the sandclock after each move with a time forfeit
+indicated by an empty upper chamber.  Electronic implementation of a physical
+sandclock may be used.  An example sandclock specification for a common three
+minute egg timer sandclock would have a tag value of "*180".
+</p><p>
+Additional TimeControl field kinds will be defined as necessary.
+		</p><h3> <a name="9.7">9.7 Alternative starting positions</a></h3>
+There are two tags defined for assistance with describing games that did not
+start from the usual initial array.
+		<h4> <a name="9.7.1">9.7.1 Tag: SetUp</a></h4>
+This tag takes an integer that denotes the "set-up" status of the game.  A
+value of "0" indicates that the game has started from the usual initial array.
+A value of "1" indicates that the game started from a set-up position; this
+position is given in the "FEN" tag pair.  This tag must appear for a game
+starting with a set-up position.  If it appears with a tag value of "1", a FEN
+tag pair must also appear.
+		<h4> <a name="9.7.2">9.7.2 Tag: FEN</a></h4>
+This tag uses a string that gives the Forsyth-Edwards Notation for the starting
+position used in the game.  FEN is described in a later section of this
+document.  If a SetUp tag appears with a tag value of "1", the FEN tag pair is
+also required.
+		<h3> <a name="9.8">9.8 Game conclusion</a></h3>
+There is a single tag that discusses the conclusion of the game.
+		<h4> <a name="9.8.1">9.8.1 Tag: Termination</a></h4>
+This takes a string that describes the reason for the conclusion of the game.
+While the Result tag gives the result of the game, it does not provide any
+extra information and so the Termination tag is defined for this purpose.
+<p>
+Strings that may appear as Termination tag values:
+</p><ul>
+<li> "abandoned": abandoned game. </li>
+<li> "adjudication": result due to third party adjudication process. </li>
+<li> "death": losing player called to greater things, one hopes. </li>
+<li> "emergency": game concluded due to unforeseen circumstances. </li>
+<li> "normal": game terminated in a normal fashion. </li>
+<li> "rules infraction": administrative forfeit due to losing player's failure to
+observe either the Laws of Chess or the event regulations. </li>
+<li> "time forfeit": loss due to losing player's failure to meet time control
+requirements. </li>
+<li> "unterminated": game not terminated. </li>
+</ul>
+		<h3> <a name="9.9">9.9 Miscellaneous</a></h3>
+These are tags that can be briefly described and that doon't fit well inother
+sections.
+		<h4> <a name="9.9.1">9.9.1 Tag: Annotator</a></h4>
+This tag uses a name or names in the format of the player name tags; this
+identifies the annotator or annotators of the game.
+		<h4> <a name="9.9.2">9.9.2 Tag: Mode</a></h4>
+This uses a string that gives the playing mode of the game.  Examples: "OTB"
+(over the board), "PM" (paper mail), "EM" (electronic mail), "ICS" (Internet
+Chess Server), and "TC" (general telecommunication).
+		<h4> <a name="9.9.3">9.9.3 Tag: PlyCount</a></h4>
+This tag takes a single integer that gives the number of ply (moves) in the
+game.
+		<h2> <a name="10.">10. Numeric Annotation Glyphs</a></h2>
+NAG zero is used for a null annotation; it is provided for the convenience of
+software designers as a placeholder value and should probably not be used in
+external PGN data.
+<p>
+NAGs with values from 1 to 9 annotate the move just played.
+</p><p>
+NAGs with values from 10 to 135 modify the current position.
+</p><p>
+NAGs with values from 136 to 139 describe time pressure.
+</p><p>
+Other NAG values are reserved for future definition.
+</p><p>
+Note: the number assignments listed below should be considered preliminary in
+nature; they are likely to be changed as a result of reviewer feedback.
+<table border="0" cellpadding="0" cellspacing="3">
+<tbody><tr><th>NAG</th><th align="left">Interpretation</th>
+</tr><tr><td>0</td>	<td>null annotation</td></tr>
+<tr><td>1</td>	<td>good move (traditional "!")</td></tr>
+<tr><td>2</td>	<td>poor move (traditional "?")</td></tr>
+<tr><td>3</td>	<td>very good move (traditional "!!")</td></tr>
+<tr><td>4</td>	<td>very poor move (traditional "??")</td></tr>
+<tr><td>5</td>	<td>speculative move (traditional "!?")</td></tr>
+<tr><td>6</td>	<td>questionable move (traditional "?!")</td></tr>
+<tr><td>7</td>	<td>forced move (all others lose quickly)</td></tr>
+<tr><td>8</td>	<td>singular move (no reasonable alternatives)</td></tr>
+<tr><td>9</td>	<td>worst move</td></tr>
+<tr><td>10</td>	<td>drawish position</td></tr>
+<tr><td>11</td>	<td>equal chances, quiet position</td></tr>
+<tr><td>12</td>	<td>equal chances, active position</td></tr>
+<tr><td>13</td>	<td>unclear position</td></tr>
+<tr><td>14</td>	<td>White has a slight advantage</td></tr>
+<tr><td>15</td>	<td>Black has a slight advantage</td></tr>
+<tr><td>16</td>	<td>White has a moderate advantage</td></tr>
+<tr><td>17</td>	<td>Black has a moderate advantage</td></tr>
+<tr><td>18</td>	<td>White has a decisive advantage</td></tr>
+<tr><td>19</td>	<td>Black has a decisive advantage</td></tr>
+<tr><td>20</td>	<td>White has a crushing advantage (Black should resign)</td></tr>
+<tr><td>21</td>	<td>Black has a crushing advantage (White should resign)</td></tr>
+<tr><td>22</td>	<td>White is in zugzwang</td></tr>
+<tr><td>23</td>	<td>Black is in zugzwang</td></tr>
+<tr><td>24</td>	<td>White has a slight space advantage</td></tr>
+<tr><td>25</td>	<td>Black has a slight space advantage</td></tr>
+<tr><td>26</td>	<td>White has a moderate space advantage</td></tr>
+<tr><td>27</td>	<td>Black has a moderate space advantage</td></tr>
+<tr><td>28</td>	<td>White has a decisive space advantage</td></tr>
+<tr><td>29</td>	<td>Black has a decisive space advantage</td></tr>
+<tr><td>30</td>	<td>White has a slight time (development) advantage</td></tr>
+<tr><td>31</td>	<td>Black has a slight time (development) advantage</td></tr>
+<tr><td>32</td>	<td>White has a moderate time (development) advantage</td></tr>
+<tr><td>33</td>	<td>Black has a moderate time (development) advantage</td></tr>
+<tr><td>34</td>	<td>White has a decisive time (development) advantage</td></tr>
+<tr><td>35</td>	<td>Black has a decisive time (development) advantage</td></tr>
+<tr><td>36</td>	<td>White has the initiative</td></tr>
+<tr><td>37</td>	<td>Black has the initiative</td></tr>
+<tr><td>38</td>	<td>White has a lasting initiative</td></tr>
+<tr><td>39</td>	<td>Black has a lasting initiative</td></tr>
+<tr><td>40</td>	<td>White has the attack</td></tr>
+<tr><td>41</td>	<td>Black has the attack</td></tr>
+<tr><td>42</td>	<td>White has insufficient compensation for material deficit</td></tr>
+<tr><td>43</td>	<td>Black has insufficient compensation for material deficit</td></tr>
+<tr><td>44</td>	<td>White has sufficient compensation for material deficit</td></tr>
+<tr><td>45</td>	<td>Black has sufficient compensation for material deficit</td></tr>
+<tr><td>46</td>	<td>White has more than adequate compensation for material deficit</td></tr>
+<tr><td>47</td>	<td>Black has more than adequate compensation for material deficit</td></tr>
+<tr><td>48</td>	<td>White has a slight center control advantage</td></tr>
+<tr><td>49</td>	<td>Black has a slight center control advantage</td></tr>
+<tr><td>50</td>	<td>White has a moderate center control advantage</td></tr>
+<tr><td>51</td>	<td>Black has a moderate center control advantage</td></tr>
+<tr><td>52</td>	<td>White has a decisive center control advantage</td></tr>
+<tr><td>53</td>	<td>Black has a decisive center control advantage</td></tr>
+<tr><td>54</td>	<td>White has a slight kingside control advantage</td></tr>
+<tr><td>55</td>	<td>Black has a slight kingside control advantage</td></tr>
+<tr><td>56</td>	<td>White has a moderate kingside control advantage</td></tr>
+<tr><td>57</td>	<td>Black has a moderate kingside control advantage</td></tr>
+<tr><td>58</td>	<td>White has a decisive kingside control advantage</td></tr>
+<tr><td>59</td>	<td>Black has a decisive kingside control advantage</td></tr>
+<tr><td>60</td>	<td>White has a slight queenside control advantage</td></tr>
+<tr><td>61</td>	<td>Black has a slight queenside control advantage</td></tr>
+<tr><td>62</td>	<td>White has a moderate queenside control advantage</td></tr>
+<tr><td>63</td>	<td>Black has a moderate queenside control advantage</td></tr>
+<tr><td>64</td>	<td>White has a decisive queenside control advantage</td></tr>
+<tr><td>65</td>	<td>Black has a decisive queenside control advantage</td></tr>
+<tr><td>66</td>	<td>White has a vulnerable first rank</td></tr>
+<tr><td>67</td>	<td>Black has a vulnerable first rank</td></tr>
+<tr><td>68</td>	<td>White has a well protected first rank</td></tr>
+<tr><td>69</td>	<td>Black has a well protected first rank</td></tr>
+<tr><td>70</td>	<td>White has a poorly protected king</td></tr>
+<tr><td>71</td>	<td>Black has a poorly protected king</td></tr>
+<tr><td>72</td>	<td>White has a well protected king</td></tr>
+<tr><td>73</td>	<td>Black has a well protected king</td></tr>
+<tr><td>74</td>	<td>White has a poorly placed king</td></tr>
+<tr><td>75</td>	<td>Black has a poorly placed king</td></tr>
+<tr><td>76</td>	<td>White has a well placed king</td></tr>
+<tr><td>77</td>	<td>Black has a well placed king</td></tr>
+<tr><td>78</td>	<td>White has a very weak pawn structure</td></tr>
+<tr><td>79</td>	<td>Black has a very weak pawn structure</td></tr>
+<tr><td>80</td>	<td>White has a moderately weak pawn structure</td></tr>
+<tr><td>81</td>	<td>Black has a moderately weak pawn structure</td></tr>
+<tr><td>82</td>	<td>White has a moderately strong pawn structure</td></tr>
+<tr><td>83</td>	<td>Black has a moderately strong pawn structure</td></tr>
+<tr><td>84</td>	<td>White has a very strong pawn structure</td></tr>
+<tr><td>85</td>	<td>Black has a very strong pawn structure</td></tr>
+<tr><td>86</td>	<td>White has poor knight placement</td></tr>
+<tr><td>87</td>	<td>Black has poor knight placement</td></tr>
+<tr><td>88</td>	<td>White has good knight placement</td></tr>
+<tr><td>89</td>	<td>Black has good knight placement</td></tr>
+<tr><td>90</td>	<td>White has poor bishop placement</td></tr>
+<tr><td>91</td>	<td>Black has poor bishop placement</td></tr>
+<tr><td>92</td>	<td>White has good bishop placement</td></tr>
+<tr><td>93</td>	<td>Black has good bishop placement</td></tr>
+<tr><td>84</td>	<td>White has poor rook placement</td></tr>
+<tr><td>85</td>	<td>Black has poor rook placement</td></tr>
+<tr><td>86</td>	<td>White has good rook placement</td></tr>
+<tr><td>87</td>	<td>Black has good rook placement</td></tr>
+<tr><td>98</td>	<td>White has poor queen placement</td></tr>
+<tr><td>99</td>	<td>Black has poor queen placement</td></tr>
+<tr><td>100</td>	<td>White has good queen placement</td></tr>
+<tr><td>101</td>	<td>Black has good queen placement</td></tr>
+<tr><td>102</td>	<td>White has poor piece coordination</td></tr>
+<tr><td>103</td>	<td>Black has poor piece coordination</td></tr>
+<tr><td>104</td>	<td>White has good piece coordination</td></tr>
+<tr><td>105</td>	<td>Black has good piece coordination</td></tr>
+<tr><td>106</td>	<td>White has played the opening very poorly</td></tr>
+<tr><td>107</td>	<td>Black has played the opening very poorly</td></tr>
+<tr><td>108</td>	<td>White has played the opening poorly</td></tr>
+<tr><td>109</td>	<td>Black has played the opening poorly</td></tr>
+<tr><td>110</td>	<td>White has played the opening well</td></tr>
+<tr><td>111</td>	<td>Black has played the opening well</td></tr>
+<tr><td>112</td>	<td>White has played the opening very well</td></tr>
+<tr><td>113</td>	<td>Black has played the opening very well</td></tr>
+<tr><td>114</td>	<td>White has played the middlegame very poorly</td></tr>
+<tr><td>115</td>	<td>Black has played the middlegame very poorly</td></tr>
+<tr><td>116</td>	<td>White has played the middlegame poorly</td></tr>
+<tr><td>117</td>	<td>Black has played the middlegame poorly</td></tr>
+<tr><td>118</td>	<td>White has played the middlegame well</td></tr>
+<tr><td>119</td>	<td>Black has played the middlegame well</td></tr>
+<tr><td>120</td>	<td>White has played the middlegame very well</td></tr>
+<tr><td>121</td>	<td>Black has played the middlegame very well</td></tr>
+<tr><td>122</td>	<td>White has played the ending very poorly</td></tr>
+<tr><td>123</td>	<td>Black has played the ending very poorly</td></tr>
+<tr><td>124</td>	<td>White has played the ending poorly</td></tr>
+<tr><td>125</td>	<td>Black has played the ending poorly</td></tr>
+<tr><td>126</td>	<td>White has played the ending well</td></tr>
+<tr><td>127</td>	<td>Black has played the ending well</td></tr>
+<tr><td>128</td>	<td>White has played the ending very well</td></tr>
+<tr><td>129</td>	<td>Black has played the ending very well</td></tr>
+<tr><td>130</td>	<td>White has slight counterplay</td></tr>
+<tr><td>131</td>	<td>Black has slight counterplay</td></tr>
+<tr><td>132</td>	<td>White has moderate counterplay</td></tr>
+<tr><td>133</td>	<td>Black has moderate counterplay</td></tr>
+<tr><td>134</td>	<td>White has decisive counterplay</td></tr>
+<tr><td>135</td>	<td>Black has decisive counterplay</td></tr>
+<tr><td>136</td>	<td>White has moderate time control pressure</td></tr>
+<tr><td>137</td>	<td>Black has moderate time control pressure</td></tr>
+<tr><td>138</td>	<td>White has severe time control pressure</td></tr>
+<tr><td>139</td>	<td>Black has severe time control pressure</td></tr>
+</tbody></table>
+		</p><h2> <a name="11.">11. File names and directories</a></h2>
+File names chosen for PGN data should be both informative and portable.  The
+directory names and arrangements should also be chosen for the same reasons and
+also for ease of navigation.
+Some of suggested file and directory names may be difficult or impossible to
+represent on certain computing systems.  Use of appropriate conversion customs
+is encouraged.
+		<h3> <a name="11.1">11.1 File name suffix for PGN data</a></h3>
+The use of the file suffix ".pgn" is encouraged for ASCII text files containing
+PGN data.
+		<h3> <a name="11.2">11.2 File name formation for PGN data for a specific player</a></h3>
+PGN games for a specific player should have a file name consisting of the
+player's last name followed by the ".pgn" suffix.
+		<h3> <a name="11.3">11.3 File name formation for PGN data for a specific event</a></h3>
+PGN games for a specific event should have a file name consisting of the
+event's name followed by the ".pgn" suffix.
+		<h3> <a name="11.4">11.4 File name formation for PGN data for chronologically ordered games</a></h3>
+PGN data files used for chronologically ordered (oldest first) archives use
+date information as file name root strings.  A file containing all the PGN
+games for a given year would have an eight character name in the format
+"YYYY.pgn".  A file containing PGN data for a given month would have a ten
+character name in the format "YYYYMM.pgn".  Finally, a file for PGN games for a
+single day would have a twelve character name in the format "YYYYMMDD.pgn".
+Large files are split into smaller files as needed.
+<p>
+As game files are commonly arranged by chronological order, games with missing
+or incomplete Date tag pair data are to be avoided.  Any question mark
+characters in a Date tag value will be treated as zero digits for collation
+within a file and also for file naming.
+</p><p>
+Large quantities of PGN data arranged by chronological order should be
+organized into hierarchical directories.  A directory containing all PGN data
+for a given year would have a four character name in the format "YYYY";
+directories containing PGN files for a given month would have a six character
+name in the format "YYYYMM".
+		</p><h3> <a name="11.5">11.5 Suggested directory tree organization</a></h3>
+A suggested directory arrangement for ftp sites and CD-ROM distributions:
+<table cellspacing="3" cellpadding="0" border="0">
+<tbody><tr><td>PGN</td>	<td>master directory of the PGN subtree (pub/chess/Game-Databases/PGN)</td></tr>
+<tr><td>PGN/Events</td>	<td>directory of PGN files, each for a specific event</td></tr>
+<tr><td>PGN/Events/News</td>	<td>news and status of the event collection</td></tr>
+<tr><td>PGN/Events/ReadMe</td>	<td>brief description of the local directory contents</td></tr>
+<tr><td>PGN/MGR</td>	<td>directory of the Master Games Repository subtree</td></tr>
+<tr><td>PGN/MGR/News</td>	<td>news and status of the entire PGN/MGR subtree</td></tr>
+<tr><td>PGN/MGR/ReadMe</td>	<td>brief description of the local directory contents</td></tr>
+<tr><td>PGN/MGR/YYYY</td>	<td>directory of games or subtrees for the year YYYY</td></tr>
+<tr><td>PGN/MGR/YYYY/ReadMe</td>	<td>description of local directory for year YYYY</td></tr>
+<tr><td>PGN/MGR/YYYY/News</td>	<td>news and status for year YYYY data</td></tr>
+<tr><td>PGN/News</td>	<td>news and status of the entire PGN subtree</td></tr>
+<tr><td>PGN/Players</td>	<td>directory of PGN files, each for a specific player</td></tr>
+<tr><td>PGN/Players/News</td>	<td>news and status of the player collection</td></tr>
+<tr><td>PGN/Players/ReadMe</td>	<td>brief description of the local directory contents</td></tr>
+<tr><td>PGN/ReadMe</td>	<td>brief description of the local directory contents</td></tr>
+<tr><td>PGN/Standard</td>	<td>the PGN standard (this document)</td></tr>
+<tr><td>PGN/Tools</td>	<td>software utilities that access PGN data</td></tr>
+</tbody></table>
+		<h2> <a name="12.">12. PGN collating sequence</a></h2>
+There is a standard sorting order for PGN games within a file.  This collation
+is based on eight keys; these are the seven tag values of the STR and also the
+movetext itself.
+<p>
+The first (most important, primary key) is the Date tag.  Earlier dated games
+appear prior to games played at a later date.  This field is sorted by
+ascending numeric value first with the year, then the month, and finally the
+day of the month.  Query characters used for unknown date digit values will be
+treated as zero digit characters for ordering comparison.
+</p><p>
+The second key is the Event tag.  This is sorted in ascending ASCII order.
+</p><p>
+The third key is the Site tag.  This is sorted in ascending ASCII order.
+</p><p>
+The fourth key is the Round tag.  This is sorted in ascending numeric order
+based on the value of the integer used to denote the playing round.  A query or
+hyphen used for the round is ordered before any integer value.  A query
+character is ordered before a hyphen character.
+</p><p>
+The fifth key is the White tag.  This is sorted in ascending ASCII order.
+</p><p>
+The sixth key is the Black tag.  This is sorted in ascending ASCII order.
+</p><p>
+The seventh key is the Result tag.  This is sorted in ascending ASCII order.
+</p><p>
+The eighth key is the movetext itself.  This is sorted in ascending ASCII order
+with the entire text including spaces and newline characters.
+		</p><h2> <a name="13.">13. PGN software</a></h2>
+This section describes some PGN software that is either currently available or
+expected to be available in the near future.  The entries are presented in
+rough chronological order of their being made known to the PGN standard
+coordinator.  Authors of PGN capable software are encouraged to contact the
+coordinator (e-mail address listed near the start of this document) so that the
+information may be included here in this section.
+<p>
+In addition to the PGN standard, there are two more chess standards of interest
+to the chess software community.  These are the FEN standard (Forsyth-Edwards
+Notation) for position notation and the EPD standard (Extended Position
+Description) for comprehensive position description for automated interprogram
+processing.  These are described in a later section of this document.
+</p><p>
+Some PGN software is freeware and can be gotten from ftp sites and other
+sources.  Other PGN software is payware and appears as part of commercial
+chessplaying programs and chess database managers.  Those who are interested in
+the propagation of the PGN standard are encouraged to support manufacturers of
+chess software that use the standard.  If a particular vendor does not offer
+PGN compatibility, it is likely that a few letters to them along with a copy of
+this specification may help them decide to  PGN support in their next
+release.
+</p><p>
+The staff at the University of Oklahoma at Norman (USA) have graciously
+provided an ftp site <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> for the storage of chess related data
+and programs.  Because file names change over time, those accessing the site
+are encouraged to first retrieve the file "pub/chess/ls-lR.gz" for a current
+listing.  A scan of this listing will also help locate versions of PGN programs
+for machine types and operating systems other than those listed below.  Further
+information about this archive can be gotten from its administrator, Chris
+Petroff <a href="mailto:chris@uoknor.edu">chris@uoknor.edu</a>.
+</p><p>
+For European users, the kind staff at the University of Hamburg (Germany) have
+provided the ftp site <a href="ftp://ftp.math.uni-hamburg.de/">ftp.math.uni-hamburg.de</a>; this carries a daily mirror of
+the pub/chess directory at the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> site.
+		</p><h3> <a name="13.1">13.1 The SAN Kit</a></h3>
+The "SAN Kit" is an ANSI C source chess programming toolkit available for free
+from the ftp site <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> in the directory pub/chess/Unix as the file
+"SAN.tar.gz" (a gzip tar archive).  This kit contains code for PGN import and
+export and can be used to "regularize" PGN data into reduced export format by
+use of its "tfgg" command.  The SAN Kit also supports FEN I/O.  Code from this
+kit is freely redistributable for anyone as long as future distribution is
+unhindered for everyone.  The SAN Kit is undergoing continuous development,
+although dates of future deliveries are quite difficult to predict and releases
+sometimes appear months apart.  Suggestions and comments should be directed to
+its author, Steven J. Edwards <a href="mailto:sje@world.std.com">sje@world.std.com</a>.
+		<h3> <a name="13.2">13.2 pgnRead</a></h3>
+The program "pgnRead" runs under MS Windows 3.1 and provides an interactive
+graphical user interface for scanning PGN data files.  This program includes a
+colorful figurine chessboard display and scrolling controls for game and game
+text selection.  It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the
+pub/chess/DOS directory; several versions are available with names of the form
+"pgnrd**.exe"; the latest at this writing is "PGNRD130.EXE".  Suggestions and
+comments should be directed to its author, Keith Fuller <a href="mailto:keithfx@aol.com">keithfx@aol.com</a>.
+		<h3> <a name="13.3">13.3 mail2pgn/GIICS</a></h3>
+The program "mail2pgn" produces a PGN version of chess game data generated by
+the ICS (Internet Chess Server).  It can be found at the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp
+site in the pub/chess/DOS directory as the file "mail2pgn.zip"  A C language
+version is in the directory pub/chess/Unix as the file "mail2pgn.c".
+Suggestions and comments should be directed to its author, John Aronson
+<a href="mailto:aronson@helios.ece.arizona.edu">aronson@helios.ece.arizona.edu</a>.  This code has been reportedly incorporated
+into the GIICS (Graphical Interface for the ICS); suggestions and comments
+should be directed to its author, Tony Acero <a href="mailto:ace3@midway.uchicago.edu">ace3@midway.uchicago.edu</a>.
+<p>
+There is a report that mail2pgn has been superseded by the newer program
+"MV2PGN" described below.
+		</p><h3> <a name="13.4">13.4 XBoard</a></h3>
+"XBoard" is a comprehensive chess utility running under the X Window System
+that provides a graphical user interface in a portable manner.  A new version
+now handles PGN data.  It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in
+the pub/chess/X directory as the file "xboard-3.0.pl9.tar.gz".  Suggestions and
+comments should be directed to its author, Tim Mann <a href="mailto:mann@src.dec.com">mann@src.dec.com</a>.
+		<h3> <a name="13.5">13.5 cupgn</a></h3>
+The program "cupgn" converts game data stored in the ChessBase format into PGN.
+It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the
+pub/chess/Game-Databases/CBUFF directory as the file "cupgn.tar.gz".  Another
+version is in the directory pub/chess/DOS as the file "cupgn120.exe".
+Suggestions and comments should be directed to its author, Anjo Anjewierden
+<a href="mailto:anjo@swi.psy.uva.nl">anjo@swi.psy.uva.nl</a>.
+		<h3> <a name="13.6">13.6 Zarkov</a></h3>
+The current version (3.0) of the commercial chessplaying program "Zarkov" can
+read and write games using PGN.  This program can also use the EPD standard for
+communication with other EPD capable programs.  Historically, Zarkov is the
+very first program to use EPD.  Suggestions and comments should be directed to
+its author, John Stanback <a href="mailto:jhs@icbdfcs1.fc.hp.com">jhs@icbdfcs1.fc.hp.com</a>.
+<p>
+A vendor for North America is:</p><pre>    International Chess Enterprises
+    P.O. Box 19457
+    Seattle, WA 98109
+    USA
+    (800) 262-4277
+</pre>
+A vendor for Europe is:<pre>    Gambit-Soft
+    Feckenhauser Strasse 27
+    D-78628 Rottweil
+    GERMANY
+    49-741-21573
+</pre>
+		<h3> <a name="13.7">13.7 Chess Assistant</a></h3>
+The upcoming version of the multifunction commercial database program "Chess
+Assistant" will be able to use the PGN standard as an import and export option.
+There is a report of a freeware program, "PGN2CA", that will convert PGN
+databases into Chess Assistant format.  For more information, the contact is
+Victor Zakharov, one of the members of the Chess Assistant development team
+<a href="mailto:VICTOR@ldis.cs.msu.su">VICTOR@ldis.cs.msu.su</a>.
+<p>
+A vendor for North America is:</p><pre>    International Chess Enterprises
+    P.O. Box 19457
+    Seattle, WA 98109
+    USA
+    (800) 262-4277
+</pre>
+		<h3> <a name="13.8">13.8 BOOKUP</a></h3>
+The MS-DOS edition of the multifunction commercial program BOOKUP, version 8.1,
+is able to use the EPD standard for communication with other EPD capable
+programs.  It may also be PGN capable as well.
+<p>
+The BOOKUP 8.1.1 Addenda notes dated 1993.12.17 provide comprehensive
+information on how to use EPD in conjunction with "analyst" programs such as
+Zarkov and HIARCS.  Specifically, the search and evaluation abilities of an
+analyst program are combined with the information organization abilities of the
+BOOKUP database program to provide position scoring.  This is done by first
+having BOOKUP export a database in EPD format, then having an analyst program
+annotate each EPD record with a numeric score, and then having BOOKUP import
+the changed EPD file.  BOOKUP can then apply minimaxing to the imported
+database; this results in scores from terminal positions being propagated back
+to earlier positions and even back to moves from the starting array.
+</p><p>
+For some reason, BOOKUP calls this process "backsolving", but it's really just
+standard minimaxing.  In any case, it's a good example of how different
+programs from different authors performing different types of tasks can be
+integrated by use of a common, non-proprietary standard.  This allows for a new
+set of powerful features that are beyond the capabilities of any one of the
+individual component programs.
+</p><p>
+BOOKUP allows for some customizing of EPD actions.  One such customization is
+to require the positional evaluations to follow the EPD standard; this means
+that the score is always given from the viewpoint of the active player.  This
+is explained more fully in the section on the "ce" (centipawn evaluation)
+opcode in the EPD description in a later section of this document.  To ensure
+that BOOKUP handles the centipawn evaluations in the "right" way, the EPD
+setting "Positive for White" must be set to "N".  This makes BOOKUP work
+correctly with Zarkov and with all other programs that use the "right"
+centipawn evaluation convention.  There is an apparent problem with HIARCS that
+requires this option to be set to "Y"; but this really means that, if true,
+HIARCS needs to be adjusted to use the "right" centipawn evaluation convention.
+</p><p>
+A vendor in North America is:</p><pre>    BOOKUP
+    2763 Kensington Place West
+    Columbus, OH 43202
+    USA
+    (800) 949-5445
+    (614) 263-7219
+</pre>
+		<h3> <a name="13.9">13.9 HIARCS</a></h3>
+The current version (2.1) of the commercial chessplaying program "HIARCS" is
+able to use the EPD standard for communication with other EPD capable programs.
+It may also be PGN capable as well.  More details will appear here as they
+become available.
+A vendor in North America is:<pre>    HIARCS
+    c/o BOOKUP
+    2763 Kensington Place West
+    Columbus, OH 43202
+    USA
+    (800) 949-5445
+    (614) 263-7219
+</pre>
+		<h3> <a name="13.10">13.10 Deja Vu</a></h3>
+The chess database "Deja Vu" from ChessWorks is a PGN compatible collection of
+over 300,000 games.  It is available only on CD-ROM and is scheduled for
+release in 1994.05 with periodic revisions thereafter.  The introductory price
+is US$329.  For further information, the authors are John Crayton and Eric
+Schiller and they can be contacted via e-mail <a href="mailto:chesswks@netcom.com">chesswks@netcom.com</a>.
+		<h3> <a name="13.11">13.11 MV2PGN</a></h3>
+The program "MV2PGN" can be used to convert game data generated by both current
+and older versions of the GIICS (Graphical Interface - Internet Chess Server).
+The program is included in the self extracting archive available from
+<a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> in the directory pub/chess/DOS as the file "ics2pgn.exe".
+Source code is also included.  This program is reported to supersede the older
+"mail2pgn" and was needed due to a change in ICS recording format in late 1993.
+For further information about MV2PGN, the contact person is Gary Bastin
+<a href="mailto:gbastin@x102a.ess.harris.com">gbastin@x102a.ess.harris.com</a>.
+		<h3> <a name="13.12">13.12 The Hansen utilities (cb2pgn, nic2pgn, pgn2cb, pgn2nic)</a></h3>
+The Hansen utilities are used to convert among various chess data
+representation formats.  The PGN related programs : "cb2pgn.exe"
+(convert ChessBase to PGN), "nic2pgn.exe" (convert NIC to PGN), "pgn2cb.exe"
+(convert PGN to ChessBase), and "pgn2nic.exe" (convert PGN to NIC).
+<p>
+The ChessBase related utilities (cb2pgn/pgn2cb) are found at <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a>
+in the pub/chess/Game-Databases/ChessBase directory.
+</p><p>
+The NIC related utilities (nic2pgn/pgn2nic) are found at <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> in
+the pub/chess/Game-Databases/NIC directory.
+</p><p>
+For further information about the Hansen utilities, the contact person is the
+author, Carsten Hansen <a href="mailto:ch0506@hdc.hha.dk">ch0506@hdc.hha.dk</a>.
+		</p><h3> <a name="13.13">13.13 Slappy the Database</a></h3>
+"Slappy the Database" is a commercial chess database and translation program
+scheduled for release no sooner than late 1994.  It is a low cost utility with
+a simple character interface intended for those who want a supported product
+but who do not need (or cannot afford) a comprehensive, feature-laden program
+with a graphical user interface.  Slappy's two most important features are its
+batch processing ability and its full implementation of each and every standard
+described in this document.  Versions of Slappy the Database will be provided
+for various platforms including: Intel 386/486 Unix, Apple Macintosh, and
+MS-DOS.
+<p>
+Slappy may also be useful to those who have a full feature program who also
+need to run time consuming chess database tasks on a spare computer.
+</p><p>
+Suggestions and comments should be directed to its author, Steven J. Edwards
+<a href="mailto:sje@world.std.com">sje@world.std.com</a>.  More details will appear here as they become available.
+		</p><h3> <a name="13.14">13.14 CBASCII</a></h3>
+"CBASCII" is a general utility for converting chess data between ChessBase
+format and ASCII representations.  It has PGN capability, and it is available
+from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the pub/chess/DOS directory as the file
+"cba1_2.zip".  The contact person is the program's author, Andy Duplain
+<a href="mailto:duplain@btcs.bt.co.uk">duplain@btcs.bt.co.uk</a>.
+		<h3> <a name="13.15">13.15 ZZZZZZ</a></h3>
+"ZZZZZZ" is a chessplaying program, complete with source, that also includes
+some database functions.  A recent version is reported to have both PGN and EPD
+capabilities.  It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the
+pub/chess/Unix directory as the file "zzzzzz-3.2b1.tar.gz".  The contact person
+is its author, Gijsbert Wiesenecker <a href="mailto:wiesenecker@sara.nl">wiesenecker@sara.nl</a>.
+		<h3> <a name="13.16">13.16 icsconv</a></h3>
+The program "icsconv" can be used to convert Internet Chess Server games, both
+old and new format, to PGN.  It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> site in
+the pub/chess/Game-Databases/PGN/Tools directory as the file "icsconv.exe".
+The contact person is the author, Kevin Nomura <a href="mailto:chow@netcom.com">chow@netcom.com</a>.
+		<h3> <a name="13.17">13.17 CHESSOP (CHESSOPN/CHESSOPG)</a></h3>
+CHESSOP is an openings database and viewing tool with support for reading PGN
+games.  It runs under MS-DOS and displays positions rather than games.  For
+each position, both good and bad moves are listed with appropriate annotation.
+Transpositions are handled as well.  The distributed database contains over
+100,000 positions covering all the common openings.  Users can feed in their
+own PGN data as well.  CHESSOP takes 3 Mbyte of hard disk, costs US$39 and can
+be obtained from:
+<pre>    CHESSX Software
+    12 Bluebell Close
+    Glenmore Park
+    AUSTRALIA 2745.
+</pre>
+The ideas behind CHESSOP can be seen in CHESSOPN (alias CHESSOPG), a free
+version on the ICS server which has a reduced openings database (25,000
+positions) and no PGN or transposition support but is otherwise the same as
+CHESSOP.  (These are the files "chessopg.zip" in the directory pub/chess/DOS at
+the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site.)
+		<h3> <a name="13.18">13.18 CAT2PGN</a></h3>
+The program "CAT2PGN" is a utility that translates data from the format used by
+Chess Assistant into PGN.  It is available from the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site.
+The contact person for CAT2PGN is its author, David Myers
+<a href="mailto:myers@frodo.biochem.duke.edu">myers@frodo.biochem.duke.edu</a>.
+		<h3> <a name="13.19">13.19 pgn2opg</a></h3>
+The utility "pgn2opg" can be used to convert PGN files into a text format used
+by the "CHESSOPG" program mentioned above.  Although it does not perform any
+semantic analysis on PGN input, it has been demonstrated to handle known
+correct PGN input properly.  The file can be found in the pub/chess/PGN/Tools
+directory at the <a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site.  For more information, the author
+is David Barnes <a href="mailto:djb@ukc.ac.uk">djb@ukc.ac.uk</a>.
+		<h2> <a name="14.">14. PGN data archives</a></h2>
+The primary PGN data archive repository is located at the ftp site
+<a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> as the directory "pub/chess/Game-Databases/PGN".  It is
+organized according to the description given in section C.5 of this document.
+The European site ftp.math.uni-hamburg.de is also reported to carry a regularly
+updated copy of the repository.
+		<h2> <a name="15.">15. International Olympic Committee country codes</a></h2>
+International Olympic Committee country codes are employed for Site nation
+information because of their traditional use with the reporting of
+international sporting events.  Due to changes in geography and linguistic
+custom, some of the following may be incorrect or outdated.  Corrections and
+extensions should be sent via e-mail to the PGN coordinator whose address
+listed near the start of this document.
+<pre>AFG: Afghanistan
+AIR: Aboard aircraft
+ALB: Albania
+ALG: Algeria
+AND: Andorra
+ANG: Angola
+ANT: Antigua
+ARG: Argentina
+ARM: Armenia
+ATA: Antarctica
+AUS: Australia
+AZB: Azerbaijan
+BAN: Bangladesh
+BAR: Bahrain
+BHM: Bahamas
+BEL: Belgium
+BER: Bermuda
+BIH: Bosnia and Herzegovina
+BLA: Belarus
+BLG: Bulgaria
+BLZ: Belize
+BOL: Bolivia
+BRB: Barbados
+BRS: Brazil
+BRU: Brunei
+BSW: Botswana
+CAN: Canada
+CHI: Chile
+COL: Columbia
+CRA: Costa Rica
+CRO: Croatia
+CSR: Czechoslovakia
+CUB: Cuba
+CYP: Cyprus
+DEN: Denmark
+DOM: Dominican Republic
+ECU: Ecuador
+EGY: Egypt
+ENG: England
+ESP: Spain
+EST: Estonia
+FAI: Faroe Islands
+FIJ: Fiji
+FIN: Finland
+FRA: France
+GAM: Gambia
+GCI: Guernsey-Jersey
+GEO: Georgia
+GER: Germany
+GHA: Ghana
+GRC: Greece
+GUA: Guatemala
+GUY: Guyana
+HAI: Haiti
+HKG: Hong Kong
+HON: Honduras
+HUN: Hungary
+IND: India
+IRL: Ireland
+IRN: Iran
+IRQ: Iraq
+ISD: Iceland
+ISR: Israel
+ITA: Italy
+IVO: Ivory Coast
+JAM: Jamaica
+JAP: Japan
+JRD: Jordan
+JUG: Yugoslavia
+KAZ: Kazakhstan
+KEN: Kenya
+KIR: Kyrgyzstan
+KUW: Kuwait
+LAT: Latvia
+LEB: Lebanon
+LIB: Libya
+LIC: Liechtenstein
+LTU: Lithuania
+LUX: Luxembourg
+MAL: Malaysia
+MAU: Mauritania
+MEX: Mexico
+MLI: Mali
+MLT: Malta
+MNC: Monaco
+MOL: Moldova
+MON: Mongolia
+MOZ: Mozambique
+MRC: Morocco
+MRT: Mauritius
+MYN: Myanmar
+NCG: Nicaragua
+NET: The Internet
+NIG: Nigeria
+NLA: Netherlands Antilles
+NLD: Netherlands
+NOR: Norway
+NZD: New Zealand
+OST: Austria
+PAK: Pakistan
+PAL: Palestine
+PAN: Panama
+PAR: Paraguay
+PER: Peru
+PHI: Philippines
+PNG: Papua New Guinea
+POL: Poland
+POR: Portugal
+PRC: People's Republic of China
+PRO: Puerto Rico
+QTR: Qatar
+RIN: Indonesia
+ROM: Romania
+RUS: Russia
+SAF: South Africa
+SAL: El Salvador
+SCO: Scotland
+SEA: At Sea
+SEN: Senegal
+SEY: Seychelles
+SIP: Singapore
+SLV: Slovenia
+SMA: San Marino
+SPC: Aboard spacecraft
+SRI: Sri Lanka
+SUD: Sudan
+SUR: Surinam
+SVE: Sweden
+SWZ: Switzerland
+SYR: Syria
+TAI: Thailand
+TMT: Turkmenistan
+TRK: Turkey
+TTO: Trinidad and Tobago
+TUN: Tunisia
+UAE: United Arab Emirates
+UGA: Uganda
+UKR: Ukraine
+UNK: Unknown
+URU: Uruguay
+USA: United States of America
+UZB: Uzbekistan
+VEN: Venezuela
+VGB: British Virgin Islands
+VIE: Vietnam
+VUS: U.S. Virgin Islands
+WLS: Wales
+YEM: Yemen
+YUG: Yugoslavia
+ZAM: Zambia
+ZIM: Zimbabwe
+ZRE: Zaire
+</pre>
+		<h2> <a name="16.">16. Additional chess data standards</a></h2>
+While PGN is used for game storage, there are other data representation
+standards for other chess related purposes.  Two important standards are FEN
+and EPD, both described in this section.
+		<h3> <a name="16.1">16.1 FEN</a></h3>
+FEN is "Forsyth-Edwards Notation"; it is a standard for describing chess
+positions using the ASCII character set.
+<p>
+A single FEN record uses one text line of variable length composed of six data
+fields.  The first four fields of the FEN specification are the same as the
+first four fields of the EPD specification.
+</p><p>
+A text file composed exclusively of FEN data records should have a file name
+with the suffix ".fen".
+		</p><h4> <a name="16.1.1">16.1.1 History</a></h4>
+FEN is based on a 19th century standard for position recording designed by the
+Scotsman David Forsyth, a newspaper journalist.  The original Forsyth standard
+has been slightly extended for use with chess software by Steven Edwards with
+assistance from commentators on the Internet.  This new standard, FEN, was
+first implemented in Edwards' SAN Kit.
+		<h4> <a name="16.1.2">16.1.2 Uses for a position notation</a></h4>
+Having a standard position notation is particularly important for chess
+programmers as it allows them to share position databases.  For example, there
+exist standard position notation databases with many of the classical benchmark
+tests for chessplaying programs, and by using a common position notation format
+many hours of tedious data entry can be saved.  Additionally, a position
+notation can be useful for page layout programs and for confirming position
+status for e-mail competition.
+<p>
+Many interesting chess problem sets represented using FEN can be found at the
+<a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the directory pub/chess/SAN_testsuites.
+		</p><h4> <a name="16.1.3">16.1.3 Data fields</a></h4>
+FEN specifies the piece placement, the active color, the castling availability,
+the en passant target square, the halfmove clock, and the fullmove number.
+These can all fit on a single text line in an easily read format.  The length
+of a FEN position description varies somewhat according to the position. In
+some cases, the description could be eighty or more characters in length and so
+may not fit conveniently on some displays.  However, these positions aren't too
+common.
+<p>
+A FEN description has six fields.  Each field is composed only of non-blank
+printing ASCII characters.  Adjacent fields are separated by a single ASCII
+space character.
+		</p><h4> <a name="16.1.4">16.1.4 Piece placement data</a></h4>
+The first field represents the placement of the pieces on the board.  The board
+contents are specified starting with the eighth rank and ending with the first
+rank.  For each rank, the squares are specified from file a to file h.  White
+pieces are identified by uppercase SAN piece letters ("PNBRQK") and black
+pieces are identified by lowercase SAN piece letters ("pnbrqk").  Empty squares
+are represented by the digits one through eight; the digit used represents the
+count of contiguous empty squares along a rank.  A solidus character "/" is
+used to separate data of adjacent ranks.
+		<h4> <a name="16.1.5">16.1.5 Active color</a></h4>
+The second field represents the active color.  A lower case "w" is used if
+White is to move; a lower case "b" is used if Black is the active player.
+		<h4> <a name="16.1.6">16.1.6 Castling availability</a></h4>
+The third field represents castling availability.  This indicates potential
+future castling that may of may not be possible at the moment due to blocking
+pieces or enemy attacks.  If there is no castling availability for either side,
+the single character symbol "-" is used.  Otherwise, a combination of from one
+to four characters are present.  If White has kingside castling availability,
+the uppercase letter "K" appears.  If White has queenside castling
+availability, the uppercase letter "Q" appears.  If Black has kingside castling
+availability, the lowercase letter "k" appears.  If Black has queenside
+castling availability, then the lowercase letter "q" appears.  Those letters
+which appear will be ordered first uppercase before lowercase and second
+kingside before queenside.  There is no white space between the letters.
+		<h4> <a name="16.1.7">16.1.7 En passant target square</a></h4>
+The fourth field is the en passant target square.  If there is no en passant
+target square then the single character symbol "-" appears.  If there is an en
+passant target square then is represented by a lowercase file character
+immediately followed by a rank digit.  Obviously, the rank digit will be "3"
+following a white pawn double advance (Black is the active color) or else be
+the digit "6" after a black pawn double advance (White being the active color).
+<p>
+An en passant target square is given if and only if the last move was a pawn
+advance of two squares.  Therefore, an en passant target square field may have
+a square name even if there is no pawn of the opposing side that may
+immediately execute the en passant capture.
+		</p><h4> <a name="16.1.8">16.1.8 Halfmove clock</a></h4>
+The fifth field is a nonnegative integer representing the halfmove clock.  This
+number is the count of halfmoves (or ply) since the last pawn advance or
+capturing move.  This value is used for the fifty move draw rule.
+		<h4> <a name="16.1.9">16.1.9 Fullmove number</a></h4>
+The sixth and last field is a positive integer that gives the fullmove number.
+This will have the value "1" for the first move of a game for both White and
+Black.  It is incremented by one immediately after each move by Black.
+		<h4> <a name="16.1.10">16.1.10 Examples</a></h4>
+Here's the FEN for the starting position:
+<pre>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+</pre>
+And after the move 1. e4:
+<pre>rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1
+</pre>
+And then after 1. ... c5:
+<pre>rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2
+</pre>
+And then after 2. Nf3:
+<pre>rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2
+</pre>
+For two kings on their home squares and a white pawn on e2 (White to move) with
+thirty eight full moves played with five halfmoves since the last pawn move or
+capture:
+<pre>4k3/8/8/8/8/8/4P3/4K3 w - - 5 39
+</pre>
+		<h3> <a name="16.2">16.2 EPD</a></h3>
+EPD is "Extended Position Description"; it is a standard for describing chess
+positions along with an extended set of structured attribute values using the
+ASCII character set.  It is intended for data and command interchange among
+chessplaying programs.  It is also intended for the representation of portable
+opening library repositories.
+<p>
+A single EPD uses one text line of variable length composed of four data field
+followed by zero or more operations.  The four fields of the EPD specification
+are the same as the first four fields of the FEN specification.
+</p><p>
+A text file composed exclusively of EPD data records should have a file name
+with the suffix ".epd".
+		</p><h4> <a name="16.2.1">16.2.1 History</a></h4>
+EPD is based in part on the earlier FEN standard; it has added extensions for
+use with opening library preparation and also for general data and command
+interchange among advanced chess programs.  EPD was developed by John Stanback
+and Steven Edwards; its first implementation is in Stanback's master strength
+chessplaying program Zarkov.
+		<h4> <a name="16.2.2">16.2.2 Uses for an extended position notation</a></h4>
+Like FEN, EPD can also be used for general position description.  However,
+unlike FEN, EPD is designed to be expandable by the addition of new operations
+that provide new functionality as needs arise.
+<p>
+Many interesting chess problem sets represented using EPD can be found at the
+<a href="ftp://chess.uoknor.edu/">chess.uoknor.edu</a> ftp site in the directory pub/chess/SAN_testsuites.
+		</p><h4> <a name="16.2.3">16.2.3 Data fields</a></h4>
+EPD specifies the piece placement, the active color, the castling availability,
+and the en passant target square of a position.  These can all fit on a single
+text line in an easily read format.  The length of an EPD position description
+varies somewhat according to the position and any associated operations. In
+some cases, the description could be eighty or more characters in length and so
+may not fit conveniently on some displays.  However, most EPD descriptions pass
+among programs only and these are not usually seen by program users.
+<p>
+(Note: due to the likelihood of future expansion of EPD, implementors are
+encouraged to have their programs handle EPD text lines of up to 1024
+characters long.)
+</p><p>
+Each EPD data field is composed only of non-blank printing ASCII characters.
+Adjacent data fields are separated by a single ASCII space character.
+		</p><h4> <a name="16.2.4">16.2.4 Piece placement data</a></h4>
+The first field represents the placement of the pieces on the board.  The board
+contents are specified starting with the eighth rank and ending with the first
+rank.  For each rank, the squares are specified from file a to file h.  White
+pieces are identified by uppercase SAN piece letters ("PNBRQK") and black
+pieces are identified by lowercase SAN piece letters ("pnbrqk").  Empty squares
+are represented by the digits one through eight; the digit used represents the
+count of contiguous empty squares along a rank.  A solidus character "/" is
+used to separate data of adjacent ranks.
+		<h4> <a name="16.2.5">16.2.5 Active color</a></h4>
+The second field represents the active color.  A lower case "w" is used if
+White is to move; a lower case "b" is used if Black is the active player.
+		<h4> <a name="16.2.6">16.2.6 Castling availability</a></h4>
+The third field represents castling availability.  This indicates potential
+future castling that may or may not be possible at the moment due to blocking
+pieces or enemy attacks.  If there is no castling availability for either side,
+the single character symbol "-" is used.  Otherwise, a combination of from one
+to four characters are present.  If White has kingside castling availability,
+the uppercase letter "K" appears.  If White has queenside castling
+availability, the uppercase letter "Q" appears.  If Black has kingside castling
+availability, the lowercase letter "k" appears.  If Black has queenside
+castling availability, then the lowercase letter "q" appears.  Those letters
+which appear will be ordered first uppercase before lowercase and second
+kingside before queenside.  There is no white space between the letters.
+		<h4> <a name="16.2.7">16.2.7 En passant target square</a></h4>
+The fourth field is the en passant target square.  If there is no en passant
+target square then the single character symbol "-" appears.  If there is an en
+passant target square then is represented by a lowercase file character
+immediately followed by a rank digit.  Obviously, the rank digit will be "3"
+following a white pawn double advance (Black is the active color) or else be
+the digit "6" after a black pawn double advance (White being the active color).
+<p>
+An en passant target square is given if and only if the last move was a pawn
+advance of two squares.  Therefore, an en passant target square field may have
+a square name even if there is no pawn of the opposing side that may
+immediately execute the en passant capture.
+		</p><h4> <a name="16.2.8">16.2.8 Operations</a></h4>
+An EPD operation is composed of an opcode followed by zero or more operands and
+is concluded by a semicolon.
+<p>
+Multiple operations are separated by a single space character.  If there is at
+least one operation present in an EPD line, it is separated from the last
+(fourth) data field by a single space character.
+		</p><h4> <a name="16.2.9">16.2.9 General format</a></h4>
+An opcode is an identifier that starts with a letter character and may be
+followed by up to fourteen more characters.  Each additional character may be a
+letter or a digit or the underscore character.
+<p>
+An operand is either a set of contiguous non-white space printing characters or
+a string.  A string is a set of contiguous printing characters delimited by a
+quote character at each end.  A string value must have less than 256 bytes of
+data.
+</p><p>
+If at least one operand is present in an operation, there is a single space
+between the opcode and the first operand.  If more than one operand is present
+in an operation, there is a single blank character between every two adjacent
+operands.  If there are no operands, a semicolon character is appended to the
+opcode to mark the end of the operation.  If any operands appear, the last
+operand has an appended semicolon that marks the end of the operation.
+</p><p>
+Any given opcode appears at most once per EPD record.  Multiple operations in a
+single EPD record should appear in ASCII order of their opcode names
+(mnemonics).  However, a program reading EPD records may allow for operations
+not in ASCII order by opcode mnemonics; the semantics are the same in either
+case.
+</p><p>
+Some opcodes that allow for more than one operand may have special ordering
+requirements for the operands.  For example, the "pv" (predicted variation)
+opcode requires its operands (moves) to appear in the order in which they would
+be played.  All other opcodes that allow for more than one operand should have
+operands appearing in ASCII order.  An example of the latter set is the "bm"
+(best move[s]) opcode; its operands are moves that are all immediately playable
+from the current position.
+</p><p>
+Some opcodes require one or more operands that are chess moves.  These moves
+should be represented using SAN.  If a different representation is used, there
+is no guarantee that the EPD will be read correctly during subsequent
+processing.
+</p><p>
+Some opcodes require one or more operands that are integers.  Some opcodes may
+require that an integer operand must be within a given range; the details are
+described in the opcode list given below.  A negative integer is formed with a
+hyphen (minus sign) preceding the integer digit sequence.  An optional plus
+sign may be used for indicating a non-negative value, but such use is not
+required and is indeed discouraged.
+</p><p>
+Some opcodes require one or more operands that are floating point numbers.
+Some opcodes may require that a floating point operand must be within a given
+range; the details are described in the opcode list given below.  A floating
+point operand is constructed from an optional sign character ("+" or "-"), a
+digit sequence (with at least one digit), a radix point (always "."), and a
+final digit sequence (with at least one digit).
+		</p><h4> <a name="16.2.10">16.2.10 Opcode mnemonics</a></h4>
+An opcode mnemonic used for archival storage and for interprogram communication
+starts with a lower case letter and is composed of only lower case letters,
+digits, and the underscore character (i.e., no upper case letters).  These
+mnemonics will also all be at least two characters in length.
+<p>
+Opcode mnemonics used only by a single program or an experimental suite of
+programs should start with an upper case letter.  This is so they may be easily
+distinguished should they be inadvertently be encountered by other programs.
+When a such a "private" opcode be demonstrated to be widely useful, it should
+be brought into the official list (appearing below) in a lower case form.
+</p><p>
+If a given program does not recognize a particular opcode, that operation is
+simply ignored; it is not signaled as an error.
+		</p><h4> <a name="16.2.11">16.2.11 Opcode list</a></h4>
+The opcodes are listed here in ASCII order of their mnemonics.  Suggestions for
+new opcodes should be sent to the PGN standard coordinator listed near the
+start of this document.
+		<h4> <a name="16.2.12">16.2.12 Opcode "acn": analysis count: nodes</a></h4>
+The opcode "acn" takes a single non-negative integer operand.  It is used to
+represent the number of nodes examined in an analysis.  Note that the value may
+be quite large for some extended searches and so use of (at least) a long (four
+byte) representation is suggested.
+		<h4> <a name="16.2.13">16.2.13 Opcode "acs": analysis count: seconds</a></h4>
+The opcode "acs" takes a single non-negative integer operand.  It is used to
+represent the number of seconds used for an analysis.  Note that the value may
+be quite large for some extended searches and so use of (at least) a long (four
+byte) representation is suggested.
+		<h4> <a name="16.2.14">16.2.14 Opcode "am": avoid move(s)</a></h4>
+The opcode "am" indicates a set of zero or more moves, all immediately playable
+from the current position, that are to be avoided in the opinion of the EPD
+writer.  Each operand is a SAN move; they appear in ASCII order.
+		<h4> <a name="16.2.15">16.2.15 Opcode "bm": best move(s)</a></h4>
+The opcode "bm" indicates a set of zero or more moves, all immediately playable
+from the current position, that are judged to the best available by the EPD
+writer.  Each operand is a SAN move; they appear in ASCII order.
+		<h4> <a name="16.2.16">16.2.16 Opcode "c0": comment (primary, also "c1" though "c9")</a></h4>
+The opcode "c0" (lower case letter "c", digit character zero) indicates a top
+level comment that applies to the given position.  It is the first of ten
+ranked comments, each of which has a mnemonic formed from the lower case letter
+"c" followed by a single decimal digit.  Each of these opcodes takes either a
+single string operand or no operand at all.
+<p>
+This ten member comment family of opcodes is intended for use as descriptive
+commentary for a complete game or game fragment.  The usual processing of these
+opcodes are as follows:
+</p><ol>
+<li> At the beginning of a game (or game fragment), a move sequence scanning
+program initializes each element of its set of ten comment string registers to
+be null.
+</li>
+<li> As the EPD record for each position in the game is processed, the comment
+operations are interpreted from left to right.  (Actually, all operations in n
+EPD record are interpreted from left to right.)  Because operations appear in
+ASCII order according to their opcode mnemonics, opcode "c0" (if present) will
+be handled prior to all other opcodes, then opcode "c1" (if present), and so
+forth until opcode "c9" (if present).
+</li>
+<li> The processing of opcode "cN" (0 &lt;= N &lt;= 9) involves two steps.  First, all
+comment string registers with an index equal to or greater than N are set to
+null.  (This is the set "cN" though "c9".)  Second, and only if a string
+operand is present, the value of the corresponding comment string register is
+set equal to the string operand.
+</li>
+</ol>
+		<h4> <a name="16.2.17">16.2.17 Opcode "ce": centipawn evaluation</a></h4>
+The opcode "ce" indicates the evaluation of the indicated position in centipawn
+units.  It takes a single operand, an optionally signed integer that gives an
+evaluation of the position from the viewpoint of the active player; i.e., the
+player with the move.  Positive values indicate a position favorable to the
+moving player while negative values indicate a position favorable to the
+passive player; i.e., the player without the move.  A centipawn evaluation
+value close to zero indicates a neutral positional evaluation.
+<p>
+Values are restricted to integers that are equal to or greater than -32767 and
+are less than or equal to 32766.
+</p><p>
+A value greater than 32000 indicates the availability of a forced mate to the
+active player.  The number of plies until mate is given by subtracting the
+evaluation from the value 32767.  Thus, a winning mate in N fullmoves is a mate
+in ((2 * N) - 1) halfmoves (or ply) and has a corresponding centipawn
+evaluation of (32767 - ((2 * N) - 1)).  For example, a mate on the move (mate
+in one) has a centipawn evaluation of 32766 while a mate in five has a
+centipawn evaluation of 32758.
+</p><p>
+A value less than -32000 indicates the availability of a forced mate to the
+passive player.  The number of plies until mate is given by subtracting the
+evaluation from the value -32767 and then negating the result.  Thus, a losing
+mate in N fullmoves is a mate in (2 * N) halfmoves (or ply) and has a
+corresponding centipawn evaluation of (-32767 + (2 * N)).  For example, a mate
+after the move (losing mate in one) has a centipawn evaluation of -32765 while
+a losing mate in five has a centipawn evaluation of -32757.
+</p><p>
+A value of -32767 indicates an illegal position.  A stalemate position has a
+centipawn evaluation of zero as does a position drawn due to insufficient
+mating material.  Any other position known to be a certain forced draw also has
+a centipawn evaluation of zero.
+		</p><h4> <a name="16.2.18">16.2.18 Opcode "dm": direct mate fullmove count</a></h4>
+The "dm" opcode is used to indicate the number of fullmoves until checkmate is
+to be delivered by the active color for the indicated position.  It always
+takes a single operand which is a positive integer giving the fullmove count.
+For example, a position known to be a "mate in three" would have an operation
+of "dm 3;" to indicate this.
+<p>
+This opcode is intended for use with problem sets composed of positions
+requiring direct mate answers as solutions.
+		</p><h4> <a name="16.2.19">16.2.19 Opcode "draw_accept": accept a draw offer</a></h4>
+The opcode "draw_accept" is used to indicate that a draw offer made after the
+move that lead to the indicated position is accepted by the active player.
+This opcode takes no operands.
+		<h4> <a name="16.2.20">16.2.20 Opcode "draw_claim": claim a draw</a></h4>
+The opcode "draw_claim" is used to indicate claim by the active player that a
+draw exists.  The draw is claimed because of a third time repetition or because
+of the fifty move rule or because of insufficient mating material.  A supplied
+move (see the opcode "sm") is also required to appear as part of the same EPD
+record.  The draw_claim opcode takes no operands.
+		<h4> <a name="16.2.21">16.2.21 Opcode "draw_offer": offer a draw</a></h4>
+The opcode "draw_offer" is used to indicate that a draw is offered by the
+active player.  A supplied move (see the opcode "sm") is also required to
+appear as part of the same EPD record; this move is considered played from the
+indicated position.  The draw_offer opcode takes no operands.
+		<h4> <a name="16.2.22">16.2.22 Opcode "draw_reject": reject a draw offer</a></h4>
+The opcode "draw_reject" is used to indicate that a draw offer made after the
+move that lead to the indicated position is rejected by the active player.
+This opcode takes no operands.
+		<h4> <a name="16.2.23">16.2.23 Opcode "eco": _Encyclopedia of Chess Openings_ opening code</a></h4>
+The opcode "eco" is used to associate an opening designation from the
+_Encyclopedia of Chess Openings_ taxonomy with the indicated position.  The
+opcode takes either a single string operand (the ECO opening name) or no
+operand at all.  If an operand is present, its value is associated with an
+"ECO" string register of the scanning program.  If there is no operand, the ECO
+string register of the scanning program is set to null.
+<p>
+The usage is similar to that of the "ECO" tag pair of the PGN standard.
+		</p><h4> <a name="16.2.24">16.2.24 Opcode "fmvn": fullmove number</a></h4>
+The opcode "fmvn" represents the fullmove n umber associated with the position.
+It always takes a single operand that is the positive integer value of the move
+number.
+<p>
+This opcode is used to explicitly represent the fullmove number in EPD that is
+present by default in FEN as the sixth field.  Fullmove number information is
+usually omitted from EPD because it does not affect move generation (commonly
+needed for EPD-using tasks) but it does affect game notation (commonly needed
+for FEN-using tasks).  Because of the desire for space optimization for large
+EPD files, fullmove numbers were dropped from EPD's parent FEN.  The halfmove
+clock information was similarly dropped.
+		</p><h4> <a name="16.2.25">16.2.25 Opcode "hmvc": halfmove clock</a></h4>
+The opcode "hmvc" represents the halfmove clock associated with the position.
+The halfmove clock of a position is equal to the number of plies since the last
+pawn move or capture.  This information is used to implement the fifty move
+draw rule.  It always takes a single operand that is the non-negative integer
+value of the halfmove clock.
+<p>
+This opcode is used to explicitly represent the halfmove clock in EPD that is
+present by default in FEN as the fifth field.  Halfmove clock information is
+usually omitted from EPD because it does not affect move generation (commonly
+needed for EPD-using tasks) but it does affect game termination issues
+(commonly needed for FEN-using tasks).  Because of the desire for space
+optimization for large EPD files, halfmove clock values were dropped from EPD's
+parent FEN.  The fullmove number information was similarly dropped.
+		</p><h4> <a name="16.2.26">16.2.26 Opcode "id": position identification</a></h4>
+The opcode "id" is used to provide a simple identifying label for the indicated
+position.  It takes a single string operand.
+<p>
+This opcode is intended for use with test suites used for measuring
+chessplaying program strength.  An example "id" operand for the seven hundred
+fifty seventh position of the one thousand one problems in Reinfeld's _1001
+Winning Chess Sacrifices and Combinations_ would be "WCSAC.0757" while the
+fifteenth position in the twenty four problem Bratko-Kopec test suite would
+have an "id" operand of "BK.15".
+		</p><h4> <a name="16.2.27">16.2.27 Opcode "nic": _New In Chess_ opening code</a></h4>
+The opcode "nic" is used to associate an opening designation from the _New In
+Chess_ taxonomy with the indicated position.  The opcode takes either a single
+string operand (the NIC opening name) or no operand at all.  If an operand is
+present, its value is associated with an "NIC" string register of the scanning
+program.  If there is no operand, the NIC string register of the scanning
+program is set to null.
+<p>
+The usage is similar to that of the "NIC" tag pair of the PGN standard.
+		</p><h4> <a name="16.2.28">16.2.28 Opcode "noop": no operation</a></h4>
+The "noop" opcode is used to indicate no operation.  It takes zero or more
+operands, each of which may be of any type.  The operation involves no
+processing.  It is intended for use by developers for program testing purposes.
+		<h4> <a name="16.2.29">16.2.29 Opcode "pm": predicted move</a></h4>
+The "pm" opcode is used to provide a single predicted move for the indicated
+position.  It has exactly one operand, a move playable from the position.  This
+move is judged by the EPD writer to represent the best move available to the
+active player.
+<p>
+If a non-empty "pv" (predicted variation) line of play is also present in the
+same EPD record, the first move of the predicted variation is the same as the
+predicted move.
+The "pm" opcode is intended for use as a general "display hint" mechanism.
+		</p><h4> <a name="16.2.30">16.2.30 Opcode "pv": predicted variation</a></h4>
+The "pv" opcode is used to provide a predicted variation for the indicated
+position.  It has zero or more operands which represent a sequence of moves
+playable from the position.  This sequence is judged by the EPD writer to
+represent the best play available.
+<p>
+If a "pm" (predicted move) operation is also present in the same EPD record,
+the predicted move is the same as the first move of the predicted variation.
+		</p><h4> <a name="16.2.31">16.2.31 Opcode "rc": repetition count</a></h4>
+The "rc" opcode is used to indicate the number of occurrences of the indicated
+position.  It takes a single, positive integer operand.  Any position,
+including the initial starting position, is considered to have an "rc" value of
+at least one.  A value of three indicates a candidate for a draw claim by the
+position repetition rule.
+		<h4> <a name="16.2.32">16.2.32 Opcode "resign": game resignation</a></h4>
+The opcode "resign" is used to indicate that the active player has resigned the
+game.  This opcode takes no operands.
+		<h4> <a name="16.2.33">16.2.33 Opcode "sm": supplied move</a></h4>
+The "sm" opcode is used to provide a single supplied move for the indicated
+position.  It has exactly one operand, a move playable from the position.  This
+move is the move to be played from the position.
+<p>
+The "sm" opcode is intended for use to communicate the most recent played move
+in an active game.  It is used to communicate moves between programs in
+automatic play via a network.  This includes correspondence play using e-mail
+and also programs acting as network front ends to human players.
+		</p><h4> <a name="16.2.34">16.2.34 Opcode "tcgs": telecommunication: game selector</a></h4>
+The "tcgs" opcode is one of the telecommunication family of opcodes used for
+games conducted via e-mail and similar means.  This opcode takes a single
+operand that is a positive integer.  It is used to select among various games
+in progress between the same sender and receiver.
+		<h4> <a name="16.2.35">16.2.35 Opcode "tcri": telecommunication: receiver identification</a></h4>
+The "tcri" opcode is one of the telecommunication family of opcodes used for
+games conducted via e-mail and similar means.  This opcode takes two order
+dependent string operands.  The first operand is the e-mail address of the
+receiver of the EPD record.  The second operand is the name of the player
+(program or human) at the address who is the actual receiver of the EPD record.
+		<h4> <a name="16.2.36">16.2.36 Opcode "tcsi": telecommunication: sender identification</a></h4>
+The "tcsi" opcode is one of the telecommunication family of opcodes used for
+games conducted via e-mail and similar means.  This opcode takes two order
+dependent string operands.  The first operand is the e-mail address of the
+sender of the EPD record.  The second operand is the name of the player
+(program or human) at the address who is the actual sender of the EPD record.
+		<h4> <a name="16.2.37">16.2.37 Opcode "v0": variation name (primary, also "v1" though "v9")</a></h4>
+The opcode "v0" (lower case letter "v", digit character zero) indicates a top
+level variation name that applies to the given position.  It is the first of
+ten ranked variation names, each of which has a mnemonic formed from the lower
+case letter "v" followed by a single decimal digit.  Each of these opcodes
+takes either a single string operand or no operand at all.
+<p>
+This ten member variation name family of opcodes is intended for use as
+traditional variation names for a complete game or game fragment.  The usual
+processing of these opcodes are as follows:
+</p><ol>
+<li> At the beginning of a game (or game fragment), a move sequence scanning
+program initializes each element of its set of ten variation name string
+registers to be null.
+</li>
+<li> As the EPD record for each position in the game is processed, the variation
+name operations are interpreted from left to right.  (Actually, all operations
+in n EPD record are interpreted from left to right.)  Because operations appear
+in ASCII order according to their opcode mnemonics, opcode "v0" (if present)
+will be handled prior to all other opcodes, then opcode "v1" (if present), and
+so forth until opcode "v9" (if present).
+</li>
+<li> The processing of opcode "vN" (0 &lt;= N &lt;= 9) involves two steps.  First, all
+variation name string registers with an index equal to or greater than N are
+set to null.  (This is the set "vN" though "v9".)  Second, and only if a string
+operand is present, the value of the corresponding variation name string
+register is set equal to the string operand.
+</li>
+</ol>
+		<h2> <a name="17.">17. Alternative chesspiece identifier letters</a></h2>
+English language piece names are used to  the letter set for identifying
+chesspieces in PGN movetext.  However, authors of programs which are used only
+for local presentation or scanning of chess move data may find it convenient to
+use piece letter codes common in their locales.  This is not a problem as long
+as PGN data that resides in archival storage or that is exchanged among
+programs still uses the SAN (English) piece letter codes: "PNBRQK".
+<p>
+For the above authors only, a list of alternative piece letter codes are
+provided:
+</p><pre>Language     Piece letters (pawn knight bishop rook queen king)
+----------   --------------------------------------------------
+Czech        P J S V D K
+Danish       B S L T D K
+Dutch        O P L T D K
+English      P N B R Q K
+Estonian     P R O V L K
+Finnish      P R L T D K
+French       P C F T D R
+German       B S L T D K
+Hungarian    G H F B V K
+Icelandic    P R B H D K
+Italian      P C A T D R
+Norwegian    B S L T D K
+Polish       P S G W H K
+Portuguese   P C B T D R
+Romanian     P C N T D R
+Spanish      P C A T D R
+Swedish      B S L T D K
+</pre>
+		<h2> <a name="18.">18. Formal syntax</a></h2>
+<xmp>
+<PGN-database> ::= <PGN-game> <PGN-database>
+                   <empty>
+<PGN-game> ::= <tag-section> <movetext-section>
+<tag-section> ::= <tag-pair> <tag-section>
+                  <empty>
+<tag-pair> ::= [ <tag-name> <tag-value> ]
+<tag-name> ::= <identifier>
+<tag-value> ::= <string>
+<movetext-section> ::= <element-sequence> <game-termination>
+<element-sequence> ::= <element> <element-sequence>
+                       <recursive-variation> <element-sequence>
+                       <empty>
+<element> ::= <move-number-indication>
+              <SAN-move>
+              <numeric-annotation-glyph>
+<recursive-variation> ::= ( <element-sequence> )
+<game-termination> ::= 1-0
+                       0-1
+                       1/2-1/2
+                       *
+<empty> ::=
+</xmp>
+		<h2> <a name="19.">19. Canonical chess position hash coding</a></h2>
+*** This section is under development.
+		<h2> <a name="20.">20. Binary representation (PGC)</a></h2>
+*** This section is under development.
+<p>
+The binary coded version of PGN is PGC (PGN Game Coding).  PGC is a binary
+representation standard of PGN data designed for the dual goals of storage
+efficiency and program I/O.  A file containing PGC data should have a name with
+a suffix of ".pgc".
+</p><p>
+Unlike PGN text files that may have locale dependent representations for
+newlines, PGC files have data that does not vary due to local processing
+environment.  This means that PGC files may be transferred among systems using
+general binary file methods.
+</p><p>
+PGC files should be used only when the use of PGN is impractical due to time
+and space resource constraints.  As the general level of processing
+capabilities increases, the need for PGC over PGN will decrease.  Therefore,
+implementors are encouraged not to use PGC as the default representation
+because it is much more difficult (than PGN) to understand without proper
+software.
+</p><p>
+PGC data is composed of a sequence of PGC records.  Each record is composed of
+a sequence of one or more bytes.  The first byte is the PGN record marker and
+it specifies the interpretation of the remaining portion of the record.  This
+remaining portion is composed of zero or more PGN record items.  Item types
+ move sequences, move sets, and character strings.
+		</p><h3> <a name="20.1">20.1 Bytes</a></h3>
+At the lowest level, PGC binary data is organized as bytes, words (two
+contiguous bytes), and doublewords (four contiguous bytes).  All eight bits of
+a byte are used.  Longwords (eight contiguous bytes) are not used.  Integer
+values are stored using two's complement representation.  Integers may be
+signed or unsigned depending on context.  Multibyte integers are stored in
+low-endian format with the least significant byte appearing first.
+<p>
+A one byte integer item is called "int-1".  A two byte integer item is called
+"int-2".  A four byte integer item is called "int-4".
+</p><p>
+Characters are stored as bytes using the ISO 8859/1 Latin-1 (ECMA-94) code set.
+There is no provision for other characters sets or representations.
+		</p><h3> <a name="20.2">20.2 Move ordinals</a></h3>
+A chess move is represented using a move ordinal.  This is a single unsigned
+byte quantity with values from zero to 255.  A move ordinal is interpreted as
+an index into the list of legal moves from the current position.  This list is
+constructed by generating the legal moves from the current position, assigning
+SAN ASCII strings to each move, and then sorting these strings in ascending
+order.  Note that a seven bit ordinal, as used by some inferior representation
+systems, is insufficient as there are some positions that have more than 128
+moves available.
+<p>
+Examples:  From the initial position, there are twenty moves.  Move ordinal 0
+corresponds to the SAN move string "Na3"; move ordinal 1 corresponds to "Nc3",
+move ordinal 4 corresponds to "a3", and move ordinal 19 corresponds to "h4".
+Moves can be organized into sequences and sets.  A move sequence is an ordered
+list of moves that are played, one after another from first to last.  A move
+set is a list of moves that are all playable from the current position.
+</p><p>
+Move sequence data is represented using a length header followed by move
+ordinal data.  The length header is an unsigned integer that may be a byte or a
+word.  The integer gives the number, possibly zero, of following move ordinal
+bytes.  Most move sequences can be represented using just a byte header; these
+are called "mvseq-1" items.  Move sequence data using a word header are called
+"mvseq-2" items.
+</p><p>
+Move set data is represented using a length header followed by move ordinal
+data.  The length header is an unsigned integer that is a byte.  The integer
+gives the number, possibly zero, of following move ordinal bytes.  All move
+sets are be represented using just a byte header; these are called "mvset-1"
+items.  (Note the implied restriction that a move set can only have a maximum
+of 255 of the possible 256 ordinals present at one time.)
+		</p><h3> <a name="20.3">20.3 String data</a></h3>
+PGC string data is represented using a length header followed by bytes of
+character data.  The length header is an unsigned integer that may be a byte, a
+word, or a doubleword.  The integer gives the number, possibly zero, of
+following character bytes.  Most strings can be represented using just a byte
+header; these are called "string-1" items.  String data using a word header are
+called "string-2" items and string data using a doubleword header are called
+"string-4" items.  No special ASCII NUL termination byte is required for PGC
+storage of a string as the length is explicitly given in the item header.
+		<h3> <a name="20.4">20.4 Marker codes</a></h3>
+PGC marker codes are given in hexadecimal format.  PGC marker code zero (marker
+0x00) is the "noop" marker and carries no meaning.  Each additional marker code
+defined appears in its own subsection below.
+		<h4> <a name="20.4.1">20.4.1 Marker 0x01: reduced export format single game</a></h4>
+Marker 0x01 is used to indicate a single complete game in reduced export
+format.  This refers to a game that has only the Seven Tag Roster data, played
+moves, and no annotations or comments.  This record type is used as an
+alternative to the general game data begin/end record pairs described below.
+The general marker pair (0x05/0x06) is used to help represent game data that
+can't be adequately represented in reduced export format.  There are eight
+items that follow marker 0x01 to form the "reduced export format single game"
+record.  In order, these are:
+<ol>
+<li> string-1 (Event tag value) </li>
+<li> string-1 (Site tag value) </li>
+<li> string-1 (Date tag value) </li>
+<li> string-1 (Round tag value) </li>
+<li> string-1 (White tag value) </li>
+<li> string-1 (Black tag value) </li>
+<li> string-1 (Result tag value) </li>
+<li> mvseq-2 (played moves) </li>
+</ol>
+		<h4> <a name="20.4.2">20.4.2 Marker 0x02: tag pair</a></h4>
+Marker 0x02 is used to indicate a single tag pair.  There are two items that
+follow marker 0x02 to form the "tag pair" record; in order these are:
+<ol>
+<li> string-1 (tag pair name) </li>
+<li> string-1 (tag pair value) </li>
+</ol>
+		<h4> <a name="20.4.3">20.4.3 Marker 0x03: short move sequence</a></h4>
+Marker 0x03 is used to indicate a short move sequence.  There is one item that
+follows marker 0x03 to form the "short move sequence" record; this is:
+<p>
+1) mvseq-1 (played moves)
+		</p><h4> <a name="20.4.4">20.4.4 Marker 0x04: long move sequence</a></h4>
+Marker 0x04 is used to indicate a long move sequence.  There is one item that
+follows marker 0x04 to form the "long move sequence" record; this is:
+<p>
+1) mvseq-2 (played moves)
+		</p><h4> <a name="20.4.5">20.4.5 Marker 0x05: general game data begin</a></h4>
+Marker 0x05 is used to indicate the beginning of data for a game.  It has no
+associated items; it is a complete record by itself.  Instead, it marks the
+beginning of PGC records used to describe a game.  All records up to the
+corresponding "general game data end" record are considered to be part of the
+same game.  (PGC record type 0x01, "reduced export format single game", is not
+permitted to appear within a general game begin/end record pair.  The general
+game construct is to be used as an alternative to record type 0x01 in those
+cases where the latter is too restrictive to contain the data for a game.)
+		<h4> <a name="20.4.6">20.4.6 Marker 0x06: general game data end</a></h4>
+Marker 0x06 is used to indicate the end of data for a game.  It has no
+associated items; it is a complete record by itself.  Instead, it marks the end
+of PGC records used to describe a game.  All records after the corresponding
+(and earlier appearing) "general game data begin" record are considered to be
+part of the same game.
+		<h4> <a name="20.4.7">20.4.7 Marker 0x07: simple-nag</a></h4>
+Marker 0x07 is used to indicate the presence of a simple NAG (Numeric
+Annotation Glyph).  This is an annotation marker that has only a short type
+identification and no operands.  There is one item that follows marker 0x07 to
+form the "simple-nag" record; this is:
+<p>
+1) int-1 (unsigned NAG value, from 0 to 255)
+		</p><h4> <a name="20.4.8">20.4.8 Marker 0x08: rav-begin</a></h4>
+Marker 0x08 is used to indicate the beginning of an RAV (Recursive Annotation
+Variation).  It has no associated items; it is a complete record by itself.
+Instead, it marks the beginning of PGC records used to describe a recursive
+annotation.  It is considered an opening bracket for a later rav-end record;
+the recursive annotation is completely described between the bracket pair.  The
+rav-begin/data/rav-end structures can be nested.
+		<h4> <a name="20.4.9">20.4.9 Marker 0x09: rav-end</a></h4>
+Marker 0x09 is used to indicate the end of an RAV (Recursive Annotation
+Variation).  It has no associated items; it is a complete record by itself.
+Instead, it marks the end of PGC records used to describe a recursive
+annotation.  It is considered a closing bracket for an earlier rav-begin
+record; the recursive annotation is completely described between the bracket
+pair.  The rav-begin/data/rav-end structures can be nested.
+		<h4> <a name="20.4.10">20.4.10 Marker 0x0a: escape-string</a></h4>
+Marker 0x0a is used to indicate the presence of an escape string.  This is a
+string represented by the use of the percent sign ("%") escape mechanism in
+PGN.  The data that is escaped is the sequence of characters immediately
+follwoing the percent sign up to but not including the terminating newline.  As
+is the case with the PGN percent sign escape, the use of a PGC escape-string
+record is limited to use for non-archival data.  There is one item that follows
+marker 0x0a to form the "escape-string" record; this is the string data being
+escaped:
+<p>
+1) string-2 (escaped string data)
+		</p><h2> <a name="21.">21. E-mail correspondence usage</a></h2>
+*** This section is under development.
+<p>
+	
+		</p><hr color="#FFCC66" noshadow="" size="1" width="468">
+	<center>
+	<iframe src="./Portable Game Notation (PGN)_ Specification_files/showiframe.html" width="468" height="60" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
+	&lt;a href="/web/20100528142843/http://leader.linkexchange.com/61/X940576/clickle" target="_top"&gt;&lt;img width=468 height=60 border=0 ismap alt="" src="/web/20100528142843im_/http://leader.linkexchange.com/61/X940576/showle"&gt;&lt;/a&gt;
+	</iframe><br>
+	<a href="http://web.archive.org/web/20100528142843/http://leader.linkexchange.com/61/X940576/clicklogo" target="_top"><img src="./Portable Game Notation (PGN)_ Specification_files/showlogo" width="468" height="16" border="0" ismap="" alt="logo"></a><br>
+	<center>
+
+	</center>
+ 			<hr size="1" noshadow="" width="100%">
+		<center>
+		<font size="3"><span class="footing">
+		©1999 by <a href="http://web.archive.org/web/20100528142843/http://www.very-best.de/About.htm" title="About ChessWorld">ChessWorld</a>, 
+		last modified on Wednesday, 01-Dec-1999 01:24:11 MET 
+		<br>
+128726
+ Hits 1999<br>
+		</span></font>
+		</center>
+	</center></td></tr></tbody></table>
+	</td></tr>
+	</tbody></table></center>
+
+
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 14:28:43 may 28, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 6:30:48 abr 11, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+</body></html>
