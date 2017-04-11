@@ -1,6 +1,7 @@
 ## PGNParser
 A simple utility to parse PGN chess files and retrieve the collection of games
 within in JSON format.
+Could be regarded as a PGN compiler, being JSON the 'object format' produced by the compiler.
 
 ### Build
 Just type 'make' and get:
@@ -8,7 +9,7 @@ Just type 'make' and get:
 (second arg, defaults to 1) to game (third arg, defaults to 100) and prints
 the json resulting array to stdout.
 * libpgnparser.so: shared dynamic link library which basically exports 2
-functions: gamecount(pgn_filename) and parser(pgn_filename, start_game, 
+functions: game_count(pgn_filename) and parser(pgn_filename, start_game, 
 end_game).
        
 ### Usage
