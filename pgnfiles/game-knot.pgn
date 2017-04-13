@@ -1658,3 +1658,13 @@
 
 1. d4 g6 2. c4 Bg7 3. Nc3 d6 4. e4 Nf6 5. Nf3 O-O 6. Be2 c5 7. O-O b6 8. d5 Nfd7 9. Bf4 Ne5 10. Nxe5 Bxe5 11. Bxe5 dxe5 12. a3 f5 13. f3 f4 14. b4 Nd7 15. Na4 Nf6 16. bxc5 bxc5 17. Qb3 Qd6 18. Qb5 Nd7 19. Rab1 Ba6 20. Qc6 Rfc8 21. Qxd6 exd6 22. Rb2 Rab8 23. Rfb1 Rxb2 24. Rxb2 Rb8 25. Rxb8+ Nxb8 26. Nc3 Kf7 27. Nb5 Bxb5 28. cxb5 Nd7 29. a4 Nb6 30. a5 Na4 31. Bd1 Nc3 32. b6 axb6 33. axb6 Nxd1 34. b7 c4 35. b8=Q c3 36. Qxd6 c2 37. Qc7+ Kg8 38. Qxc2 Ne3 39. Qb3 1-0
 
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2017.04.13"]
+[Round "-"]
+[White "sandyrosario"]
+[Black "plstudioart"]
+[Result "1-0"]
+
+1. d4 e6 2. Nf3 Nc6 3. Bf4 Bb4+ 4. c3 Ba5 5. e3 Bb6 6. Bd3 a5 7. Nbd2 a4 8. a3 Nce7 9. O-O Nd5 10. Bg3 Ngf6 11. Qe2 Ng4 12. h3 Ngf6 13. Bh2 c5 14. e4 Ne7 15. Rfe1 cxd4 16. cxd4 Ba5 17. Rac1 Bxd2 18. Nxd2 Qb6 19. d5 Qxb2 20. dxe6 fxe6 21. e5 Nfd5 22. Qh5+ Kd8 23. Nc4 Qd4 24. Nd6 Qxd3 25. Qe8+ Rxe8 26. Nf7# 1-0
+
