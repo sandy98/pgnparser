@@ -36,6 +36,8 @@ long current = INIT_TOTAL;
 long only_count = 0;
 
 const char *seven_tag_roster[] = {"Event", "Site", "Date", "Round", "White", "Black", "Result"};
+const char *terminations[] = {"abandoned", "adjudication", "death", "emergency", "normal", "rules infraction", "time forfeit", "unterminated"};
+const char *default_fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 char * game_buffer;
 
@@ -183,10 +185,21 @@ result:
         {
                 // asprintf(&game_buffer, "%s\nResult: %s\n\n", game_buffer, $1);
                 json_object * new_game = json_object_new_object();
+                json_object * missing_prop;
+                json_object_object_get_ex(headers, "FEN", &missing_prop);
+                json_object_object_get_ex(headers, "PlyCount", &missing_prop);
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "PlyCount", json_object_new_int(json_object_array_length(moves)));
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
+                json_object_object_get_ex(headers, "Termination", &missing_prop);
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "Termination", json_object_new_string(!strcmp($1, "*") ? terminations[7] : terminations[4]));
                 json_object_object_add(new_game, "headers", headers);
                 json_object_object_add(new_game, "moves", moves);
                 json_object_object_add(new_game, "result", json_object_new_string($1));
                 json_object_array_add(games, new_game);
+                json_object_put(missing_prop);
                 init_json_objs();
         }
         ;

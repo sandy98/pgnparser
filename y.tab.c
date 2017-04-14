@@ -101,6 +101,8 @@ long current = INIT_TOTAL;
 long only_count = 0;
 
 const char *seven_tag_roster[] = {"Event", "Site", "Date", "Round", "White", "Black", "Result"};
+const char *terminations[] = {"abandoned", "adjudication", "death", "emergency", "normal", "rules infraction", "time forfeit", "unterminated"};
+const char *default_fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 char * game_buffer;
 
@@ -203,7 +205,7 @@ char * parser(char* filename, long gstart, long gend)
 
 
 
-#line 207 "y.tab.c" /* yacc.c:339  */
+#line 209 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -255,11 +257,11 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 142 "pgnparse.y" /* yacc.c:355  */
+#line 144 "pgnparse.y" /* yacc.c:355  */
 
   char* str;
 
-#line 263 "y.tab.c" /* yacc.c:355  */
+#line 265 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -276,7 +278,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 280 "y.tab.c" /* yacc.c:358  */
+#line 282 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -574,7 +576,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   153,   153,   154,   158,   160,   162,   166,   174,   182
+       0,   155,   155,   156,   160,   162,   164,   168,   176,   184
 };
 #endif
 
@@ -1343,39 +1345,50 @@ yyreduce:
   switch (yyn)
     {
         case 7:
-#line 167 "pgnparse.y" /* yacc.c:1646  */
+#line 169 "pgnparse.y" /* yacc.c:1646  */
     {
             //    asprintf(&game_buffer, "%s[%s '%s']\n", game_buffer, $1, $2);
             json_object_object_add(headers, (yyvsp[-1].str), json_object_new_string((yyvsp[0].str)));
         }
-#line 1352 "y.tab.c" /* yacc.c:1646  */
+#line 1354 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 175 "pgnparse.y" /* yacc.c:1646  */
+#line 177 "pgnparse.y" /* yacc.c:1646  */
     {
             //    asprintf(&game_buffer, "%s%d. %s ", game_buffer, movec, $1);
                 json_object_array_add(moves, json_object_new_string((yyvsp[0].str)));
         }
-#line 1361 "y.tab.c" /* yacc.c:1646  */
+#line 1363 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 183 "pgnparse.y" /* yacc.c:1646  */
+#line 185 "pgnparse.y" /* yacc.c:1646  */
     {
                 // asprintf(&game_buffer, "%s\nResult: %s\n\n", game_buffer, $1);
                 json_object * new_game = json_object_new_object();
+                json_object * missing_prop;
+                json_object_object_get_ex(headers, "FEN", &missing_prop);
+                json_object_object_get_ex(headers, "PlyCount", &missing_prop);
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "PlyCount", json_object_new_int(json_object_array_length(moves)));
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
+                json_object_object_get_ex(headers, "Termination", &missing_prop);
+                if (json_object_is_type(missing_prop, json_type_null)) 
+                  json_object_object_add(headers, "Termination", json_object_new_string(!strcmp((yyvsp[0].str), "*") ? terminations[7] : terminations[4]));
                 json_object_object_add(new_game, "headers", headers);
                 json_object_object_add(new_game, "moves", moves);
                 json_object_object_add(new_game, "result", json_object_new_string((yyvsp[0].str)));
                 json_object_array_add(games, new_game);
+                json_object_put(missing_prop);
                 init_json_objs();
         }
-#line 1375 "y.tab.c" /* yacc.c:1646  */
+#line 1388 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1379 "y.tab.c" /* yacc.c:1646  */
+#line 1392 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1603,7 +1616,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 194 "pgnparse.y" /* yacc.c:1906  */
+#line 207 "pgnparse.y" /* yacc.c:1906  */
 
 
 
