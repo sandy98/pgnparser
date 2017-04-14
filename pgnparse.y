@@ -35,6 +35,7 @@ long end = DEFAULT_END;
 long current = INIT_TOTAL;
 long only_count = 0;
 
+const char *seven_tag_roster[] = {"Event", "Site", "Date", "Round", "White", "Black", "Result"};
 
 char * game_buffer;
 

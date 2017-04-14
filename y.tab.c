@@ -100,6 +100,7 @@ long end = DEFAULT_END;
 long current = INIT_TOTAL;
 long only_count = 0;
 
+const char *seven_tag_roster[] = {"Event", "Site", "Date", "Round", "White", "Black", "Result"};
 
 char * game_buffer;
 
@@ -202,7 +203,7 @@ char * parser(char* filename, long gstart, long gend)
 
 
 
-#line 206 "y.tab.c" /* yacc.c:339  */
+#line 207 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -254,11 +255,11 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 141 "pgnparse.y" /* yacc.c:355  */
+#line 142 "pgnparse.y" /* yacc.c:355  */
 
   char* str;
 
-#line 262 "y.tab.c" /* yacc.c:355  */
+#line 263 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -275,7 +276,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 279 "y.tab.c" /* yacc.c:358  */
+#line 280 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -573,7 +574,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   152,   152,   153,   157,   159,   161,   165,   173,   181
+       0,   153,   153,   154,   158,   160,   162,   166,   174,   182
 };
 #endif
 
@@ -1342,25 +1343,25 @@ yyreduce:
   switch (yyn)
     {
         case 7:
-#line 166 "pgnparse.y" /* yacc.c:1646  */
+#line 167 "pgnparse.y" /* yacc.c:1646  */
     {
             //    asprintf(&game_buffer, "%s[%s '%s']\n", game_buffer, $1, $2);
             json_object_object_add(headers, (yyvsp[-1].str), json_object_new_string((yyvsp[0].str)));
         }
-#line 1351 "y.tab.c" /* yacc.c:1646  */
+#line 1352 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 174 "pgnparse.y" /* yacc.c:1646  */
+#line 175 "pgnparse.y" /* yacc.c:1646  */
     {
             //    asprintf(&game_buffer, "%s%d. %s ", game_buffer, movec, $1);
                 json_object_array_add(moves, json_object_new_string((yyvsp[0].str)));
         }
-#line 1360 "y.tab.c" /* yacc.c:1646  */
+#line 1361 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 182 "pgnparse.y" /* yacc.c:1646  */
+#line 183 "pgnparse.y" /* yacc.c:1646  */
     {
                 // asprintf(&game_buffer, "%s\nResult: %s\n\n", game_buffer, $1);
                 json_object * new_game = json_object_new_object();
@@ -1370,11 +1371,11 @@ yyreduce:
                 json_object_array_add(games, new_game);
                 init_json_objs();
         }
-#line 1374 "y.tab.c" /* yacc.c:1646  */
+#line 1375 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1378 "y.tab.c" /* yacc.c:1646  */
+#line 1379 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1602,7 +1603,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 193 "pgnparse.y" /* yacc.c:1906  */
+#line 194 "pgnparse.y" /* yacc.c:1906  */
 
 
 
