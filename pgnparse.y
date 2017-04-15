@@ -90,6 +90,11 @@ void init_json_objs() {
   headers = json_object_new_object();
 }
 
+const char *l_to_string(long n) {
+  char *buffer;
+  asprintf(&buffer, "%li", n);
+  return (const char*)buffer;
+}
   
 char * parser(char* filename, long gstart, long gend)
 {
@@ -189,7 +194,7 @@ result:
                 json_object_object_get_ex(headers, "FEN", &missing_prop);
                 json_object_object_get_ex(headers, "PlyCount", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
-                  json_object_object_add(headers, "PlyCount", json_object_new_int(json_object_array_length(moves)));
+                  json_object_object_add(headers, "PlyCount", json_object_new_string(l_to_string(json_object_array_length(moves))));
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
                 json_object_object_get_ex(headers, "Termination", &missing_prop);

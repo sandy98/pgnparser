@@ -62,7 +62,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 144 "pgnparse.y" /* yacc.c:1909  */
+#line 149 "pgnparse.y" /* yacc.c:1909  */
 
   char* str;
 
