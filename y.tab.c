@@ -1379,9 +1379,10 @@ yyreduce:
                 json_object_object_get_ex(headers, "FEN", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
-                json_object_object_get_ex(headers, "Termination", &missing_prop);
+            /*    json_object_object_get_ex(headers, "Termination", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
-                  json_object_object_add(headers, "Termination", json_object_new_string(!strcmp((yyvsp[0].str), "*") ? terminations[7] : terminations[4]));
+                  json_object_object_add(headers, "Termination", json_object_new_string(!strcmp($1, "*") ? terminations[7] : terminations[4]));
+            */
                 json_object_object_add(new_game, "headers", headers);
                 json_object_object_add(new_game, "moves", moves);
                 json_object_object_add(new_game, "result", json_object_new_string((yyvsp[0].str)));
@@ -1389,11 +1390,11 @@ yyreduce:
                 json_object_put(missing_prop);
                 init_json_objs();
         }
-#line 1393 "y.tab.c" /* yacc.c:1646  */
+#line 1394 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1397 "y.tab.c" /* yacc.c:1646  */
+#line 1398 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1621,7 +1622,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 212 "pgnparse.y" /* yacc.c:1906  */
+#line 213 "pgnparse.y" /* yacc.c:1906  */
 
 
 
