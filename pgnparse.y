@@ -191,10 +191,10 @@ result:
                 // asprintf(&game_buffer, "%s\nResult: %s\n\n", game_buffer, $1);
                 json_object * new_game = json_object_new_object();
                 json_object * missing_prop;
-                json_object_object_get_ex(headers, "FEN", &missing_prop);
                 json_object_object_get_ex(headers, "PlyCount", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "PlyCount", json_object_new_string(l_to_string(json_object_array_length(moves))));
+                json_object_object_get_ex(headers, "FEN", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
                 json_object_object_get_ex(headers, "Termination", &missing_prop);

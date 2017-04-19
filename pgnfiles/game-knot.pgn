@@ -1668,3 +1668,37 @@
 
 1. d4 e6 2. Nf3 Nc6 3. Bf4 Bb4+ 4. c3 Ba5 5. e3 Bb6 6. Bd3 a5 7. Nbd2 a4 8. a3 Nce7 9. O-O Nd5 10. Bg3 Ngf6 11. Qe2 Ng4 12. h3 Ngf6 13. Bh2 c5 14. e4 Ne7 15. Rfe1 cxd4 16. cxd4 Ba5 17. Rac1 Bxd2 18. Nxd2 Qb6 19. d5 Qxb2 20. dxe6 fxe6 21. e5 Nfd5 22. Qh5+ Kd8 23. Nc4 Qd4 24. Nd6 Qxd3 25. Qe8+ Rxe8 26. Nf7# 1-0
 
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2017.04.17"]
+[Round "-"]
+[White "sandyrosario"]
+[Black "harribold2"]
+[Result "1-0"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 c5 7. Nf3 Bg7 8. Rb1 O-O 9. Be2 Qa5 10. Rb5 Qxa2 11. Rxc5 b6 12. Bc4 Qa1 13. Rc7 Qxc3+ 14. Bd2 Qa3 15. O-O Na6 16. Bc1 Qd6 17. Rxc8 Raxc8 18. Bxa6 Rc7 19. g3 Rd8 20. Bf4 e5 21. Nxe5 Qxd4 22. Qxd4 Rxd4 23. Nf3 Rc3 24. Nxd4 Bxd4 25. Rd1 Bf6 26. e5 Be7 27. Rd7 Bc5 28. Bh6 1-0
+
+[Event "Challenge from anup75"]
+[Site "http://gameknot.com/chess.pl?bd=25791836"]
+[Date "2017.04.19"]
+[Round "-"]
+[White "sandyrosario"]
+[Black "anup75"]
+[Result "1-0"]
+[WhiteElo "1896"]
+[BlackElo "1588"]
+[TimeControl "1/259200"]
+[Mode "ICS"]
+[Termination "normal"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 c5 4. d5 b5 5. Bg5 exd5 6. cxd5 h6 7. Bxf6 Qxf6 
+8. Qc2 d6 9. e4 a6 10. a4 b4 11. Nbd2 g6 12. Nc4 Bg7 13. Bd3 Nd7 14. O-O O-O 
+15. a5 Qf4 16. Qe2 Rb8 17. Rfe1 h5 18. g3 Qf6 19. Qe3 Rd8 20. Bf1 Qe7 
+21. Qf4 Qf6 22. Rad1 Ne5 23. Qxf6 Bxf6 24. Nfxe5 dxe5 25. Nb6 Be7 26. Ra1 Bb7 
+27. Bh3 h4 28. Nd7 Ra8 29. Nxe5 Bf6 30. f4 Re8 31. Rac1 Bxe5 32. fxe5 Rxe5 
+33. Rxc5 f5 34. Rd1 Rd8 35. Rc7 Ba8 36. d6 hxg3 37. hxg3 Rxa5 38. Bf1 fxe4 
+39. Bc4+ Kh8 40. d7 Rf5 41. Be6 Rff8 42. Rf1 Kg7 43. Rc8 Rh8 44. Rf7+ Kh6 
+45. Re7 Kg5 46. Rxd8 Rxd8 47. Re8 Bd5 48. Bh3 Rxd7 49. Bxd7 Kh6 50. Kf2 Kg7 
+51. Ke3 Kf7 52. Re5 Bb3 53. Kxe4 Kf6 54. Kd4 a5 55. Rxa5 Bf7 56. Rb5 b3 
+57. Bc6 Be6 58. Bd5 Bf5 59. Bxb3 Ke7 60. Ke5  1-0
+
