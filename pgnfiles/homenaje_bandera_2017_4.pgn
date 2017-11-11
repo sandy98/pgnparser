@@ -1,0 +1,742 @@
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "1"]
+[White "Rodriguez Vila, Andres"]
+[Black "Tokman, Ariel"]
+[Result "1-0"]
+[ECO "A53"]
+[WhiteElo "2478"]
+[BlackElo "2283"]
+[PlyCount "155"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 d6 2. d4 Nf6 3. f3 Nbd7 4. Be3 e5 5. d5 Be7 6. Qd2 O-O 7. c4 c6 8. Nc3 a6
+9. Bd3 h6 10. Nge2 Nh7 11. g3 Nc5 12. Bc2 a5 13. O-O-O Nd7 14. Kb1 Re8 15. h4
+Nb6 16. Qd3 c5 17. Rdg1 Bf8 18. g4 g6 19. Ng3 Bg7 20. Qe2 Kh8 21. Bd3 Qe7 22.
+Qd2 Qf8 23. Nb5 Rd8 24. Nc7 Ra7 25. Rh2 Bd7 26. Rhg2 Na8 27. Nxa8 Raxa8 28. Qd1
+Qe7 29. Rh1 a4 30. a3 Rdb8 31. Qc1 Qf8 32. Ne2 b5 33. cxb5 Bxb5 34. Bxb5 Rxb5
+35. Nc3 Rb3 36. Ka2 Qb8 37. Rc2 Kg8 38. Rhh2 Qf8 39. Rhe2 Rb7 40. Nb1 Nf6 41.
+Rh2 Nd7 42. Nd2 Kh7 43. Nf1 Rb3 44. Rce2 Rb7 45. Ng3 Qd8 46. Rc2 Nb8 47. Ka1
+Na6 48. Ne2 Nc7 49. Nc3 Nb5 50. Nxb5 Rxb5 51. Bd2 Rb3 52. Bc3 Rab8 53. g5 h5
+54. Rhf2 R8b7 55. Qf1 Qb6 56. Rc1 Kg8 57. Qc4 Qb5 58. Qxb5 R3xb5 59. Rcc2 R5b6
+60. Bd2 Ra6 61. Kb1 Raa7 62. Rc3 Rb8 63. Rc4 Rb6 64. Bc3 Rb8 65. f4 exf4 66.
+Bxg7 Kxg7 67. Rxf4 Rf8 68. Rf6 Rd8 69. Kc2 Kf8 70. Kc3 Ke7 71. e5 dxe5 72. Rxc5
+Rd6 73. Rxd6 Kxd6 74. Kc4 Rb7 75. Rc6+ Kd7 76. Rf6 Ke8 77. Ra6 Rxb2 78. Kc5 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "2"]
+[White "Munoz, Francisco Javier"]
+[Black "Zapata Charles, Santiago"]
+[Result "0-1"]
+[ECO "C06"]
+[WhiteElo "2296"]
+[BlackElo "2318"]
+[PlyCount "96"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Bd3 c5 6. c3 Nc6 7. Ne2 cxd4 8. cxd4
+f6 9. exf6 Nxf6 10. Nf3 Bd6 11. O-O Qc7 12. Bg5 O-O 13. Bh4 Nh5 14. Qc2 h6 15.
+Bh7+ Kh8 16. Bg6 Rxf3 17. gxf3 Bxh2+ 18. Kg2 Nf4+ 19. Nxf4 Qxf4 20. Bg3 Bxg3
+21. fxg3 Qf6 22. Rad1 Nxd4 23. Qc7 Nb5 24. Qc2 Bd7 25. Bd3 Rc8 26. Qf2 Nd6 27.
+f4 a6 28. Bb1 Be8 29. Qd4 Qxd4 30. Rxd4 Kg8 31. Re1 Kf7 32. g4 Kf6 33. g5+ hxg5
+34. fxg5+ Ke7 35. Kg3 Bc6 36. Rf4 Rh8 37. Rh4 Rg8 38. b3 Nf7 39. Kg4 Bd7 40. g6
+Nh6+ 41. Kg5 Rh8 42. Bf5 Rf8 43. Bh3 Rf3 44. Rg1 d4 45. Kh5 e5 46. Rg5 Bxh3 47.
+Rxe5+ Kf6 48. Rd5 Be6 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "3"]
+[White "Pierrot, Facundo"]
+[Black "Beroiz, Julian"]
+[Result "1/2-1/2"]
+[ECO "C54"]
+[WhiteElo "2406"]
+[BlackElo "2090"]
+[PlyCount "125"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Bc4 Nf6 3. d3 Nc6 4. Nf3 Bc5 5. c3 a6 6. O-O d6 7. Bb3 Ba7 8. h3
+O-O 9. Nbd2 Ne7 10. Re1 Ng6 11. Nc4 Re8 12. Ne3 h6 13. Nh2 c6 14. Nhg4 h5 15.
+Nh2 d5 16. Nf3 Qd6 17. Nf5 Bxf5 18. exf5 Nf8 19. Ng5 Bb8 20. Nf3 Qd7 21. Nh4
+Qc7 22. g3 Ba7 23. Kg2 N8d7 24. Bg5 Qd6 25. Bc2 Rad8 26. Qd2 c5 27. Kh2 Qc6 28.
+Re2 b5 29. Rae1 c4 30. d4 exd4 31. cxd4 Rxe2 32. Rxe2 Re8 33. Rxe8+ Nxe8 34.
+Nf3 Ndf6 35. Be3 Bb8 36. Qe2 Ne4 37. Kg2 Qf6 38. Ng1 Ba7 39. f3 N4d6 40. g4
+hxg4 41. hxg4 Bxd4 42. Bf4 Bc5 43. Nh3 Qxb2 44. Ng5 Qd4 45. Bxd6 Qg1+ 46. Kh3
+Qh1+ 47. Bh2 Nf6 48. Qd1 Qxd1 49. Bxd1 Be3 50. f4 d4 51. Kg3 Nd5 52. Kf3 Nc3
+53. Bc2 Nxa2 54. Ne4 Nb4 55. Bb1 c3 56. Nxc3 dxc3 57. Kxe3 c2 58. Bxc2 Nxc2+
+59. Kd3 Nb4+ 60. Kd4 Nc2+ 61. Kd3 Nb4+ 62. Kd4 Nc2+ 63. Kd3 1/2-1/2
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "4"]
+[White "Llanos, Guillermo"]
+[Black "Benedetti, Julio"]
+[Result "0-1"]
+[ECO "A48"]
+[WhiteElo "2334"]
+[BlackElo "2363"]
+[PlyCount "72"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 Nf6 2. Nf3 g6 3. Bg5 Bg7 4. Nbd2 d6 5. e4 O-O 6. c3 h6 7. Bh4 c5 8. dxc5
+dxc5 9. Bc4 Nc6 10. Qe2 Na5 11. Bxf6 exf6 12. Bd5 f5 13. Rd1 Qb6 14. O-O Qxb2
+15. Rb1 Qa3 16. Nh4 Kh7 17. exf5 Qxc3 18. fxg6+ fxg6 19. Nxg6 Kxg6 20. Be4+ Kf7
+21. Bd5+ Kg6 22. Be4+ Kf7 23. Rfc1 Qd4 24. Nf3 Qd6 25. Rb5 Nc6 26. Bh7 Bd4 27.
+Bc2 b6 28. Qe4 Be6 29. Qh7+ Ke8 30. Re1 Kd8 31. Qxh6 Kd7 32. Be4 Bd5 33. Qh7+
+Rf7 34. Qh5 Rxf3 35. Qxf3 Rf8 36. Qg4+ Be6 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "5"]
+[White "Falcon, Benjamin"]
+[Black "Lagar, Valentin Alejo"]
+[Result "1/2-1/2"]
+[ECO "C78"]
+[WhiteElo "2132"]
+[BlackElo "2181"]
+[PlyCount "62"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 b5 6. Bb3 Bc5 7. O-O d6 8. Be3
+Bxe3 9. fxe3 Be6 10. Nc3 O-O 11. Qe1 Ne7 12. Bxe6 fxe6 13. Ng5 Qd7 14. Qh4 h6
+15. Nf3 Ng6 16. Qg3 Qe8 17. Nh4 Nxh4 18. Qxh4 Qc6 19. Rac1 Rf7 20. Qh3 Re8 21.
+Ne2 d5 22. exd5 exd5 23. Ng3 Ref8 24. Nh5 Nxh5 25. Rxf7 Rxf7 26. Qxh5 Qf6 27.
+Qe2 e4 28. d4 Qd6 29. c3 c5 30. dxc5 Qxc5 31. Rd1 Rf5 1/2-1/2
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "6"]
+[White "Benvenutto, Federico"]
+[Black "Lorenzini, Martin"]
+[Result "0-1"]
+[ECO "B07"]
+[WhiteElo "1644"]
+[BlackElo "2453"]
+[PlyCount "56"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f3 e5 5. d5 Be7 6. Be3 O-O 7. Qd2 c6 8. Bc4
+b5 9. dxc6 bxc4 10. cxd7 Bxd7 11. Nd5 Nxd5 12. Qxd5 Qb8 13. b3 Be6 14. Qd1 Rd8
+15. Ne2 d5 16. exd5 Rxd5 17. Qc1 Qb4+ 18. Kf2 f5 19. Rd1 f4 20. Bd2 Qb6+ 21.
+Kf1 Rad8 22. Nc3 Bh4 23. Be1 Rxd1 24. Nxd1 Bxe1 25. Kxe1 Qg1+ 26. Ke2 Qxg2+ 27.
+Nf2 c3 28. Qh1 Rd2+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "7"]
+[White "Grego, Maximiliano"]
+[Black "Sanhueza, Cristian"]
+[Result "0-1"]
+[ECO "B34"]
+[WhiteElo "1834"]
+[BlackElo "2246"]
+[PlyCount "54"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Bg7 5. Be3 Nc6 6. Nc3 Nf6 7. f3 O-O 8.
+Qd2 d5 9. exd5 Nxd5 10. Nxc6 bxc6 11. Bd4 Bxd4 12. Qxd4 e5 13. Qf2 Nxc3 14.
+bxc3 Qa5 15. Qe3 Bf5 16. Bc4 Bxc2 17. Rc1 Bf5 18. g4 Bd7 19. h4 e4 20. h5 exf3
+21. hxg6 Rae8 22. gxf7+ Rxf7 23. Bxf7+ Kxf7 24. Rxh7+ Kf6 25. Rh6+ Kg7 26. Qxe8
+Bxe8 27. Re6 Qxa2 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "8"]
+[White "Alvarez, Leandro"]
+[Black "Santini, Maximiliano"]
+[Result "1-0"]
+[ECO "A87"]
+[WhiteElo "2086"]
+[BlackElo "1810"]
+[PlyCount "59"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. Nf3 f5 2. d4 Nf6 3. c4 d6 4. g3 g6 5. Bg2 Bg7 6. O-O O-O 7. Nc3 Qe8 8. Re1
+Qf7 9. d5 Ne4 10. Qc2 Nxc3 11. bxc3 e5 12. Rb1 h6 13. Rf1 Na6 14. Ba3 g5 15.
+Nd2 Qh5 16. e3 f4 17. f3 g4 18. exf4 exf4 19. fxg4 Bxg4 20. gxf4 Rae8 21. Ne4
+Kh8 22. Rxb7 Be2 23. Ng3 Qg4 24. Re1 Bxc4 25. Rbb1 Rxe1+ 26. Rxe1 Qxf4 27. Bc1
+Qf6 28. Be3 Qxc3 29. Qxc3 Bxc3 30. Rc1 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "9"]
+[White "Arrondo, Hernan"]
+[Black "Martinez, Francisco"]
+[Result "1-0"]
+[ECO "E01"]
+[WhiteElo "2072"]
+[BlackElo "1758"]
+[PlyCount "169"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 Nbd7 5. g3 c6 6. Bg2 Bd6 7. O-O O-O 8. b3
+Re8 9. Qc2 e5 10. dxe5 Nxe5 11. cxd5 cxd5 12. Rd1 Be6 13. Bg5 Rc8 14. Qb2 Nxf3+
+15. Bxf3 Be5 16. Rac1 Qa5 17. b4 Qb6 18. Qa3 d4 19. Ne4 Nd5 20. Bd2 Red8 21.
+Nc5 Bf5 22. Bxd5 Rxd5 23. Qf3 Rdxc5 24. Rxc5 Rxc5 25. bxc5 Qe6 26. Qxb7 h5 27.
+Qb3 Qc6 28. Qf3 Qg6 29. Qg2 Be4 30. f3 Bc6 31. e4 Ba4 32. Rc1 d3 33. Be3 Qc6
+34. Qf2 h4 35. gxh4 Qf6 36. Kh1 Bb2 37. Rf1 Bc3 38. h5 Qd8 39. Bd2 Bd4 40. Qg3
+Qf6 41. Qg5 Qxg5 42. Bxg5 Bxc5 43. Bd2 Bd4 44. Kg2 f6 45. Rb1 Bc2 46. Rb4 Bb6
+47. a4 Bc5 48. Rc4 Bd6 49. a5 Kf7 50. f4 Ke6 51. Kf3 Bd1+ 52. Ke3 Bxh5 53. Kxd3
+Kd7 54. Be3 a6 55. Rc1 Be8 56. h4 Bc7 57. Rg1 g6 58. Bd2 Ke6 59. Rc1 Kd7 60.
+Ke3 Bf7 61. Rc5 Bd6 62. Rc1 Bc7 63. Bc3 Bd8 64. Rd1+ Kc7 65. Bd4 Be7 66. Bb6+
+Kc6 67. Rc1+ Kd7 68. Rd1+ Ke6 69. Kf3 Be8 70. Rc1 Bd6 71. Kg4 Bd7 72. Rd1 Be8
+73. f5+ gxf5+ 74. exf5+ Ke7 75. Bd8+ Kd7 76. Bxf6 Kc6 77. h5 Bf7 78. h6 Bg8 79.
+Kg5 Bh7 80. Bc3 Be7+ 81. f6 Bc5 82. Bd4 Bb4 83. f7 Be7+ 84. Bf6 Bc5 85. Rc1 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "10"]
+[White "Savoretti, Ernesto"]
+[Black "Castro, Diego"]
+[Result "1-0"]
+[ECO "A53"]
+[WhiteElo "2026"]
+[BlackElo "1749"]
+[PlyCount "68"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 Nf6 2. c4 d6 3. Nc3 c6 4. e4 Qc7 5. Nf3 e5 6. Be2 Be7 7. O-O Bg4 8. Be3
+O-O 9. a3 Nbd7 10. h3 Bh5 11. d5 Bg6 12. Nd2 Nc5 13. f3 a5 14. b4 Na6 15. Qb3
+Nh5 16. Rfb1 Ng3 17. bxa5 Nxe2+ 18. Nxe2 Rfb8 19. Bb6 Qd7 20. Qe3 cxd5 21. cxd5
+h6 22. Nc4 Rc8 23. Qb3 Rf8 24. Be3 Rab8 25. Ba7 Nc5 26. Bxc5 dxc5 27. Nxe5 Qd6
+28. Nxg6 Qxg6 29. e5 Qa6 30. Qb5 Qg6 31. d6 Bh4 32. Qc4 Bg5 33. f4 Bd8 34. a6
+b6 {y abandonan.} 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "11"]
+[White "Salvatierra, Matias"]
+[Black "Barchiesi, Lisandro"]
+[Result "1-0"]
+[ECO "C54"]
+[WhiteElo "1991"]
+[BlackElo "1481"]
+[PlyCount "55"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O Nf6 5. d3 h6 6. c3 d6 7. Bb3 O-O 8. Re1
+a6 9. Nbd2 Re8 10. Nf1 Ba7 11. Ng3 Ne7 12. h3 Ng6 13. d4 exd4 14. cxd4 c5 15.
+Be3 b5 16. e5 dxe5 17. dxe5 Qxd1 18. Raxd1 Nxe5 19. Nxe5 Rxe5 20. Rd8+ Kh7 21.
+Bxf7 Re7 22. Bb3 Rd7 23. Rd1 Rxd8 24. Rxd8 Bb7 25. Bc2+ g6 26. Rd6 Kg7 27.
+Bxh6+ Kf7 28. Bg5 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "12"]
+[White "Santianes, Nahuel"]
+[Black "Caruso, Tomas"]
+[Result "0-1"]
+[ECO "B48"]
+[WhiteElo "1796"]
+[BlackElo "1978"]
+[PlyCount "150"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be3 a6 7. Qd2 Nf6 8.
+O-O-O Bb4 9. f3 b5 10. Qe1 Bb7 11. Nxc6 Qxc6 12. Bd4 Rc8 13. Qg3 Be7 14. Bd3 b4
+15. Ne2 a5 16. Be3 Qc7 17. Qxc7 Rxc7 18. Bb6 Rc8 19. Bb5 Bc6 20. Bxc6 Rxc6 21.
+Be3 d5 22. Nd4 Rc8 23. exd5 Nxd5 24. Bf2 O-O 25. Rhe1 Rfd8 26. Kb1 Bf6 27. Ne2
+Rd7 28. Bd4 Bg5 29. g3 h6 30. f4 Be7 31. Bf2 Rdc7 32. Nd4 a4 33. f5 Bf6 34.
+fxe6 fxe6 35. Re2 Bxd4 36. Bxd4 Rc6 37. Rf1 Rd8 38. Ref2 Ne7 39. Be3 Nf5 40.
+Rd2 Rdc8 41. Bf2 Nd6 42. Rfd1 Nf7 43. Be3 Kh7 44. Rf1 Ne5 45. Bd4 Nc4 46. Re2
+Rd8 47. c3 e5 48. Be3 bxc3 49. bxc3 Rd3 50. Bc1 Rxc3 51. Bb2 Rb6 52. Ka1 Nxb2
+53. Rxb2 Rxb2 54. Kxb2 Re3 55. Rf2 Kg6 56. Kc1 e4 57. Kd2 Ra3 58. Ke1 Kg5 59.
+Kd1 Rf3 60. Rc2 Ra3 61. Rf2 e3 62. Rc2 Kg4 63. Ke2 Kh3 64. Kf3 g5 65. Re2 h5
+66. Ke4 Kg4 67. Rg2 Rc3 68. Re2 Kh3 69. Kf3 Rd3 70. Ke4 Rd2 71. Rxe3 Rxa2 72.
+Kf5 g4 73. Kg5 Kxh2 74. Kxh5 Kh3 75. Kg5 a3 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "13"]
+[White "Ibarra, Juan Martin"]
+[Black "Paganini, Jose Ignacio"]
+[Result "0-1"]
+[ECO "B22"]
+[WhiteElo "1779"]
+[BlackElo "1935"]
+[PlyCount "102"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. c3 e6 3. d4 d5 4. exd5 exd5 5. Nf3 Nc6 6. Bb5 Bg4 7. Qa4 Bd7 8. Be3
+c4 9. O-O Bd6 10. Re1 Nge7 11. Nbd2 O-O 12. Bg5 f6 13. Be3 Qe8 14. Nf1 Qg6 15.
+Ng3 h5 16. Qd1 Qh7 17. Ba4 h4 18. Bc2 g6 19. Ne2 Bg4 20. Bf4 Rad8 21. Bxd6 Rxd6
+22. Qd2 Qh5 23. Nf4 Qh7 24. Re3 Qh6 25. Ree1 g5 26. Nh3 Ng6 27. Bxg6 Qxg6 28.
+Kh1 Qf5 29. Re3 Kg7 30. Rae1 Qd7 31. Nhxg5 fxg5 32. Ne5 Qf5 33. Nxc6 bxc6 34.
+Re5 Qf4 35. Rxg5+ Kh6 36. Qxf4 Rxf4 37. Ree5 Rxf2 38. h3 Rf1+ 39. Kh2 Bd1 40.
+Rg8 Kh7 41. Reg5 Rf7 42. g4 Re6 43. Rc8 Re2+ 44. Kg1 Re1+ 45. Kg2 Bf3+ 46. Kf2
+Re2+ 47. Kg1 Rg2+ 48. Kf1 Be4+ 49. Ke1 Rg1+ 50. Ke2 Bd3+ 51. Kd2 Rg2+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "14"]
+[White "Bianchi, Augusto"]
+[Black "Rojas, Alejo"]
+[Result "1-0"]
+[ECO "E95"]
+[WhiteElo "1929"]
+[BlackElo "1458"]
+[PlyCount "73"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. c4 Nf6 2. Nc3 g6 3. Nf3 Bg7 4. e4 d6 5. d4 O-O 6. Be2 Nbd7 7. O-O e5 8. Re1
+Re8 9. Bf1 Kh8 10. Ng5 Re7 11. dxe5 Nxe5 12. c5 h6 13. cxd6 cxd6 14. Nf3 Bg4
+15. Be2 Rc8 16. Nxe5 Bxe2 17. Nxf7+ Rxf7 18. Qxe2 d5 19. e5 Re7 20. exf6 Rxe2
+21. fxg7+ Kxg7 22. Rxe2 d4 23. Ne4 d3 24. Re1 Rc2 25. Bd2 Kf7 26. Bc3 Qe7 27.
+Rad1 Re2 28. f3 Qc7 29. Rxe2 dxe2 30. Re1 Qb6+ 31. Kh1 Qe3 32. Ng3 h5 33. Rxe2
+Qc1+ 34. Re1 Qf4 35. Ne4 g5 36. Bd2 Qh4 37. g3 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "15"]
+[White "Decoppet, Nestor"]
+[Black "Mizzau, Pablo"]
+[Result "1-0"]
+[ECO "C58"]
+[WhiteElo "1733"]
+[BlackElo "1868"]
+[PlyCount "117"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6 8.
+Qf3 Be7 9. Ba4 O-O 10. Ne4 Nd5 11. d3 f5 12. Nec3 e4 13. dxe4 fxe4 14. Qxe4 Nf6
+15. Bb3+ Nxb3 16. Qc4+ Kh8 17. axb3 Ng4 18. Ne4 Bh4 19. O-O a5 20. Qe2 Qc7 21.
+g3 Bd8 22. f3 Nf6 23. Bf4 Qa7+ 24. Be3 Qd7 25. Nbd2 Nd5 26. Bc5 Be7 27. Bxe7
+Qxe7 28. Nc3 Qa7+ 29. Rf2 Ba6 30. Nc4 Nxc3 31. bxc3 Rae8 32. Qd3 Rd8 33. Qe3
+Qc7 34. Qb6 Qxb6 35. Nxb6 Rf5 36. g4 Rb5 37. Nc4 Bc8 38. Rxa5 h5 39. Ra8 Kh7
+40. Rxc8 Rxc8 41. Nd6 Rc7 42. Nxb5 cxb5 43. gxh5 Rxc3 44. Kg2 Kh6 45. Kg3 Kxh5
+46. h4 g5 47. hxg5 Kxg5 48. Re2 Kf5 49. Rd2 b4 50. Rd4 Rxc2 51. Rxb4 Rc5 52.
+Rb6 Re5 53. b4 Rd5 54. b5 Rd1 55. Rb8 Rg1+ 56. Kf2 Rb1 57. b6 Kf4 58. b7 Rb2+
+59. Ke1 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "16"]
+[White "Banfi, Pablo"]
+[Black "Colombo Berra, Pablo"]
+[Result "0-1"]
+[ECO "A04"]
+[WhiteElo "1804"]
+[BlackElo "1700"]
+[PlyCount "62"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. Nf3 b6 2. g3 Bb7 3. Bg2 e5 4. O-O d6 5. c4 Be7 6. d4 e4 7. Ne1 Bg5 8. Nc3 f5
+9. f3 Bxc1 10. Qxc1 exf3 11. Bxf3 Bxf3 12. Rxf3 Ne7 13. Qg5 O-O 14. Nd3 Nbc6
+15. Nf4 Nxd4 16. Rd3 Nec6 17. Qh5 Qd7 18. Ncd5 Rae8 19. e3 Ne6 20. Rf1 Nc5 21.
+Rdd1 Ne5 22. b4 Ne4 23. b5 Ng4 24. Ne2 Nef6 25. Qxf5 Qxf5 26. Rxf5 Nxe3 27.
+Nxe3 Rxe3 28. Nf4 Rc3 29. Rd4 g6 30. Rg5 Rc2 31. Ne6 Re8 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "17"]
+[White "Barchiesi, Emilio"]
+[Black "Maggiori, Luciano"]
+[Result "0-1"]
+[ECO "C54"]
+[WhiteElo "1176"]
+[BlackElo "2084"]
+[PlyCount "96"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2 Bxd2+
+8. Nbxd2 d5 9. exd5 Nxd5 10. O-O O-O 11. Qc2 Nb6 12. Nb3 Nxc4 13. Qxc4 Be6 14.
+Qd3 Bxb3 15. axb3 Qd5 16. Rfe1 Rfe8 17. h3 a6 18. Qc3 Rad8 19. Rac1 h6 20. Red1
+Re6 21. Qc4 Re4 22. Qxd5 Rxd5 23. Rc4 Kf8 24. Kf1 Ke7 25. Re1 Rxe1+ 26. Kxe1
+Kd6 27. Ne5 Nxe5 28. dxe5+ Rxe5+ 29. Kd2 Rd5+ 30. Ke3 Rc5 31. Rf4 Ke6 32. Re4+
+Re5 33. Rxe5+ Kxe5 34. Kf3 Kd4 35. Kg4 Ke4 36. f3+ Ke5 37. f4+ Ke4 38. g3 c5
+39. h4 b5 40. h5 c4 41. bxc4 bxc4 42. Kh4 a5 43. Kg4 a4 44. f5 c3 45. bxc3 a3
+46. c4 a2 47. c5 a1=Q 48. c6 Qd1+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "18"]
+[White "Jesse, Jose"]
+[Black "Luna, Juan"]
+[Result "1-0"]
+[ECO "C58"]
+[WhiteElo "1750"]
+[BlackElo "1556"]
+[PlyCount "71"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Na5 6. Bb5+ c6 7. dxc6 bxc6 8.
+Bd3 h6 9. Ne4 Nxe4 10. Bxe4 Qh4 11. Qf3 Rb8 12. O-O Bd7 13. c3 c5 14. Bd5 Qf6
+15. Qxf6 gxf6 16. Re1 Bd6 17. b3 Nc6 18. Ba3 Ke7 19. f4 Nd8 20. fxe5 fxe5 21.
+d4 cxd4 22. cxd4 Bxa3 23. Nxa3 Bc6 24. Rxe5+ Kd7 25. Rae1 Bxd5 26. Rxd5+ Kc6
+27. Rc5+ Kd6 28. Nc4+ Kd7 29. Ne5+ Kd6 30. Rf1 Rf8 31. Rf6+ Ne6 32. Ra5 Ke7 33.
+Rxh6 Nxd4 34. Rxa7+ Ke8 35. Rf6 Ne6 36. Nc6 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "19"]
+[White "Petti, Luca Giovanni"]
+[Black "Buchet, Carlos"]
+[Result "0-1"]
+[ECO "B38"]
+[WhiteElo "1252"]
+[BlackElo "1572"]
+[PlyCount "54"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nc6 5. c4 g6 6. Nc3 Bg7 7. Be3 Nf6 8. Be2
+O-O 9. Nxc6 bxc6 10. Qd2 Qa5 11. O-O Re8 12. f4 Bb7 13. f5 Rad8 14. Rf3 d5 15.
+e5 dxc4 16. Qe1 Qxe5 17. Bf4 Qxf5 18. Bc7 Qc5+ 19. Kf1 Rd7 20. Bg3 Ng4 21. Bf2
+Nxf2 22. Rxf2 Red8 23. Bg4 e6 24. Ne4 Qb5 25. Qe2 c5 26. Kg1 Bxe4 27. Qxe4 Bd4
+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "20"]
+[White "Piazza, Cristian"]
+[Black "Gomez Reyes, Solana"]
+[Result "1-0"]
+[ECO "B13"]
+[WhiteElo "1956"]
+[BlackElo "1586"]
+[PlyCount "93"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. c4 c6 2. e4 d5 3. exd5 cxd5 4. d4 Nf6 5. Nc3 Nc6 6. c5 Bf5 7. Nf3 g6 8. Bb5
+a6 9. Bxc6+ bxc6 10. Ne5 Bd7 11. Na4 Bg7 12. Nb6 Ra7 13. Qa4 Qc7 14. Nbxd7 Nxd7
+15. Nxc6 Ra8 16. Be3 a5 17. b4 e6 18. Rc1 O-O 19. b5 Rfe8 20. O-O e5 21. b6 Qb7
+22. dxe5 Re6 23. Nd4 Nxb6 24. cxb6 Rxb6 25. Nf3 Rb4 26. Qc6 Rb8 27. Qxb7 R4xb7
+28. Rfd1 Rb2 29. Rxd5 Rxa2 30. h3 a4 31. Rd7 Rab2 32. Rcc7 a3 33. Ra7 a2 34.
+Kh2 Rc2 35. Rxf7 Bf8 36. e6 Rb1 37. Bd4 Bd6+ 38. g3 Rxf2+ 39. Bxf2 a1=Q 40.
+Rxa1 Rxa1 41. Ng5 Ra2 42. Ne4 Be5 43. Kg2 Re2 44. Kf3 Ra2 45. Bc5 Ra6 46. Rf8+
+Kg7 47. e7 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "21"]
+[White "Rebele, Santos"]
+[Black "Vazquez, Sebastian"]
+[Result "0-1"]
+[ECO "B50"]
+[WhiteElo "1485"]
+[BlackElo "1726"]
+[PlyCount "68"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 d6 3. Bc4 Nf6 4. Nc3 a6 5. O-O b5 6. Bd5 Nxd5 7. Nxd5 e6 8. Ne3
+Be7 9. d4 Qc7 10. d5 O-O 11. b3 Nd7 12. Bb2 Nf6 13. Bxf6 Bxf6 14. Rb1 e5 15. c4
+g6 16. h4 Qe7 17. h5 gxh5 18. Nh2 Kh8 19. Qxh5 Rg8 20. Nhg4 Rg5 21. Qh3 Bd7 22.
+Nf5 Bxf5 23. exf5 Rxf5 24. f4 exf4 25. Rbe1 Bd4+ 26. Kh1 Qg5 27. Rf3 Rg8 28.
+Nh6 Rf6 29. Nxg8 Kxg8 30. Qc8+ Kg7 31. Rh3 f3 32. g3 Qd2 33. Qg4+ Rg6 34. Qxf3
+Qxe1+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "22"]
+[White "Barchiesi, Julian"]
+[Black "Risso, Fernando"]
+[Result "0-1"]
+[ECO "B41"]
+[WhiteElo "1318"]
+[BlackElo "1713"]
+[PlyCount "44"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Qc7 6. Nc3 Nf6 7. Be2 Nc6 8. Be3
+Bb4 9. O-O Bxc3 10. bxc3 Nxe4 11. Qd3 Nf6 12. Nb3 O-O 13. Rfd1 Ne5 14. Qd4 Ng6
+15. Rab1 d5 16. cxd5 Nxd5 17. Nc5 b6 18. Na4 Nxe3 19. Nxb6 Nxd1 20. Nxa8 Nxc3
+21. Bd3 Qe5 22. Qc4 Nxb1 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "23"]
+[White "Samudio, Gonzalo"]
+[Black "Formaggini, Valentino"]
+[Result "1-0"]
+[ECO "A11"]
+[WhiteElo "1684"]
+[BlackElo "0"]
+[PlyCount "71"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. c4 c6 2. g3 d5 3. cxd5 cxd5 4. d4 Bf5 5. Bg2 Nf6 6. Nc3 e6 7. Nf3 Nbd7 8.
+Bf4 a6 9. Rc1 Be7 10. Nh4 Be4 11. f3 Bf5 12. Nxf5 exf5 13. Qd3 O-O 14. Qxf5 Rc8
+15. O-O Nb6 16. Rfd1 Bd6 17. Bg5 Be7 18. e4 dxe4 19. fxe4 Nfd7 20. Bf4 h6 21.
+e5 Bg5 22. Bxg5 Qxg5 23. Qxg5 hxg5 24. Bxb7 Rb8 25. Bxa6 Nc8 26. b3 Ne7 27. Bd3
+Rfd8 28. Be4 Kf8 29. Na4 Nc8 30. Nc5 Nxc5 31. Rxc5 Rb6 32. Rdc1 Ne7 33. d5 f6
+34. d6 fxe5 35. dxe7+ Kxe7 36. Rxe5+ 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "24"]
+[White "Gimenez, Julieta"]
+[Black "Catala, Pablo Ezequiel"]
+[Result "0-1"]
+[ECO "B76"]
+[WhiteElo "1275"]
+[BlackElo "1669"]
+[PlyCount "54"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 a6 7. Qd2 Nf6 8. f3
+O-O 9. O-O-O Bd7 10. Bc4 b5 11. Bb3 e6 12. Rhe1 Ne8 13. Kb1 Nc6 14. Nxc6 Bxc6
+15. Bh6 a5 16. a3 b4 17. Bxg7 Kxg7 18. Qd4+ Qf6 19. Ba4 Bxa4 20. Nxa4 bxa3 21.
+Qxf6+ Kxf6 22. bxa3 Rb8+ 23. Kc1 Ke7 24. Kd2 Nc7 25. Kc3 Rfc8 26. Rb1 Nb5+ 27.
+Kb2 Nc3+ 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "25"]
+[White "Mancilla Canales, Manuel"]
+[Black "Gimenez, Benjamin"]
+[Result "1-0"]
+[ECO "A30"]
+[WhiteElo "1642"]
+[BlackElo "0"]
+[PlyCount "47"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. c4 c5 2. g3 d6 3. Bg2 Bd7 4. Bxb7 Bc6 5. Bxa8 Bxh1 6. Bxh1 Nf6 7. Qa4+ Qd7
+8. Qb3 e6 9. Qxb8+ Qd8 10. Bc6+ Nd7 11. Qxa7 Be7 12. Nc3 Rf8 13. Nb5 Rg8 14.
+Nc7+ Kf8 15. Nxe6+ fxe6 16. Qxd7 Qxd7 17. Bxd7 Kf7 18. a4 Ra8 19. a5 Ra7 20. a6
+Kf8 21. Bc6 Bd8 22. Bb7 Ke8 23. d3 Kd7 24. Bd2 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "26"]
+[White "Marcópulo, Jeremías"]
+[Black "Brito, Sofia"]
+[Result "0-1"]
+[ECO "A01"]
+[WhiteElo "0"]
+[BlackElo "1639"]
+[PlyCount "70"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. b3 c5 2. Bb2 d6 3. e3 Nf6 4. Bb5+ Bd7 5. Be2 g6 6. Nf3 Bg7 7. O-O O-O 8. d4
+cxd4 9. exd4 e6 10. Nbd2 Nc6 11. Bb5 a6 12. Bc4 b5 13. Be2 Rc8 14. c4 Qb6 15.
+Rc1 Na7 16. Ng5 Bc6 17. Ngf3 Ne4 18. Nxe4 Bxe4 19. Ng5 Bb7 20. Bg4 Qd8 21. Nxe6
+fxe6 22. Bxe6+ Kh8 23. Bxc8 Nxc8 24. Qd2 Ne7 25. Ba1 Nf5 26. Rfe1 Nh4 27. d5
+Bxa1 28. Rxa1 Bc8 29. Re3 Qg5 30. Kf1 Qxg2+ 31. Ke2 Rxf2+ 32. Kd3 Rxd2+ 33. Kc3
+Rc2+ 34. Kb4 Qd2+ 35. Ka3 Qa5# 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "27"]
+[White "Perez Sanches, Victor Manuel"]
+[Black "Rullán, Julián"]
+[Result "1-0"]
+[ECO "B41"]
+[WhiteElo "1616"]
+[BlackElo "0"]
+[PlyCount "91"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. c4 Qc7 6. Nc3 Nf6 7. Be3 Bb4 8. f3
+d6 9. Be2 Bxc3+ 10. bxc3 O-O 11. O-O Bd7 12. Qd2 Nc6 13. Nxc6 Bxc6 14. Rab1 d5
+15. cxd5 exd5 16. exd5 Nxd5 17. Bd4 Qf4 18. Rfd1 Qxd2 19. Rxd2 Rfe8 20. Kf2 Nf4
+21. Bf1 Rad8 22. Rb6 Nd5 23. Rb1 b5 24. c4 bxc4 25. Bxc4 a5 26. Bb5 Bxb5 27.
+Rxb5 a4 28. Ra5 Nb6 29. Rc5 Ra8 30. Rb5 f6 31. Bxf6 g6 32. Re5 Rxe5 33. Bxe5
+Nc4 34. Re2 Nxe5 35. Rxe5 Kf7 36. Re4 h5 37. Kg3 g5 38. h4 Kf6 39. hxg5+ Kxg5
+40. f4+ Kf6 41. Kf3 Ra5 42. g3 a3 43. Re3 Kf5 44. Rc3 Ra4 45. Kg2 Kg4 46. Rc5
+ 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "28"]
+[White "Trifiró, Santiago"]
+[Black "Casariego, Pablo"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "0"]
+[BlackElo "1528"]
+[PlyCount "47"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 d5 2. Nf3 Nc6 3. Bf4 e6 4. e3 a6 5. Nbd2 Nf6 6. Ne5 Nxe5 7. dxe5 Nd7 8.
+c3 h5 9. h3 f6 10. exf6 Nxf6 11. Be2 Bd6 12. Bg5 g6 13. Qc2 Rg8 14. Bd3 Kf7 15.
+g4 Be7 16. Nf3 Bd6 17. Nh4 Qd7 18. Bxg6+ Ke7 19. Bxf6+ Kxf6 20. Bxh5 Qc6 21.
+Qh7 Rf8 22. g5+ Kxg5 23. Qg6+ Kxh4 24. Qg4# 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "29"]
+[White "Ojeda, Cesar"]
+[Black "Mizzau, Hernan"]
+[Result "0-1"]
+[ECO "D00"]
+[WhiteElo "0"]
+[BlackElo "0"]
+[PlyCount "106"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 e6 4. a3 a6 5. h3 c5 6. dxc5 Bxc5 7. e3 O-O 8. Nf3
+Nc6 9. Be2 Re8 10. O-O e5 11. Bh2 d4 12. exd4 exd4 13. Na2 b5 14. c3 Bb7 15.
+cxd4 Nxd4 16. Nxd4 Bxd4 17. Nc3 Bxc3 18. Qxd8 Raxd8 19. bxc3 Rxe2 20. Rad1 Rc8
+21. Rd3 h6 22. Rfd1 Bd5 23. f3 Re6 24. Rxd5 Nxd5 25. Rxd5 Rxc3 26. Bd6 Rc6 27.
+Bb4 f6 28. Rd2 Rc8 29. Kf2 Rec6 30. Ke3 Re8+ 31. Kf2 Ra8 32. Rd5 Re8 33. Kf1
+Rc2 34. Rd6 Ra8 35. f4 a5 36. Bc5 Rxc5 37. Rb6 a4 38. Kf2 Rd8 39. h4 Rd3 40. g4
+Rxa3 41. Ke2 Rh3 42. g5 hxg5 43. hxg5 fxg5 44. fxg5 Rxg5 45. Rb8+ Kh7 46. Rb7
+a3 47. Kf2 Rb3 48. Ke2 Rc5 49. Kd2 b4 50. Kd1 a2 51. Rxg7+ Kxg7 52. Kd2 a1=Q
+53. Ke2 Rc2# 0-1
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "30"]
+[White "Sosa, Marianela Ayelen"]
+[Black "Velazco, Tomas Sebastian"]
+[Result "1-0"]
+[ECO "D02"]
+[WhiteElo "1423"]
+[BlackElo "1347"]
+[PlyCount "109"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. d4 d5 2. Nf3 Nc6 3. b3 Nf6 4. e3 Bf5 5. a3 e6 6. Bd3 Bg6 7. O-O Bd6 8. Bb2
+Qe7 9. Ne5 Bxe5 10. dxe5 Nd7 11. f4 O-O-O 12. Bb5 Qc5 13. Bxc6 Qxc6 14. Nc3 Nc5
+15. Rc1 Ne4 16. Nxe4 Bxe4 17. Bd4 Qa6 18. a4 f6 19. exf6 gxf6 20. Bxf6 Rhg8 21.
+Rf2 Rdf8 22. Be5 Qc6 23. Qd4 h5 24. Qxa7 d4 25. g3 h4 26. f5 Rxf5 27. Rxf5 Bxf5
+28. Qa8+ Kd7 29. Qxg8 h3 30. Qf7+ Kc8 31. Qxc7+ Qxc7 32. Bxc7 Kxc7 33. exd4 Kd6
+34. c4 b6 35. Kf2 e5 36. dxe5+ Kxe5 37. Ke3 Bd7 38. Rd1 Be8 39. Rd5+ Ke6 40.
+Kf4 Bf7 41. Re5+ Kd6 42. a5 bxa5 43. Rxa5 Kc6 44. g4 Kd6 45. g5 Ke6 46. c5 Kd5
+47. b4 Kc6 48. Ke5 Kb7 49. Kf6 Bd5 50. g6 Bc4 51. g7 Kb8 52. Rb5+ Kc7 53. Rb6
+Bg8 54. Ke7 Bh7 55. Kf8 1-0
+
+[Event "IRT Abierto "Homenaje a la Bandera" 2017"]
+[Site "Rosario"]
+[Date "2017.06.18"]
+[Round "4"]
+[Board "31"]
+[White "Dearma, Thiago Daniel"]
+[Black "Barchiesi, Gonzalo"]
+[Result "0-1"]
+[ECO "C27"]
+[WhiteElo "1187"]
+[BlackElo "1221"]
+[PlyCount "72"]
+[EventDate "2017.06.17"]
+[EventRounds "7"]
+[EventCountry "ARG"]
+
+1. e4 e5 2. Bc4 Nf6 3. Nc3 Bb4 4. d3 O-O 5. Nge2 h6 6. Bd2 Nc6 7. a3 Ba5 8. b4
+Bb6 9. O-O d6 10. Nd5 Nxd5 11. exd5 Ne7 12. c3 c6 13. dxc6 Nxc6 14. b5 Ne7 15.
+d4 Bf5 16. dxe5 dxe5 17. Be3 Bg4 18. a4 Rc8 19. Qxd8 Rfxd8 20. Bxb6 axb6 21. f3
+Rxc4 22. fxg4 Rxg4 23. Rfd1 Rxd1+ 24. Rxd1 Rxa4 25. Rd7 Kf8 26. Rxb7 Nd5 27.
+Rd7 Nf4 28. Nxf4 Rxf4 29. Rd6 Rf6 30. Rd5 Re6 31. Kf2 Ke7 32. Ke3 f6 33. Ke4
+Rd6 34. g4 g6 35. c4 Ke6 36. c5 f5+ 0-1
+
