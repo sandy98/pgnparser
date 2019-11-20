@@ -3863,3 +3863,43 @@
 
 1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Bg5 Bg7 8. Bd3 h6 9. Bh4 O-O 10. Nge2 a6 11. a4 Nbd7 12. Bg3 Qc7 13. O-O Nh5 14. Bh4 Rb8 15. Ng3 Nxg3 16. Bxg3 c4 17. Bc2 b5 18. axb5 axb5 19. Ne2 Bxb2 20. Rb1 Bg7 21. Nd4 Bxd4 22. Qxd4 b4 23. Ba4 Ba6 24. Rfc1 f6 25. Bc6 Ne5 26. Bxe5 fxe5 27. Qe3 Kg7 28. Qh3 Rf7 29. Rc2 c3 30. Ra1 Bc8 31. Qd3 Bd7 32. Ra6 Rb6 33. Qc4 b3 34. Rxc3 b2 35. Rxb6 Qxb6 0-1
 
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2017.12.09"]
+[Round "-"]
+[White "jeronimofuentes"]
+[Black "sandyrosario"]
+[Result "0-1"]
+
+1. e4 c5 2. f4 Nc6 3. Nf3 g6 4. c3 Bg7 5. Be2 e6 6. O-O Nge7 7. Na3 O-O 8. Nc2 d5 9. e5 d4 10. cxd4 cxd4 11. d3 b6 12. b3 Bb7 13. Bb2 Nf5 14. Qe1 Rc8 15. Rc1 f6 16. g4 Ne3 17. Nxe3 dxe3 18. Qg3 Qd5 19. d4 fxe5 20. Bc4 exf4 21. Qg2 Qe4 22. Qh3 Nxd4 23. Bxd4 Bxd4 24. Rcd1 Bc5 25. Rd7 e2+ 0-1
+
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2017.12.19"]
+[Round "-"]
+[White "d6player"]
+[Black "sandyrosario"]
+[Result "0-1"]
+
+1. c4 c5 2. g3 Nc6 3. Bg2 g6 4. Nc3 Bg7 5. d3 e6 6. e4 Nge7 7. f4 O-O 8. Nge2 b6 9. O-O Bb7 10. a3 Nd4 11. Nxd4 cxd4 12. Ne2 d5 13. cxd5 exd5 14. e5 f6 15. exf6 Bxf6 16. Qa4 Bc6 17. Qb3 Qd7 18. Qd1 Nf5 19. Bh3 Rae8 20. b4 Ba4 21. Qe1 Qe6 22. Rf2 Qc6 23. Bxf5 gxf5 24. Qd2 Qc2 25. Ra2 Qxd2 26. Bxd2 Bb5 27. Nc1 Re7 28. Rc2 Rfe8 29. Kf1 Kf7 30. h3 Ba6 31. a4 Rc8 32. Be1 Rec7 33. Rxc7+ Rxc7 34. Nb3 Bxd3+ 35. Kg2 Be4+ 0-1
+
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2018.10.16"]
+[Round "-"]
+[White "sandyrosario"]
+[Black "rian123"]
+[Result "1-0"]
+
+1. d4 Nc6 2. Nf3 d6 3. e4 Bg4 4. d5 Ne5 5. Nxe5 Bxd1 6. Bb5+ c6 7. dxc6 Qa5+ 8. Nc3 Qxb5 9. Nxb5 O-O-O 10. cxb7+ Kxb7 11. Nxf7 Rc8 12. Kxd1 Nf6 13. Nxh8 Nxe4 14. Be3 1-0
+
+[Event "GameKnot Blitz"]
+[Site "http://gameknot.com/"]
+[Date "2018.11.03"]
+[Round "-"]
+[White "sandyrosario"]
+[Black "battlingfool"]
+[Result "1-0"]
+
+1. d4 c5 2. d5 e5 3. c4 d6 4. Nc3 Na6 5. e4 Nf6 6. Bd3 Be7 7. Nge2 Nb4 8. Bb1 O-O 9. O-O Bg4 10. f3 Bh5 11. a3 Na6 12. Ng3 h6 13. Be3 Nc7 14. b4 cxb4 15. axb4 b6 16. Qe1 Bg6 17. f4 exf4 18. Bxf4 a5 19. bxa5 bxa5 20. c5 dxc5 21. d6 Bxd6 22. e5 Bxb1 23. Rxb1 Be7 24. exf6 Bxf6 25. Bxc7 Qxc7 26. Rxf6 gxf6 27. Nd5 Qd6 28. Nf5 Qe6 29. Qg3+ Kh8 30. Qg7# 1-0
+

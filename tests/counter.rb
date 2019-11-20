@@ -5,7 +5,7 @@ require 'ffi'
 module PGN
   extend FFI::Library
 
-  ffi_lib '../libpgnparser.so'
+  ffi_lib 'libpgnparser.so'
   ffi_convention :stdcall
 
   attach_function :count, :game_count,[ :string], :long

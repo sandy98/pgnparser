@@ -197,10 +197,11 @@ result:
                 json_object_object_get_ex(headers, "FEN", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "FEN", json_object_new_string(default_fen));
-            /*    json_object_object_get_ex(headers, "Termination", &missing_prop);
+            
+                json_object_object_get_ex(headers, "Termination", &missing_prop);
                 if (json_object_is_type(missing_prop, json_type_null)) 
                   json_object_object_add(headers, "Termination", json_object_new_string(!strcmp($1, "*") ? terminations[7] : terminations[4]));
-            */
+            
                 json_object_object_add(new_game, "headers", headers);
                 json_object_object_add(new_game, "moves", moves);
                 json_object_object_add(new_game, "result", json_object_new_string($1));
