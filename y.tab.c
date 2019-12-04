@@ -83,7 +83,7 @@ extern char *yytext;
 void yyerror(const char *str)
 {
         fprintf(stderr,"\nERROR: %s\n",str);
-        fprintf(stderr, "CAUSED BY: %\n\n", yytext);
+        fprintf(stderr, "CAUSED BY: %s\n\n", yytext);
 }
  
 int yywrap()
@@ -256,7 +256,8 @@ extern int yydebug;
     TOKLABEL = 258,
     TOKVALUE = 259,
     TOKMOVE = 260,
-    TOKRESULT = 261
+    TOKRESULT = 261,
+    TOKEXTRA = 262
   };
 #endif
 /* Tokens.  */
@@ -264,6 +265,7 @@ extern int yydebug;
 #define TOKVALUE 259
 #define TOKMOVE 260
 #define TOKRESULT 261
+#define TOKEXTRA 262
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -273,7 +275,7 @@ union YYSTYPE
 
   char* str;
 
-#line 277 "y.tab.c"
+#line 279 "y.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -523,19 +525,19 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  2
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   6
+#define YYLAST   7
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  7
+#define YYNTOKENS  8
 /* YYNNTS -- Number of nonterminals.  */
-#define YYNNTS  6
+#define YYNNTS  7
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  9
+#define YYNRULES  11
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  11
+#define YYNSTATES  13
 
 #define YYUNDEFTOK  2
-#define YYMAXUTOK   261
+#define YYMAXUTOK   262
 
 /* YYTRANSLATE(TOKEN-NUM) -- Symbol number corresponding to TOKEN-NUM
    as returned by yylex, with out-of-bounds checking.  */
@@ -572,14 +574,15 @@ static const yytype_uint8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
-       5,     6
+       5,     6,     7
 };
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   160,   160,   161,   165,   167,   169,   173,   181,   189
+       0,   160,   160,   161,   165,   167,   169,   171,   177,   186,
+     194,   202
 };
 #endif
 
@@ -589,7 +592,8 @@ static const yytype_uint8 yyrline[] =
 static const char *const yytname[] =
 {
   "$end", "error", "$undefined", "TOKLABEL", "TOKVALUE", "TOKMOVE",
-  "TOKRESULT", "$accept", "evts", "evt", "header", "move", "result", YY_NULLPTR
+  "TOKRESULT", "TOKEXTRA", "$accept", "evts", "evt", "extra", "header",
+  "move", "result", YY_NULLPTR
 };
 #endif
 
@@ -598,7 +602,7 @@ static const char *const yytname[] =
    (internal) symbol number NUM (which must be that of a token).  */
 static const yytype_uint16 yytoknum[] =
 {
-       0,   256,   257,   258,   259,   260,   261
+       0,   256,   257,   258,   259,   260,   261,   262
 };
 # endif
 
@@ -617,7 +621,7 @@ static const yytype_uint16 yytoknum[] =
 static const yytype_int8 yypact[] =
 {
       -4,     0,    -4,    -3,    -4,    -4,    -4,    -4,    -4,    -4,
-      -4
+      -4,    -4,    -4
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -625,20 +629,20 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       2,     0,     1,     0,     8,     9,     3,     4,     5,     6,
-       7
+       2,     0,     1,     0,    10,    11,     8,     3,     7,     4,
+       5,     6,     9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -4,    -4,    -4,    -4,    -4,    -4
+      -4,    -4,    -4,    -4,    -4,    -4,    -4
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     1,     6,     7,     8,     9
+      -1,     1,     7,     8,     9,    10,    11
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -646,32 +650,34 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       2,    10,     0,     3,     0,     4,     5
+       2,    12,     0,     3,     0,     4,     5,     6
 };
 
 static const yytype_int8 yycheck[] =
 {
-       0,     4,    -1,     3,    -1,     5,     6
+       0,     4,    -1,     3,    -1,     5,     6,     7
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     8,     0,     3,     5,     6,     9,    10,    11,    12,
-       4
+       0,     9,     0,     3,     5,     6,     7,    10,    11,    12,
+      13,    14,     4
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
-       0,     7,     8,     8,     9,     9,     9,    10,    11,    12
+       0,     8,     9,     9,    10,    10,    10,    10,    11,    12,
+      13,    14
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
-       0,     2,     0,     2,     1,     1,     1,     2,     1,     1
+       0,     2,     0,     2,     1,     1,     1,     1,     1,     2,
+       1,     1
 };
 
 
@@ -1357,26 +1363,34 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-  case 7:
-#line 174 "pgnparse.y"
+  case 8:
+#line 178 "pgnparse.y"
+    {
+	    // int tok_xtra = 1;
+	}
+#line 1372 "y.tab.c"
+    break;
+
+  case 9:
+#line 187 "pgnparse.y"
     {
             //    asprintf(&game_buffer, "%s[%s '%s']\n", game_buffer, $1, $2);
             json_object_object_add(headers, (yyvsp[-1].str), json_object_new_string((yyvsp[0].str)));
         }
-#line 1367 "y.tab.c"
+#line 1381 "y.tab.c"
     break;
 
-  case 8:
-#line 182 "pgnparse.y"
+  case 10:
+#line 195 "pgnparse.y"
     {
             //    asprintf(&game_buffer, "%s%d. %s ", game_buffer, movec, $1);
                 json_object_array_add(moves, json_object_new_string((yyvsp[0].str)));
         }
-#line 1376 "y.tab.c"
+#line 1390 "y.tab.c"
     break;
 
-  case 9:
-#line 190 "pgnparse.y"
+  case 11:
+#line 203 "pgnparse.y"
     {
                 // asprintf(&game_buffer, "%s\nResult: %s\n\n", game_buffer, $1);
                 json_object * new_game = json_object_new_object();
@@ -1399,11 +1413,11 @@ yyreduce:
                 json_object_put(missing_prop);
                 init_json_objs();
         }
-#line 1403 "y.tab.c"
+#line 1417 "y.tab.c"
     break;
 
 
-#line 1407 "y.tab.c"
+#line 1421 "y.tab.c"
 
       default: break;
     }
@@ -1635,7 +1649,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 214 "pgnparse.y"
+#line 227 "pgnparse.y"
 
 
 

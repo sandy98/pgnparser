@@ -14,7 +14,7 @@ extern char *yytext;
 void yyerror(const char *str)
 {
         fprintf(stderr,"\nERROR: %s\n",str);
-        fprintf(stderr, "CAUSED BY: %\n\n", yytext);
+        fprintf(stderr, "CAUSED BY: %s\n\n", yytext);
 }
  
 int yywrap()
@@ -154,7 +154,7 @@ char * parser(char* filename, long gstart, long gend)
 %token <str> TOKVALUE
 %token <str> TOKMOVE
 %token <str> TOKRESULT
-
+%token <str> TOKEXTRA
 %%
 
 evts:   /* empty */
@@ -167,8 +167,21 @@ evt:
         move
         |
         result
+        |
+        extra
         ;
 
+
+
+extra: 
+	TOKEXTRA
+	{
+	    // int tok_xtra = 1;
+	}
+	;
+	
+
+	
 header:
         TOKLABEL TOKVALUE
         {

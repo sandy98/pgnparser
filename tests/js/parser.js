@@ -16,9 +16,9 @@
     module.exports = libpgnparser.parser;
   } else {
     if (process.argv.length === 2) {
-      console.log(libpgnparser.parser(ref.NULL_POINTER, 1, 1000000));
+      console.log(libpgnparser.parser(ref.NULL_POINTER, 1, 10000000));
     } else {
-      console.log(libpgnparser.parser(process.argv[2], 1, 1000));
+      console.log(libpgnparser.parser(process.argv[2], 1, 10000000));
     }
   }
 

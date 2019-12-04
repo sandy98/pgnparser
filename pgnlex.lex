@@ -23,12 +23,6 @@ char tmp_buffer[256] = {'\0'};
 begin-header    \[
 end-header      \]
 
-begin-comment1	\(
-end-comment1	\)
-
-begin-comment2	\{
-end-comment2	\}
-
 value           \".+?\"
 label           [A-Za-z]+
 ww              1-0
@@ -53,8 +47,9 @@ any		({short-castle}|{long-castle}|{pawn-move}|{pawn-capture}|{crowning}|{figure
 check		\+
 check-mate	({cm1}|{cm2})
 move            {any}({check}|{check-mate})?
-
-
+comment		\([ \t\r\n]*([^\(\)]|\n)*[ \t\r\n]*\)
+alt-move	\{[ \t\r\n]*([^\{\}]|\n)*[ \t\r\n]*\}
+extra		({comment}|{alt-move})
 %%
 
 {begin-header}          BEGIN(header);
@@ -75,21 +70,11 @@ move            {any}({check}|{check-mate})?
 
 {end-header}            BEGIN(INITIAL);
 
-
-{begin-comment1}	BEGIN(comment1);
-
-<comment1>[ \t\n]	/* do nothing with spaces */
-<comment1>.		/* and do nothing with the rest */
-
-{end-comment1}		BEGIN(INITIAL);
-
-
-{begin-comment2}	BEGIN(comment2);
-
-<comment2>[ \t\n]	/* do nothing with spaces */
-<comment2>.		/* and do nothing with the rest */
-
-{end-comment2}		BEGIN(INITIAL);
+{extra}			{   
+			    // fprintf(stderr, "Found an extra thing: %s\n", yytext);
+			    yylval.str = strdup("");
+			    return TOKEXTRA;
+			}
 
 {move}		        { if (!only_count && current >= start && current <= end) {
                             movec++;

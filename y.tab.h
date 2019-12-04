@@ -52,7 +52,8 @@ extern int yydebug;
     TOKLABEL = 258,
     TOKVALUE = 259,
     TOKMOVE = 260,
-    TOKRESULT = 261
+    TOKRESULT = 261,
+    TOKEXTRA = 262
   };
 #endif
 /* Tokens.  */
@@ -60,6 +61,7 @@ extern int yydebug;
 #define TOKVALUE 259
 #define TOKMOVE 260
 #define TOKRESULT 261
+#define TOKEXTRA 262
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -69,7 +71,7 @@ union YYSTYPE
 
   char* str;
 
-#line 73 "y.tab.h"
+#line 75 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

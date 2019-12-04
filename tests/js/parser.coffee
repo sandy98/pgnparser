@@ -14,10 +14,10 @@ if !!module.parent
 else  
   if process.argv.length == 2
     #console.log "Calling parser without a file.\n\n"
-    console.log(libpgnparser.parser(ref.NULL_POINTER, 1, 100))
+    console.log(libpgnparser.parser(ref.NULL_POINTER, 1, 10000000))
   else
     #console.log "Calling parser with file: #{process.argv[2]}\n\n"
-    console.log(libpgnparser.parser(process.argv[2], 1, 100))
+    console.log(libpgnparser.parser(process.argv[2], 1, 10000000))
 
 
 

@@ -1,4 +1,5 @@
-all:	lexer parser shared exe emcc
+#all:	lexer parser shared exe emcc
+all:	lexer parser shared exe
 
 lexer:	pgnlex.lex
 	lex pgnlex.lex
@@ -12,8 +13,8 @@ shared:	y.tab.h lex.yy.c y.tab.c
 exe:	y.tab.h lex.yy.c y.tab.c
 	cc -I/usr/include/json-c -ljson-c -D __EXE__ lex.yy.c y.tab.c -o pgnparser
 
-#emcc:	y.tab.h lex.yy.c y.tab.c
-#	emcc -I/usr/include/json-c -D __EXE__ lex.yy.c y.tab.c -o pgnparser.js
+emcc:	y.tab.h lex.yy.c y.tab.c
+	emcc -I/usr/include/json-c -L/usr/lib -ljson-c -D __EXE__ lex.yy.c y.tab.c -o pgnparser.js
 
 clean:
 	$(RM) *.h *.c libpgnparser.so pgnparser
